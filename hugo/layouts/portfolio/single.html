@@ -1,0 +1,138 @@
+{{ define "title" }}{{ .Title }} — {{ .Site.Params.siteName }}{{ end }}
+{{ define "main" }}
+
+<section class="case-hero">
+  <div class="container">
+    <span class="case-eyebrow">{{ i18n "case_eyebrow" }} · {{ .Params.industry_label }}</span>
+    <h1>{{ .Title }}</h1>
+    <p class="case-hero__sub">{{ .Params.subtitle }}</p>
+  </div>
+</section>
+
+<section class="case-summary">
+  <div class="container">
+    <div class="case-summary__grid">
+      <div class="case-cell">
+        <h3>
+          <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 1l8 14H1L9 1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 7v3M9 12.5v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          {{ i18n "challenge_title" }}
+        </h3>
+        <p>{{ .Params.challenge }}</p>
+      </div>
+      <div class="case-cell">
+        <h3>
+          <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M10 1L3 10h5l-1 7 7-9H9l1-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/></svg>
+          {{ i18n "solution_title" }}
+        </h3>
+        <ol>
+          {{- range .Params.solution }}<li>{{ . }}</li>{{ end }}
+        </ol>
+      </div>
+      <div class="case-cell case-cell--result">
+        <h3>
+          <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="7.5" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="9" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="9" r="1.2" fill="currentColor"/></svg>
+          {{ i18n "result_title" }}
+        </h3>
+        <p>{{ .Params.short_body }}</p>
+        <div class="case-cell__metric-wrap">
+          <div class="case-cell__metric">{{ .Params.result_value }}<span class="case-cell__metric-unit">{{ .Params.result_unit }}</span></div>
+          <div class="case-cell__metric-label">{{ .Params.result_label }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case-arch">
+  <div class="container">
+    <div class="case-arch__box case-arch__box--workflow">
+      <img class="case-arch__diagram"
+           src="/img/workflows/{{ .File.ContentBaseName }}.png"
+           alt="{{ .Title }} — {{ i18n "arch_alt" }}"
+           loading="lazy">
+      <div class="case-arch__status">
+        <div class="case-arch__status-title">{{ i18n "system_status" }}</div>
+        <div class="case-arch__status-row">{{ i18n "system_status_label" }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case-stack-section">
+  <div class="container">
+    <h2>{{ i18n "stack_title" }}</h2>
+    <div class="case-stack__list">
+      {{- range .Params.stack }}
+      <div class="case-stack__item">
+        <div class="case-stack__icon">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18" stroke="currentColor" stroke-width="1.4"/></svg>
+        </div>
+        <span class="case-stack__label">{{ . }}</span>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+<section class="case-impact">
+  <div class="container">
+    <div class="case-impact__grid">
+      <div class="case-impact__head">
+        <h2>{{ i18n "impact_title" }}</h2>
+        <p>{{ .Params.subtitle }}</p>
+      </div>
+      <div class="case-impact__list">
+        {{- range .Params.impact }}
+        <div class="case-impact__item">
+          <div class="case-impact__check">
+            <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.5l2.5 2.5 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <p>{{ . }}</p>
+        </div>
+        {{- end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case-complexity">
+  <div class="container">
+    <div class="case-complexity__inner">
+      <div class="case-complexity__num-wrap">
+        <div class="case-complexity__num">{{ .Params.nodes }}</div>
+        <div class="case-complexity__num-label">{{ i18n "nodes_label" }}</div>
+      </div>
+      <div>
+        <div class="case-complexity__title">{{ i18n "complexity_title" }}</div>
+        <div class="case-complexity__summary">{{ .Params.complexity_summary }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <h2>{{ i18n "case_cta_title" }}</h2>
+    <p>{{ i18n "case_cta_lede" }}</p>
+    <a class="btn btn--primary btn--lg" href="{{ with .Site.GetPage "/" }}{{ .RelPermalink }}{{ end }}#contact">
+      {{ i18n "case_cta_button" }}
+      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M2 6.5h12M5.5 2v3M10.5 2v3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+    </a>
+  </div>
+</section>
+
+<section class="case-back">
+  <div class="container">
+    <a class="case-back__link" href="{{ with .Site.GetPage "/portfolio" }}{{ .RelPermalink }}{{ end }}">
+      <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M12 7H3M6 3.5L2.5 7 6 10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      {{ i18n "back_to_list" }}
+    </a>
+  </div>
+</section>
+
+{{ end }}
+
+{{ define "scripts" }}
+{{- $js := resources.Get "js/site.js" | resources.Fingerprint "sha256" }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{ end }}

@@ -1,0 +1,88 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: uk
+media_folder: "hugo/static/img/uploads"
+public_folder: "/img/uploads"
+
+collections:
+  - name: "blog_uk"
+    label: "Блог (UA)"
+    label_singular: "Стаття (UA)"
+    folder: "hugo/content/uk/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Дата", name: "date", widget: "datetime" }
+      - { label: "Опис (meta)", name: "description", widget: "string", required: false }
+      - { label: "Теги", name: "tags", widget: "list", required: false }
+      - { label: "Чернетка", name: "draft", widget: "boolean", default: false }
+      - { label: "Текст", name: "body", widget: "markdown" }
+
+  - name: "blog_en"
+    label: "Blog (EN)"
+    label_singular: "Post (EN)"
+    folder: "hugo/content/en/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Description (meta)", name: "description", widget: "string", required: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "blog_ru"
+    label: "Блог (RU)"
+    label_singular: "Статья (RU)"
+    folder: "hugo/content/ru/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Дата", name: "date", widget: "datetime" }
+      - { label: "Описание (meta)", name: "description", widget: "string", required: false }
+      - { label: "Теги", name: "tags", widget: "list", required: false }
+      - { label: "Черновик", name: "draft", widget: "boolean", default: false }
+      - { label: "Текст", name: "body", widget: "markdown" }
+
+  - name: "portfolio_uk"
+    label: "Портфоліо (UA)"
+    label_singular: "Кейс (UA)"
+    folder: "hugo/content/uk/portfolio"
+    create: false
+    filter: { field: "draft", value: false }
+    fields:
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Опис (meta)", name: "description", widget: "string" }
+      - { label: "Короткий опис (картка)", name: "short_body", widget: "text" }
+      - { label: "Підзаголовок", name: "subtitle", widget: "text" }
+      - { label: "Виклик", name: "challenge", widget: "text" }
+      - { label: "Рішення (список)", name: "solution", widget: "list" }
+      - { label: "Результати (список)", name: "impact", widget: "list" }
+      - { label: "Результат — значення", name: "result_value", widget: "string" }
+      - { label: "Результат — одиниця", name: "result_unit", widget: "string" }
+      - { label: "Результат — підпис", name: "result_label", widget: "string" }
+      - { label: "Складність (короткий опис)", name: "complexity_summary", widget: "string" }
+
+  - name: "portfolio_en"
+    label: "Portfolio (EN)"
+    label_singular: "Case (EN)"
+    folder: "hugo/content/en/portfolio"
+    create: false
+    filter: { field: "draft", value: false }
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description (meta)", name: "description", widget: "string" }
+      - { label: "Short body (card)", name: "short_body", widget: "text" }
+      - { label: "Subtitle", name: "subtitle", widget: "text" }
+      - { label: "Challenge", name: "challenge", widget: "text" }
+      - { label: "Solution (list)", name: "solution", widget: "list" }
+      - { label: "Impact (list)", name: "impact", widget: "list" }
+      - { label: "Result value", name: "result_value", widget: "string" }
+      - { label: "Result unit", name: "result_unit", widget: "string" }
+      - { label: "Result label", name: "result_label", widget: "string" }
+      - { label: "Complexity summary", name: "complexity_summary", widget: "string" }

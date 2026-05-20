@@ -1,0 +1,34 @@
+---
+title: "Автоматична синхронізація даних на основі файлів"
+description: "Двотригерний пайплайн: парсинг Excel-файлів із Google Drive у нормалізовану базу Sheets."
+date: 2023-12-01
+weight: 8
+industry: "operations"
+industry_label: "Операції / Дані"
+platform: "N8N"
+nodes: 7
+short_body: "Кинули Excel-файл у спільну папку Drive — за секунди він розпарсений, нормалізований і змерджений у центральну базу Sheets."
+subtitle: "Двотригерний пайплайн: парсинг Excel-файлів із Google Drive у нормалізовану базу Sheets."
+challenge: "Синхронізувати дані про заборгованість із Excel-файлів, завантажених у Google Drive, до центральної бази Google Sheets із нормалізацією."
+solution:
+  - "Подвійні тригери: запланований sync + детекція завантаження файлу."
+  - "Автоматичне завантаження файлу з Google Drive."
+  - "Парсинг Excel-файлу та видобуток даних."
+  - "Нормалізація даних із конвертацією форматів."
+impact:
+  - "Усунено ручний імпорт файлів."
+  - "Синхронізація у реальному часі."
+  - "Менше помилок ручного вводу."
+  - "Повна історія файлів."
+  - "Щоденний sync + завантаження за запитом."
+stack:
+  - "Google Drive API"
+  - "Excel Parsing"
+  - "Google Sheets API"
+  - "JavaScript"
+  - "Error Handling"
+result_value: "0"
+result_unit: "manual imports"
+result_label: "fully automated ingest"
+complexity_summary: "Двотригерна архітектура · Обробка файлів"
+---

@@ -1,0 +1,47 @@
+baseURL = "https://easytarget.com.ua/"
+locale = "uk-UA"
+defaultContentLanguage = "uk"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+pluralizeListTitles = false
+summaryLength = 40
+
+[outputs]
+  home     = ["HTML"]
+  section  = ["HTML"]
+  page     = ["HTML"]
+  taxonomy = ["HTML"]
+  term     = ["HTML"]
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[languages]
+  [languages.uk]
+    label        = "Українська"
+    contentDir   = "content/uk"
+    weight       = 1
+    [languages.uk.params]
+      htmlLang = "uk"
+  [languages.en]
+    label        = "English"
+    contentDir   = "content/en"
+    weight       = 2
+    locale       = "en-US"
+    [languages.en.params]
+      htmlLang = "en"
+  [languages.ru]
+    label        = "Русский"
+    contentDir   = "content/ru"
+    weight       = 3
+    locale       = "ru-RU"
+    [languages.ru.params]
+      htmlLang = "ru"
+
+[params]
+  siteName  = "EasyTarget"
+  email     = "blagoveshchenskyivan@gmail.com"
+  calendly  = "https://calendly.com/blagoveshchenskyivan/30min"
+  telegram  = "https://t.me/Aarkashabb"
+  linkedin  = "https://www.linkedin.com/in/aarkashabb"
+  twitterCard = "summary_large_image"

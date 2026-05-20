@@ -1,0 +1,33 @@
+---
+title: "Менеджмент завдань зі штучним інтелектом"
+description: "Telegram-помічник, що приймає команди природною мовою та створює структуровані завдання через Gemini."
+date: 2023-10-28
+weight: 5
+industry: "ai"
+industry_label: "AI / Продуктивність"
+platform: "N8N"
+nodes: 8
+short_body: "Невимушене повідомлення у Telegram — і у Google Tasks з'являється повноцінне структуроване завдання. Gemini класифікує намір, Sheets зберігає аудит."
+subtitle: "Telegram-помічник, що приймає команди природною мовою та створює структуровані завдання через Gemini."
+challenge: "Створити інтелектуальну систему планування, що розуміє команди природною мовою з Telegram і створює структуровані завдання."
+solution:
+  - "Інтеграція Telegram через webhook для прийому повідомлень."
+  - "Логування повідомлень у Google Sheets (аудит)."
+  - "Google Gemini AI для розуміння природної мови."
+  - "Інтелектуальне визначення завдань та умовне створення."
+impact:
+  - "Hands-free менеджмент завдань через чат."
+  - "Автоматична категоризація завдань."
+  - "Повна історія та контекст."
+  - "AI-підтримка продуктивності."
+stack:
+  - "Telegram Bot API"
+  - "Google Sheets API"
+  - "Google Gemini AI"
+  - "Google Tasks API"
+  - "N8N Agents"
+result_value: "100%"
+result_unit: "hands-free"
+result_label: "voice/chat-driven task capture"
+complexity_summary: "AI-інтеграція · Реальний час"
+---

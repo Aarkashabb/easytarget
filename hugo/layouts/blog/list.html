@@ -1,0 +1,39 @@
+{{ define "title" }}{{ i18n "blog_page_title" }} | {{ .Site.Params.siteName }}{{ end }}
+{{ define "main" }}
+
+<section class="portfolio-hero">
+  <div class="container">
+    <span class="portfolio-hero__eyebrow">{{ i18n "nav_blog" }}</span>
+    <h1>{{ i18n "blog_h1" }}</h1>
+    <p class="portfolio-hero__sub">{{ i18n "blog_subhead" }}</p>
+  </div>
+</section>
+
+<section class="section insights" style="background: var(--c-bg); padding-top: 0;">
+  <div class="container">
+    <div class="insights__grid">
+      {{- range .Pages }}
+      <article class="icard">
+        <div class="icard__thumb">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h13a3 3 0 013 3v13H7a3 3 0 01-3-3V4z" stroke="currentColor" stroke-width="1.6"/><path d="M7 8h9M7 12h9M7 16h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <div class="icard__body">
+          <div class="icard__tags">
+            {{- range .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}
+          </div>
+          <h3 class="icard__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p class="icard__excerpt">{{ .Summary }}</p>
+          <div class="icard__meta">{{ .Date.Format "02 Jan 2006" }} · {{ .ReadingTime }} {{ i18n "min_read" }}</div>
+        </div>
+      </article>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}
+
+{{ define "scripts" }}
+{{- $js := resources.Get "js/site.js" | resources.Fingerprint "sha256" }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{ end }}

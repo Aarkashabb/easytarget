@@ -1,0 +1,58 @@
+{{ define "title" }}{{ i18n "portfolio_page_title" }} | {{ .Site.Params.siteName }}{{ end }}
+{{ define "main" }}
+
+<section class="portfolio-hero">
+  <div class="container">
+    <span class="portfolio-hero__eyebrow">{{ i18n "nav_portfolio" }}</span>
+    <h1>{{ .Params.h1 | default (i18n "portfolio_h1") }}</h1>
+    <p class="portfolio-hero__sub">{{ .Params.subhead | default (i18n "portfolio_subhead") }}</p>
+  </div>
+</section>
+
+<section class="portfolio-section">
+  <div class="container">
+    <div class="filter-bar" role="tablist" aria-label="{{ i18n "nav_portfolio" }}">
+      <button class="filter-pill is-active" data-industry="all" type="button">{{ i18n "filter_all" }}</button>
+      <button class="filter-pill" data-industry="banking" type="button">{{ i18n "filter_banking" }}</button>
+      <button class="filter-pill" data-industry="marketing" type="button">{{ i18n "filter_marketing" }}</button>
+      <button class="filter-pill" data-industry="ecommerce" type="button">{{ i18n "filter_ecommerce" }}</button>
+      <button class="filter-pill" data-industry="ai" type="button">{{ i18n "filter_ai" }}</button>
+      <button class="filter-pill" data-industry="crm" type="button">{{ i18n "filter_crm" }}</button>
+      <button class="filter-pill" data-industry="finance" type="button">{{ i18n "filter_finance" }}</button>
+      <button class="filter-pill" data-industry="operations" type="button">{{ i18n "filter_operations" }}</button>
+    </div>
+
+    <div class="portfolio-grid" id="portfolio-grid">
+      {{- range $i, $page := .Pages }}
+      <article class="pcard" data-industry="{{ $page.Params.industry }}">
+        <a class="pcard__thumb" href="{{ $page.RelPermalink }}" aria-hidden="true" tabindex="-1">
+          <span class="pcard__thumb-id">CASE.{{ printf "%02d" (add $i 1) }}</span>
+          <span class="pcard__thumb-art">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="3" width="6" height="4" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="16" y="3" width="6" height="4" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="9" y="10" width="6" height="4" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="2" y="17" width="6" height="4" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="16" y="17" width="6" height="4" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="M5 7v3h7M19 7v3h-7M5 14v3h7M19 14v3h-7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </span>
+          <span class="pcard__thumb-nodes">{{ $page.Params.nodes }} nodes</span>
+        </a>
+        <div class="pcard__body">
+          <div class="pcard__industry">{{ $page.Params.industry_label }}</div>
+          <h3 class="pcard__title">{{ $page.Title }}</h3>
+          <p>{{ $page.Params.short_body }}</p>
+          <div class="pcard__stack">
+            {{- range first 3 $page.Params.stack }}<span class="tag">{{ . }}</span>{{ end }}
+          </div>
+          <a class="pcard__link" href="{{ $page.RelPermalink }}">{{ i18n "view_case" }} <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h9M8 3.5L11.5 7 8 10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+      {{- end }}
+    </div>
+    <div class="portfolio-empty" id="portfolio-empty">—</div>
+  </div>
+</section>
+
+{{ end }}
+
+{{ define "scripts" }}
+{{- $js := resources.Get "js/site.js" | resources.Fingerprint "sha256" }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{- $pjs := resources.Get "js/portfolio.js" | resources.Fingerprint "sha256" }}
+<script src="{{ $pjs.RelPermalink }}" integrity="{{ $pjs.Data.Integrity }}" defer></script>
+{{ end }}

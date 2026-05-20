@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Params.htmlLang | default .Site.Language.Lang }}" dir="ltr">
+<head>
+  {{- block "head" . }}{{ partial "head.html" . }}{{ end -}}
+</head>
+<body>
+  {{- partial "header.html" . -}}
+  <main>
+    {{- block "main" . }}{{ end -}}
+  </main>
+  {{- partial "footer.html" . -}}
+  {{- block "scripts" . }}{{ end -}}
+</body>
+</html>

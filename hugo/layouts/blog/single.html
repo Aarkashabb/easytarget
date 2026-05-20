@@ -1,0 +1,36 @@
+{{ define "title" }}{{ .Title }} — {{ .Site.Params.siteName }}{{ end }}
+{{ define "main" }}
+
+<section class="case-hero" style="padding-bottom: 48px;">
+  <div class="container">
+    <div class="case-eyebrow">
+      {{- range .Params.tags }}<span class="tag" style="margin-right:6px">{{ . }}</span>{{ end }}
+    </div>
+    <h1 style="margin-top: 16px;">{{ .Title }}</h1>
+    <p class="case-hero__sub">{{ .Date.Format "02 Jan 2006" }} · {{ .ReadingTime }} {{ i18n "min_read" }}</p>
+  </div>
+</section>
+
+<section style="background: var(--c-bg); padding: 0 0 96px;">
+  <div class="container" style="max-width: 780px;">
+    <div class="card" style="padding: 48px; font-size: 16px; line-height: 1.75;">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+
+<section class="case-back">
+  <div class="container">
+    <a class="case-back__link" href="{{ with .Site.GetPage "/blog" }}{{ .RelPermalink }}{{ end }}">
+      <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M12 7H3M6 3.5L2.5 7 6 10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      {{ i18n "back_to_blog" }}
+    </a>
+  </div>
+</section>
+
+{{ end }}
+
+{{ define "scripts" }}
+{{- $js := resources.Get "js/site.js" | resources.Fingerprint "sha256" }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{ end }}

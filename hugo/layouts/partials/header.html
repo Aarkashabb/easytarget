@@ -1,0 +1,43 @@
+{{- $curLang := .Lang -}}
+{{- $p := . -}}
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="logo" href="{{ with .Site.GetPage "/" }}{{ .RelPermalink }}{{ end }}" aria-label="EasyTarget — home">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="url(#lg)"/><defs><linearGradient id="lg" x1="2" y1="2" x2="22" y2="22"><stop stop-color="#00D2FF"/><stop offset="1" stop-color="#00B4DB"/></linearGradient></defs></svg>
+      <span>EasyTarget</span>
+    </a>
+
+    <nav class="site-nav" aria-label="{{ i18n "nav_aria_label" }}">
+      {{- $home := .Site.GetPage "/" -}}
+      <a href="{{ $home.RelPermalink }}#services">{{ i18n "nav_services" }}</a>
+      {{- $portfolio := .Site.GetPage "/portfolio" -}}
+      {{- if eq .Section "portfolio" }}
+      <a href="{{ $portfolio.RelPermalink }}" class="is-active" aria-current="page">{{ i18n "nav_portfolio" }}</a>
+      {{- else }}
+      <a href="{{ $portfolio.RelPermalink }}">{{ i18n "nav_portfolio" }}</a>
+      {{- end }}
+      <a href="{{ $home.RelPermalink }}#process">{{ i18n "nav_process" }}</a>
+      <a href="{{ $home.RelPermalink }}#faq">FAQ</a>
+    </nav>
+
+    <div class="header-right">
+      <div class="lang-switch" role="group" aria-label="{{ i18n "lang_switcher_label" }}">
+        {{- range (slice (dict "lang" "uk" "label" "UA") (dict "lang" "en" "label" "EN") (dict "lang" "ru" "label" "ru")) }}
+          {{- $lang := .lang -}}
+          {{- $label := .label -}}
+          {{- $href := "" -}}
+          {{- range $p.AllTranslations -}}
+            {{- if eq .Lang $lang -}}{{- $href = .RelPermalink -}}{{- end -}}
+          {{- end -}}
+          {{- if not $href -}}
+            {{- if eq $lang "uk" -}}{{- $href = "/" -}}
+            {{- else -}}{{- $href = printf "/%s/" $lang -}}{{- end -}}
+          {{- end -}}
+          <a href="{{ $href }}"{{ if eq $lang $curLang }} class="is-active"{{ end }}>{{ $label }}</a>
+        {{- end }}
+      </div>
+      <a class="btn btn--primary" href="{{ with .Site.GetPage "/" }}{{ .RelPermalink }}{{ end }}#contact">{{ i18n "nav_cta" }}</a>
+      <button class="nav-toggle" aria-label="{{ i18n "nav_menu_label" }}" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>

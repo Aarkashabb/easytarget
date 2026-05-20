@@ -1,0 +1,4 @@
+hugo/public/
+hugo/.hugo_build.lock
+.DS_Store
+Thumbs.db
