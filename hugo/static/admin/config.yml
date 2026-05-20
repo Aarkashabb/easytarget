@@ -86,3 +86,22 @@ collections:
       - { label: "Result unit", name: "result_unit", widget: "string" }
       - { label: "Result label", name: "result_label", widget: "string" }
       - { label: "Complexity summary", name: "complexity_summary", widget: "string" }
+
+  - name: "portfolio_ru"
+    label: "Портфолио (RU)"
+    label_singular: "Кейс (RU)"
+    folder: "hugo/content/ru/portfolio"
+    create: false
+    filter: { field: "draft", value: false }
+    fields:
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Описание (meta)", name: "description", widget: "string" }
+      - { label: "Краткое описание (карточка)", name: "short_body", widget: "text" }
+      - { label: "Подзаголовок", name: "subtitle", widget: "text" }
+      - { label: "Вызов", name: "challenge", widget: "text" }
+      - { label: "Решение (список)", name: "solution", widget: "list" }
+      - { label: "Результаты (список)", name: "impact", widget: "list" }
+      - { label: "Результат — значение", name: "result_value", widget: "string" }
+      - { label: "Результат — единица", name: "result_unit", widget: "string" }
+      - { label: "Результат — подпись", name: "result_label", widget: "string" }
+      - { label: "Сложность (краткое описание)", name: "complexity_summary", widget: "string" }
