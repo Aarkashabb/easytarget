@@ -53,10 +53,11 @@ collections:
     label: "Портфоліо (UA)"
     label_singular: "Кейс (UA)"
     folder: "hugo/content/uk/portfolio"
-    create: false
-    filter: { field: "draft", value: false }
+    create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Чернетка", name: "draft", widget: "boolean", default: false }
       - { label: "Опис (meta)", name: "description", widget: "string" }
       - { label: "Короткий опис (картка)", name: "short_body", widget: "text" }
       - { label: "Підзаголовок", name: "subtitle", widget: "text" }
@@ -72,10 +73,11 @@ collections:
     label: "Portfolio (EN)"
     label_singular: "Case (EN)"
     folder: "hugo/content/en/portfolio"
-    create: false
-    filter: { field: "draft", value: false }
+    create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
       - { label: "Description (meta)", name: "description", widget: "string" }
       - { label: "Short body (card)", name: "short_body", widget: "text" }
       - { label: "Subtitle", name: "subtitle", widget: "text" }
@@ -91,10 +93,11 @@ collections:
     label: "Портфолио (RU)"
     label_singular: "Кейс (RU)"
     folder: "hugo/content/ru/portfolio"
-    create: false
-    filter: { field: "draft", value: false }
+    create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Черновик", name: "draft", widget: "boolean", default: false }
       - { label: "Описание (meta)", name: "description", widget: "string" }
       - { label: "Краткое описание (карточка)", name: "short_body", widget: "text" }
       - { label: "Подзаголовок", name: "subtitle", widget: "text" }
