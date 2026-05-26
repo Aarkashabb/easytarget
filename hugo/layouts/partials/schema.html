@@ -1,0 +1,89 @@
+{{- /* JSON-LD Schema Markup */ -}}
+{{- /* Organization Schema */ -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ .Site.Params.siteName }}",
+  "url": "{{ .Site.BaseURL }}",
+  "logo": "{{ .Site.BaseURL }}images/logo.png",
+  "description": "Automation services for business processes using N8N, Make, Zapier",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+380",
+    "contactType": "customer service",
+    "email": "{{ .Site.Params.email }}"
+  },
+  "sameAs": [
+    "{{ .Site.Params.linkedin }}",
+    "{{ .Site.Params.telegram }}"
+  ]
+}
+</script>
+
+{{- /* Person Schema - for author */ -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ivan Blagoveshchenskyi",
+  "email": "{{ .Site.Params.email }}",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "{{ .Site.Params.siteName }}"
+  },
+  "url": "{{ .Site.BaseURL }}",
+  "sameAs": [
+    "{{ .Site.Params.linkedin }}",
+    "{{ .Site.Params.telegram }}"
+  ]
+}
+</script>
+
+{{- /* Article/BlogPosting Schema - for blog posts */ -}}
+{{- if eq .Type "blog" -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ .Title }}",
+  "description": "{{ .Summary }}",
+  "image": "{{ with .Params.image }}{{ .Site.BaseURL }}{{ . }}{{ end }}",
+  "datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .LastMod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Person",
+    "name": "Ivan Blagoveshchenskyi"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Params.siteName }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ .Site.BaseURL }}images/logo.png"
+    }
+  }
+}
+</script>
+{{- end -}}
+
+{{- /* BreadcrumbList Schema */ -}}
+{{- if gt (len .Breadcrumbs) 1 -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {{- range $index, $breadcrumb := .Breadcrumbs -}}
+      {{- if $index }},{{ end }}
+      {
+        "@type": "ListItem",
+        "position": {{ add $index 1 }},
+        "name": "{{ $breadcrumb.Title }}",
+        "item": "{{ $breadcrumb.URL }}"
+      }
+    {{- end }}
+  ]
+}
+</script>
+{{- end -}}

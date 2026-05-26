@@ -1,0 +1,56 @@
+{{- /* robots.txt for Search Engines and AI Crawlers */ -}}
+# Allow all search engines
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+
+# Specify sitemap
+Sitemap: {{ .Site.BaseURL }}sitemap.xml
+
+{{- /* AI Crawler Configuration */ -}}
+# OpenAI GPTBot - allow for training (beneficial for brand awareness)
+User-agent: GPTBot
+Allow: /
+
+# ChatGPT browsing - allow for real-time citations
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic ClaudeBot - allow for training and citations
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity Bot - allow for search and citations
+User-agent: PerplexityBot
+Allow: /
+
+# ByteDance Bytespider - block from training (optional)
+User-agent: Bytespider
+Disallow: /
+
+# Google-Extended (Gemini training, not search) - optional blocking
+User-agent: Google-Extended
+Allow: /
+
+# Common Crawl - allow
+User-agent: CCBot
+Allow: /
+
+# Standard crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Crawl delay settings
+User-agent: *
+Crawl-delay: 1
