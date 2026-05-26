@@ -52,10 +52,9 @@
   "description": "{{ .Description | default .Summary }}",
   "image": {
     "@type": "ImageObject",
-    "url": "{{ with .Params.image }}{{ .Site.BaseURL }}{{ . }}{{ else }}{{ .Site.BaseURL }}images/favicon.svg{{ end }}"
+    "url": "{{ with .Params.image }}{{ $.Site.BaseURL }}{{ . }}{{ else }}{{ $.Site.BaseURL }}images/favicon.svg{{ end }}"
   },
   "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
-  "dateModified": "{{ .LastMod.Format "2006-01-02T15:04:05Z07:00" }}",
   "author": {
     "@type": "Person",
     "name": "Ivan Blagoveshchenskyi",
@@ -91,7 +90,7 @@
   "description": "{{ .Description }}",
   "image": {
     "@type": "ImageObject",
-    "url": "{{ with .Params.image }}{{ .Site.BaseURL }}{{ . }}{{ else }}{{ .Site.BaseURL }}images/favicon.svg{{ end }}"
+    "url": "{{ with .Params.image }}{{ $.Site.BaseURL }}{{ . }}{{ else }}{{ $.Site.BaseURL }}images/favicon.svg{{ end }}"
   },
   "provider": {
     "@type": "Organization",
@@ -131,24 +130,3 @@
   }
 }
 </script>
-
-{{- /* BreadcrumbList Schema */ -}}
-{{- if gt (len .Breadcrumbs) 1 -}}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {{- range $index, $breadcrumb := .Breadcrumbs -}}
-      {{- if $index }},{{ end }}
-      {
-        "@type": "ListItem",
-        "position": {{ add $index 1 }},
-        "name": "{{ $breadcrumb.Title }}",
-        "item": "{{ $breadcrumb.URL }}"
-      }
-    {{- end }}
-  ]
-}
-</script>
-{{- end -}}
