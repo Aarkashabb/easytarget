@@ -1,0 +1,446 @@
+
+
+======== uploads/Project_1_Banking_Data_Integration___Fin.pdf ========
+
+Banking Data Integration &
+Financial Tracking
+N8N Workflow Automation Project
+
+-- 1 of 8 --
+
+The Challenge
+Automate daily banking operations and track account balances across multiple
+accounts without manual intervention
+
+-- 2 of 8 --
+
+Our Solution
+1 Scheduled daily triggers (15:00 UTC) fetching from Monobank API
+2 Real-time balance data aggregation in Google Sheets
+3 Automated transaction logging with enrichment
+4 Retry logic with exponential backoff
+
+-- 3 of 8 --
+
+Key Technologies
+Monobank API Google Sheets API HTTP Requests
+JavaScript Cron Triggers
+
+-- 4 of 8 --
+
+Workflow Architecture
+
+-- 5 of 8 --
+
+Business Impact
+✓ Eliminated manual bank statement checking (5+ hours/month saved)
+✓ Real-time account balance visibility
+✓ Automated transaction categorization
+✓ Complete audit trail
+
+-- 6 of 8 --
+
+Workflow Complexity
+6 workflow nodes | Multiple API layers | Real-time sync
+
+-- 7 of 8 --
+
+Ready to Automate Your Business?
+Let's discuss your automation needs
+blagoveshchenskyivan@gmail.com
+Available on: LinkedIn | Fiverr | Upwork
+
+-- 8 of 8 --
+
+
+
+
+======== uploads/Project_2_Marketing_Campaign_Budget_Auto.pdf ========
+
+Marketing Campaign Budget
+Automation
+N8N Workflow Automation Project
+
+-- 1 of 8 --
+
+The Challenge
+Automate daily advertising budget allocation across multiple campaigns and channels
+(Facebook/Instagram) with performance data sync
+
+-- 2 of 8 --
+
+Our Solution
+1 Daily scheduled budget update workflow (05:00 UTC)
+2 Multi-account Facebook Graph API integration
+3 Dynamic budget calculation based on real-time metrics
+4 Batch budget updates across platforms
+
+-- 3 of 8 --
+
+Key Technologies
+Facebook Graph API Google Sheets API JavaScript
+HTTP REST Scheduled Triggers
+
+-- 4 of 8 --
+
+Workflow Architecture
+
+-- 5 of 8 --
+
+Business Impact
+✓ Reduced budget management from 2 hours to 5 minutes daily
+✓ Eliminated manual spreadsheet updates
+✓ Real-time performance-based allocation
+✓ Supports 10+ concurrent ad accounts
+
+-- 6 of 8 --
+
+Workflow Complexity
+11-14 workflow nodes | Multi-API orchestration | Real-
+time + batch
+
+-- 7 of 8 --
+
+Ready to Automate Your Business?
+Let's discuss your automation needs
+blagoveshchenskyivan@gmail.com
+Available on: LinkedIn | Fiverr | Upwork
+
+-- 8 of 8 --
+
+
+
+
+======== uploads/Project_3_E_Commerce_Product_Inventory_S.pdf ========
+
+E-Commerce Product Inventory
+Synchronization
+N8N Workflow Automation Project
+
+-- 1 of 8 --
+
+The Challenge
+Maintain real-time synchronization of product inventory between e-commerce
+platform and central Google Sheets database
+
+-- 2 of 8 --
+
+Our Solution
+1 Daily scheduled data sync (23:50 UTC)
+2 API integration for order retrieval
+3 Intelligent data aggregation from orders
+4 Smart update logic - only changed records
+
+-- 3 of 8 --
+
+Key Technologies
+E-commerce API Google Sheets API JavaScript
+Scheduled Triggers Error Logging
+
+-- 4 of 8 --
+
+Workflow Architecture
+
+-- 5 of 8 --
+
+Business Impact
+✓ Real-time inventory visibility
+✓ Automatic stock level updates (10+ daily)
+✓ Zero manual data entry
+✓ Complete order history tracking
+
+-- 6 of 8 --
+
+Workflow Complexity
+5 workflow nodes | Custom data aggregation | Daily sync
+
+-- 7 of 8 --
+
+Ready to Automate Your Business?
+Let's discuss your automation needs
+blagoveshchenskyivan@gmail.com
+Available on: LinkedIn | Fiverr | Upwork
+
+-- 8 of 8 --
+
+
+
+
+======== uploads/Project_4_E_Commerce_Order_Recovery___Da.pdf ========
+
+E-Commerce Order Recovery &
+Data Mining
+N8N Workflow Automation Project
+
+-- 1 of 8 --
+
+The Challenge
+Recover historical order data, extract detailed product information, and populate
+database for business intelligence
+
+-- 2 of 8 --
+
+Our Solution
+1 Paginated API calls retrieving 500+ historical records
+2 Deep data extraction of nested product details
+3 Intelligent product grouping and deduplication
+4 Batch update with conflict resolution
+
+-- 3 of 8 --
+
+Key Technologies
+E-commerce API Google Sheets API JavaScript
+Pagination Data Transformation
+
+-- 4 of 8 --
+
+Workflow Architecture
+
+-- 5 of 8 --
+
+Business Impact
+✓ Recovered 5+ years of historical order data
+✓ Populated database with 1000+ products
+✓ Enabled business intelligence and analytics
+✓ Single-run recovery operation
+
+-- 6 of 8 --
+
+Workflow Complexity
+12 workflow nodes | Complex nested extraction |
+Advanced transformation
+
+-- 7 of 8 --
+
+Ready to Automate Your Business?
+Let's discuss your automation needs
+blagoveshchenskyivan@gmail.com
+Available on: LinkedIn | Fiverr | Upwork
+
+-- 8 of 8 --
+
+
+
+
+======== uploads/Project_5_AI_Powered_Task_Management___A.pdf ========
+
+AI-Powered Task Management
+& Automation
+N8N Workflow Automation Project
+
+-- 1 of 8 --
+
+The Challenge
+Create intelligent task planning system that understands natural language commands
+from Telegram and creates structured tasks
+
+-- 2 of 8 --
+
+Our Solution
+1 Telegram webhook integration for message capture
+2 Message logging to Google Sheets (audit trail)
+3 Google Gemini AI for natural language understanding
+4 Intelligent task detection and conditional creation
+
+-- 3 of 8 --
+
+Key Technologies
+Telegram Bot API Google Sheets API Google Gemini AI
+Google Tasks API N8N Agents
+
+-- 4 of 8 --
+
+Workflow Architecture
+
+-- 5 of 8 --
+
+Business Impact
+✓ Hands-free task management through chat
+✓ Automated task categorization
+✓ Complete task history and context
+✓ AI-assisted productivity enhancement
+
+-- 6 of 8 --
+
+Workflow Complexity
+8 workflow nodes | AI integration | Real-time messaging
+
+-- 7 of 8 --
+
+Ready to Automate Your Business?
+Let's discuss your automation needs
+blagoveshchenskyivan@gmail.com
+Available on: LinkedIn | Fiverr | Upwork
+
+-- 8 of 8 --
+
+
+
+
+======== uploads/Project_6_Service_Account_Management___D.pdf ========
+
+Service Account Management
+& Debt Tracking System
+N8N Workflow Automation Project
+
+-- 1 of 8 --
+
+The Challenge
+Automate account verification, balance tracking, and debt notification with real-time
+webhook integration
+
+-- 2 of 8 --
+
+Our Solution
+1 Webhook-based real-time account lookup
+2 Google Sheets-based directory database
+3 Dynamic balance calculation and categorization
+4 Multi-channel notification system (Manychat)
+
+-- 3 of 8 --
+
+Key Technologies
+Webhook Handlers Google Sheets API Manychat API
+Conditional Logic CRM Integration
+
+-- 4 of 8 --
+
+Workflow Architecture
+
+-- 5 of 8 --
+
+Business Impact
+✓ Instant account verification (< 1 second response)
+✓ Automated debt notifications
+✓ Reduced customer support load
+✓ Real-time payment status updates
+
+-- 6 of 8 --
+
+Workflow Complexity
+16 workflow nodes | Multi-conditional branching | Real-
+time webhooks
+
+-- 7 of 8 --
+
+Ready to Automate Your Business?
+Let's discuss your automation needs
+blagoveshchenskyivan@gmail.com
+Available on: LinkedIn | Fiverr | Upwork
+
+-- 8 of 8 --
+
+
+
+
+======== uploads/Project_7_Automated_Financial_Report_Gen_1.pdf ========
+
+Automated Financial Report
+Generation
+N8N Workflow Automation Project
+
+-- 1 of 8 --
+
+The Challenge
+Create comprehensive monthly reports combining multiple data sources with AI-
+powered analysis and automatic delivery
+
+-- 2 of 8 --
+
+Our Solution
+1 Multi-source data aggregation (Google Sheets, Facebook Ads)
+2 Dynamic month resolution for previous-month reporting
+3 Google Gemini AI for performance analysis
+4 Automatic Google Slides report generation
+
+-- 3 of 8 --
+
+Key Technologies
+Google Sheets API Facebook Graph API Google Gemini AI
+Google Slides API Rate Limiting
+
+-- 4 of 8 --
+
+Workflow Architecture
+
+-- 5 of 8 --
+
+Business Impact
+✓ Automated monthly reporting (saves 4+ hours)
+✓ AI-powered insights generation
+✓ Consistent report format and branding
+✓ Executive-ready output
+✓ Complete audit trail
+
+-- 6 of 8 --
+
+Workflow Complexity
+14 workflow nodes | Multi-API orchestration | AI analysis
+
+-- 7 of 8 --
+
+Ready to Automate Your Business?
+Let's discuss your automation needs
+blagoveshchenskyivan@gmail.com
+Available on: LinkedIn | Fiverr | Upwork
+
+-- 8 of 8 --
+
+
+
+
+======== uploads/Project_8_Automated_File_Based_Data_Sync.pdf ========
+
+Automated File-Based Data
+Synchronization
+N8N Workflow Automation Project
+
+-- 1 of 8 --
+
+The Challenge
+Synchronize debt data from Excel files uploaded to Google Drive into central Google
+Sheets database with normalization
+
+-- 2 of 8 --
+
+Our Solution
+1 Dual triggers: scheduled sync + file upload detection
+2 Automatic file download from Google Drive
+3 Excel file parsing and data extraction
+4 Data normalization with format conversion
+
+-- 3 of 8 --
+
+Key Technologies
+Google Drive API Excel Parsing Google Sheets API
+JavaScript Error Handling
+
+-- 4 of 8 --
+
+Workflow Architecture
+
+-- 5 of 8 --
+
+Business Impact
+✓ Eliminated manual file import process
+✓ Real-time data synchronization
+✓ Reduced data entry errors
+✓ Complete file history tracking
+✓ Supports daily syncs + on-demand uploads
+
+-- 6 of 8 --
+
+Workflow Complexity
+7 workflow nodes | Dual-trigger architecture | File
+processing
+
+-- 7 of 8 --
+
+Ready to Automate Your Business?
+Let's discuss your automation needs
+blagoveshchenskyivan@gmail.com
+Available on: LinkedIn | Fiverr | Upwork
+
+-- 8 of 8 --
+
+

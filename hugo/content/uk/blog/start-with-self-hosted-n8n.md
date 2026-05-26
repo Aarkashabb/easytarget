@@ -1,8 +1,10 @@
 ---
 title: "Старт із self-hosted N8N"
 date: 2023-10-12
-description: "Покрокова інструкція з розгортання та захисту власного інстансу N8N для команд."
-tags: ["Гайд", "N8N"]
+description: "Покрокова інструкція з розгортання та захисту власного інстансу N8N для команд. Налаштування Docker, безпеки та резервних копій."
+image: "images/n8n-guide.svg"
+tags: ["Гайд", "N8N", "DevOps", "Automation"]
+author: "Ivan Blagoveshchenskyi"
 draft: false
 ---
 
@@ -36,4 +38,15 @@ docker run -d \
 
 ## Наступні кроки
 
-Після розгортання налаштуйте перший workflow та підключіть потрібні credentials. Якщо потрібна допомога — напишіть мені.
+Після розгортання налаштуйте перший workflow та підключіть потрібні credentials. 
+
+### Важно: безпека
+Обов'язково ознайомтесь з [best practices для безпеки no-code автоматизації](/uk/blog/security-best-practices-no-code-automation/) — вони критичні для self-hosted N8N.
+
+### ROI ваших workflows
+Перевіримо, чи окупиться ваша автоматизація. Читайте [гайд з розрахунку ROI для automation](/uk/blog/calculating-roi-workflow-automation/).
+
+### Приклади з практики
+Подивіться на [case studies від нашої команди](/uk/portfolio/) — реальні приклади того, як N8N вирішує бізнес-задачи.
+
+Якщо потрібна допомога — [запишіться на консультацію](https://calendly.com/blagoveshchenskyivan/30min).

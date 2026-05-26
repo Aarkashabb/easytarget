@@ -118,3 +118,11 @@ cta_title: "Ready to automate your business?"
 cta_lede: "Stop spending time on manual tasks. Let's build a scalable system so you can focus on growth."
 cta_button: "Book Free Consultation"
 ---
+
+## Learn From Real Case Studies
+
+Explore detailed automation strategies and proven methodologies: [Calculating ROI for Workflow Automation](/en/blog/calculating-roi-workflow-automation/) shows you how to measure the real impact of your automation investments.
+
+## Ready to Get Started?
+
+Begin your automation journey with our comprehensive guide: [Start with Self-Hosted N8N](/en/blog/start-with-self-hosted-n8n/) — learn how to design and deploy reliable automation infrastructure.

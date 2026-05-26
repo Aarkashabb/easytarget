@@ -31,3 +31,11 @@ result_unit: "response"
 result_label: "instant account lookup"
 complexity_summary: "Multi-conditional branching · Real-time webhooks"
 ---
+
+## Customer Service Automation Impact
+
+This project demonstrates the value of real-time automation in customer service operations. Measure the customer support efficiency gains: [How to Calculate ROI for Workflow Automation](/en/blog/calculating-roi-workflow-automation/).
+
+## Need Real-Time Account Integration?
+
+Start with our guide [Getting Started with Self-Hosted N8N](/en/blog/start-with-self-hosted-n8n/) to design your real-time webhook infrastructure for customer account management.

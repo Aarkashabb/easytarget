@@ -31,3 +31,11 @@ result_unit: "daily"
 result_label: "budget management time"
 complexity_summary: "Multi-API orchestration · Real-time + batch"
 ---
+
+## Real ROI Numbers
+
+This project demonstrates compelling automation results: reducing budget administration time from 2 hours to just 5 minutes daily. Learn how to calculate ROI for similar projects: [How to Calculate ROI for Workflow Automation](/en/blog/calculating-roi-workflow-automation/).
+
+## Need Similar Automation?
+
+Start with our guide [Getting Started with Self-Hosted N8N](/en/blog/start-with-self-hosted-n8n/) and calculate the savings for your use case.

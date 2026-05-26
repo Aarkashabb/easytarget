@@ -31,3 +31,11 @@ result_unit: "hands-free"
 result_label: "voice/chat-driven task capture"
 complexity_summary: "AI integration · Real-time messaging"
 ---
+
+## Productivity Enhancement Through AI
+
+This project showcases how AI-powered automation improves task management and team productivity. Learn how to measure the productivity impact: [How to Calculate ROI for Workflow Automation](/en/blog/calculating-roi-workflow-automation/).
+
+## Ready to Add AI to Your Workflow?
+
+Start with our guide [Getting Started with Self-Hosted N8N](/en/blog/start-with-self-hosted-n8n/) to understand how to integrate AI capabilities like Gemini into your automation workflows.

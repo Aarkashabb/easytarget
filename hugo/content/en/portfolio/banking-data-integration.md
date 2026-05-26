@@ -31,3 +31,11 @@ result_unit: "hours/mo"
 result_label: "manual checking eliminated"
 complexity_summary: "Multiple API layers · Real-time sync"
 ---
+
+## How We Secured Your Financial Data
+
+Since this project involved transmitting sensitive banking data, security was paramount. Learn about the best practices we applied: [Security Best Practices for No-Code Automation](/en/blog/security-best-practices-no-code-automation/).
+
+## Need a Similar Integration?
+
+Start with our guide on [Getting Started with Self-Hosted N8N](/en/blog/start-with-self-hosted-n8n/) to estimate your project costs and [calculate ROI for workflow automation](/en/blog/calculating-roi-workflow-automation/).

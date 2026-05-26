@@ -31,3 +31,11 @@ result_unit: "daily"
 result_label: "budget management time"
 complexity_summary: "Оркестрація кількох API · Real-time + batch"
 ---
+
+## Реальні цифри ROI
+
+Цей проект демонструє переконливі результати автоматизації: скорочення часу адміністрування з 2 годин на 5 хвилин щодня. Дізнайтеся як розраховується ROI для подібних проектів: [Як розраховувати ROI для workflow автоматизації](/uk/blog/calculating-roi-workflow-automation/).
+
+## Потрібна подібна автоматизація?
+
+Розпочніть з нашого гайду [Старт із self-hosted N8N](/uk/blog/start-with-self-hosted-n8n/) та розрахуйте економію для вашого випадку.

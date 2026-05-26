@@ -31,3 +31,11 @@ result_unit: "hours/mo"
 result_label: "manual checking eliminated"
 complexity_summary: "Кілька API-шарів · Sync у реальному часі"
 ---
+
+## Як ми забезпечили безпеку фінансових даних
+
+Оскільки цей проект передавав чутливі банківські дані, безпека була пріоритетом. Дізнайтеся про best practices, які ми застосували: [Best Practices безпеки в No-Code автоматизації](/uk/blog/security-best-practices-no-code-automation/).
+
+## Потрібна подібна інтеграція?
+
+Розпочніть з нашого гайду [Старт із self-hosted N8N](/uk/blog/start-with-self-hosted-n8n/) щоб розрахувати вартість вашого проекту та [ROI від автоматизації](/uk/blog/calculating-roi-workflow-automation/).

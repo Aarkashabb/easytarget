@@ -32,3 +32,11 @@ result_unit: "manual imports"
 result_label: "fully automated ingest"
 complexity_summary: "Dual-trigger architecture · File processing"
 ---
+
+## Eliminating Manual Data Entry
+
+This project showcases the operational efficiency of automating file-based data imports. Understand the business value: [How to Calculate ROI for Workflow Automation](/en/blog/calculating-roi-workflow-automation/).
+
+## Need File Synchronization Automation?
+
+Start with our guide [Getting Started with Self-Hosted N8N](/en/blog/start-with-self-hosted-n8n/) to plan your file-processing workflows and estimate the data-entry time savings.

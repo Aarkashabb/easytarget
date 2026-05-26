@@ -32,3 +32,11 @@ result_unit: "hours/mo"
 result_label: "monthly reporting saved"
 complexity_summary: "Multi-API orchestration · AI analysis"
 ---
+
+## Proof of Business Impact
+
+This project demonstrates significant results: saving 4+ hours monthly on reporting. Learn how to calculate the complete ROI for similar projects, including productivity impact: [How to Calculate ROI for Workflow Automation](/en/blog/calculating-roi-workflow-automation/).
+
+## Ready to Start Your Project?
+
+[Getting Started with Self-Hosted N8N](/en/blog/start-with-self-hosted-n8n/) will help you plan your infrastructure.

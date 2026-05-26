@@ -31,3 +31,11 @@ result_unit: "errors"
 result_label: "manual data entry eliminated"
 complexity_summary: "Custom data aggregation · Daily sync"
 ---
+
+## Real Impact of Inventory Automation
+
+This project demonstrates the value of eliminating manual inventory management. Learn how to calculate the complete ROI for e-commerce automation projects: [How to Calculate ROI for Workflow Automation](/en/blog/calculating-roi-workflow-automation/).
+
+## Need Similar E-Commerce Automation?
+
+Start with our guide [Getting Started with Self-Hosted N8N](/en/blog/start-with-self-hosted-n8n/) to plan your e-commerce integration and estimate the business impact.

@@ -31,3 +31,11 @@ result_unit: "products"
 result_label: "recovered & catalogued"
 complexity_summary: "Complex nested extraction · Advanced transformation"
 ---
+
+## Unlocking Historical Data Value
+
+This project demonstrates how data recovery and organization enables business intelligence. Understand the business impact of automation through: [How to Calculate ROI for Workflow Automation](/en/blog/calculating-roi-workflow-automation/).
+
+## Need Data Integration Help?
+
+Start with our infrastructure guide [Getting Started with Self-Hosted N8N](/en/blog/start-with-self-hosted-n8n/) to understand the platform capabilities for your data migration needs.

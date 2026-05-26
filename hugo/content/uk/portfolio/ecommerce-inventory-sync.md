@@ -31,3 +31,11 @@ result_unit: "errors"
 result_label: "manual data entry eliminated"
 complexity_summary: "Кастомна агрегація даних · Щоденний sync"
 ---
+
+## Вплив автоматизації залишків
+
+Цей проект демонструє цінність виключення ручного керування запасами. Дізнайтеся, як розраховується ROI для e-commerce проектів автоматизації: [Як розраховувати ROI для автоматизації рабочих процесів](/uk/blog/calculating-roi-workflow-automation/).
+
+## Потрібна подібна E-Commerce автоматизація?
+
+Розпочніть з нашого гайду [Старт із self-hosted N8N](/uk/blog/start-with-self-hosted-n8n/) для планування вашої e-commerce інтеграції та оцінки бізнес-впливу.

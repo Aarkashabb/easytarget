@@ -1,4 +1,5 @@
 {{- /* JSON-LD Schema Markup */ -}}
+
 {{- /* Organization Schema */ -}}
 <script type="application/ld+json">
 {
@@ -6,8 +7,8 @@
   "@type": "Organization",
   "name": "{{ .Site.Params.siteName }}",
   "url": "{{ .Site.BaseURL }}",
-  "logo": "{{ .Site.BaseURL }}images/logo.png",
-  "description": "Automation services for business processes using N8N, Make, Zapier",
+  "logo": "{{ .Site.BaseURL }}images/logo.svg",
+  "description": "Workflow automation services for business processes using N8N, Make, Zapier. Custom automation solutions for banking, marketing, e-commerce, and more.",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+380",
@@ -33,6 +34,7 @@
     "name": "{{ .Site.Params.siteName }}"
   },
   "url": "{{ .Site.BaseURL }}",
+  "jobTitle": "Workflow Automation Specialist",
   "sameAs": [
     "{{ .Site.Params.linkedin }}",
     "{{ .Site.Params.telegram }}"
@@ -40,32 +42,95 @@
 }
 </script>
 
-{{- /* Article/BlogPosting Schema - for blog posts */ -}}
+{{- /* BlogPosting Schema - for blog posts */ -}}
 {{- if eq .Type "blog" -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "{{ .Title }}",
-  "description": "{{ .Summary }}",
-  "image": "{{ with .Params.image }}{{ .Site.BaseURL }}{{ . }}{{ end }}",
-  "datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}",
+  "description": "{{ .Description | default .Summary }}",
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ with .Params.image }}{{ .Site.BaseURL }}{{ . }}{{ else }}{{ .Site.BaseURL }}images/favicon.svg{{ end }}"
+  },
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
   "dateModified": "{{ .LastMod.Format "2006-01-02T15:04:05Z07:00" }}",
   "author": {
     "@type": "Person",
-    "name": "Ivan Blagoveshchenskyi"
+    "name": "Ivan Blagoveshchenskyi",
+    "url": "{{ .Site.BaseURL }}"
   },
   "publisher": {
     "@type": "Organization",
     "name": "{{ .Site.Params.siteName }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ .Site.BaseURL }}images/logo.png"
+      "url": "{{ .Site.BaseURL }}images/logo.svg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  }
+  {{- with .Params.tags -}}
+  ,
+  "keywords": "{{ delimit . ", " }}"
+  {{- end -}}
+}
+</script>
+{{- end -}}
+
+{{- /* Service Schema - for portfolio items (case studies) */ -}}
+{{- if eq .Type "portfolio" -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ .Title }}",
+  "description": "{{ .Description }}",
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ with .Params.image }}{{ .Site.BaseURL }}{{ . }}{{ else }}{{ .Site.BaseURL }}images/favicon.svg{{ end }}"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "{{ .Site.Params.siteName }}",
+    "url": "{{ .Site.BaseURL }}"
+  },
+  "areaServed": "Worldwide",
+  {{- with .Params.industry_label -}}
+  "category": "{{ . }}",
+  {{- end -}}
+  {{- with .Params.platform -}}
+  "serviceType": "{{ . }} Integration",
+  {{- end -}}
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": {
+      "@type": "EntryPoint",
+      "url": "{{ .Site.Params.calendly }}"
     }
   }
 }
 </script>
 {{- end -}}
+
+{{- /* WebPage Schema - for all pages */ -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{{ .Title }}",
+  "description": "{{ .Description | default .Summary }}",
+  "url": "{{ .Permalink }}",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "{{ .Site.Params.siteName }}",
+    "url": "{{ .Site.BaseURL }}"
+  }
+}
+</script>
 
 {{- /* BreadcrumbList Schema */ -}}
 {{- if gt (len .Breadcrumbs) 1 -}}
