@@ -1,15 +1,16 @@
-{{- /* robots.txt for Search Engines and AI Crawlers */ -}}
+{{/* robots.txt for Search Engines and AI Crawlers */}}
 # Allow all search engines
 User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /private/
 Disallow: /*.json$
+Crawl-delay: 1
 
 # Specify sitemap
 Sitemap: {{ .Site.BaseURL }}sitemap.xml
 
-{{- /* AI Crawler Configuration */ -}}
+{{/* AI Crawler Configuration */}}
 # OpenAI GPTBot - allow for training (beneficial for brand awareness)
 User-agent: GPTBot
 Allow: /
@@ -50,7 +51,3 @@ Allow: /
 
 User-agent: DuckDuckBot
 Allow: /
-
-# Crawl delay settings
-User-agent: *
-Crawl-delay: 1
