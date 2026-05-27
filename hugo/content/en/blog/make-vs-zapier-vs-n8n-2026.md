@@ -1,6 +1,6 @@
 ---
 title: "Make vs Zapier vs N8N: The Complete 2026 Comparison"
-date: 2026-06-02
+date: 2026-05-27
 lastmod: 2026-05-27
 description: "Side-by-side comparison of the three leading no-code automation platforms: pricing, integrations, setup complexity, self-hosted options. Pick the right tool for your business."
 image: "images/blog/make-vs-zapier-vs-n8n-hero.jpg"
