@@ -3,7 +3,7 @@ title: "Self-Hosted N8N: Complete Production Setup Guide (2026)"
 date: 2026-05-26
 lastmod: 2026-05-27
 description: "Step-by-step guide to deploying production-ready self-hosted N8N with Docker, PostgreSQL, HTTPS, automated backups, and monitoring. Security best practices included."
-image: "images/blog/start-with-self-hosted-n8n-hero.jpg"
+image: "/images/blog/start-with-self-hosted-n8n-hero.jpg"
 tags: ["N8N", "Self-Hosting", "DevOps", "Docker", "Automation"]
 keywords: ["self-hosted n8n", "n8n docker", "n8n setup", "n8n production", "n8n vps"]
 author: "Ivan Blagoveshchenskyi"

@@ -3,7 +3,7 @@ title: "The Complete Guide to Business Process Automation in 2026"
 date: 2026-05-26
 lastmod: 2026-05-27
 description: "How to start automating business processes in 2026: which tasks to automate first, how to choose between Make, N8N, and Zapier, and how to build workflows that save 10-40 hours per week."
-image: "images/blog/automation-guide-2026-hero.jpg"
+image: "/images/blog/automation-guide-2026-hero.jpg"
 tags: ["Guide", "Automation", "Business Process", "BPA", "Workflow"]
 keywords: ["business process automation", "workflow automation", "automation guide", "BPA"]
 author: "Ivan Blagoveshchenskyi"
@@ -17,6 +17,8 @@ Business process automation in 2026 is no longer a competitive advantage — it 
 Business Process Automation (BPA) means using software to execute repetitive tasks without human involvement. Instead of manually moving data between your CRM and spreadsheets every morning, a properly configured system does it instantly, automatically, and error-free.
 
 Today, process automation spans everything: from email notifications and order status updates to financial report generation and multi-platform inventory synchronization. A well-built workflow saves teams between 10 and 40 hours per week — time that shifts back to work that actually creates value.
+
+![Manual work vs automated workflow comparison](/images/blog/automation-manual-vs-automated.jpg)
 
 ## Which Processes to Automate First
 
@@ -44,6 +46,8 @@ Dozens of no-code and low-code platforms exist, but three leaders cover 80% of s
 Platform choice depends on three factors: your team's technical level, monthly operation volume, and data security requirements. For most B2B companies, N8N or Make is the optimal choice.
 
 For a full side-by-side breakdown with pricing and capability tables, see [Make vs Zapier vs N8N: The Complete 2026 Comparison](/en/blog/make-vs-zapier-vs-n8n-2026/).
+
+![Business team with automation dashboards](/images/blog/automation-business-dashboards.jpg)
 
 ## Steps to Launch Your First Automation
 

@@ -3,7 +3,7 @@ title: "Make vs Zapier vs N8N: The Complete 2026 Comparison"
 date: 2026-05-27
 lastmod: 2026-05-27
 description: "Side-by-side comparison of the three leading no-code automation platforms: pricing, integrations, setup complexity, self-hosted options. Pick the right tool for your business."
-image: "images/blog/make-vs-zapier-vs-n8n-hero.jpg"
+image: "/images/blog/make-vs-zapier-vs-n8n-hero.jpg"
 tags: ["Comparison", "Make", "Zapier", "N8N", "No-code"]
 keywords: ["make vs zapier", "n8n vs zapier", "make vs n8n", "automation platform comparison", "no-code platforms"]
 author: "Ivan Blagoveshchenskyi"
@@ -11,6 +11,8 @@ draft: false
 ---
 
 Choosing an [automation platform](/en/blog/automation-guide-2026/) in 2026 means picking between three dominant players — each with its own audience, strengths, and limitations. Make, Zapier, and N8N all promise to connect your tools and eliminate manual work, but they serve very different needs. This comparison cuts through the noise so you can make the right call for your business.
+
+![Zapier, Make, and N8N user interfaces side-by-side comparison](/images/blog/make-zapier-n8n-ui-comparison.jpg)
 
 ## Zapier: Simplicity as the Core Value Proposition
 
@@ -43,6 +45,8 @@ N8N supports JavaScript execution directly inside nodes, enabling unlimited cust
 | **Best for** | Non-technical teams | B2B mid-complexity | Technical teams / GDPR |
 
 ## How to Choose — Decision Algorithm
+
+![Decision tree: which automation platform to choose](/images/blog/make-zapier-n8n-decision-tree.jpg)
 
 **Choose Zapier if:**
 - Your team has no technical staff

@@ -2,7 +2,7 @@
 title: "Как рассчитать ROI для автоматизации workflow"
 date: 2024-02-10
 description: "Практический гайд по расчету экономии времени и денег от автоматизации. Примеры расчетов для типичных бизнес-процессов."
-image: "images/roi-automation.svg"
+image: "/images/roi-automation.svg"
 tags: ["ROI", "Business Case", "Automation Strategy"]
 author: "Ivan Blagoveshchenskyi"
 draft: false

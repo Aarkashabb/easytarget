@@ -2,7 +2,7 @@
 title: "Security Best Practices for No-Code Automation 2024"
 date: 2024-01-15
 description: "Comprehensive guide to securing N8N, Make, and Zapier workflows. How to protect credentials, API keys, and client data in no-code automation."
-image: "images/security-automation.svg"
+image: "/images/security-automation.svg"
 tags: ["Security", "Best Practices", "N8N", "Make", "Zapier"]
 author: "Ivan Blagoveshchenskyi"
 draft: false
