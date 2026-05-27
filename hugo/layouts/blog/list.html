@@ -14,9 +14,10 @@
     <div class="insights__grid">
       {{- range .Pages }}
       <article class="icard">
+        {{- $title := .Title -}}
         <a class="icard__thumb" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
           {{- with .Params.image }}
-          <img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy" decoding="async">
+          <img src="{{ . | relURL }}" alt="{{ $title }}" loading="lazy" decoding="async">
           {{- else }}
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h13a3 3 0 013 3v13H7a3 3 0 01-3-3V4z" stroke="currentColor" stroke-width="1.6"/><path d="M7 8h9M7 12h9M7 16h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           {{- end }}
