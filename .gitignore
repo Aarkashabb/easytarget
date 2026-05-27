@@ -3,5 +3,5 @@ hugo/.hugo_build.lock
 .DS_Store
 Thumbs.db
 claude-seo/
-Blog/
+/Blog/
 files.zip
