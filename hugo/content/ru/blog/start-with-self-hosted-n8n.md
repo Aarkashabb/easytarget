@@ -90,6 +90,8 @@ docker --version && docker compose version
 
 ## Шаг 2 — Развёртывание N8N через Docker Compose
 
+![Архитектура self-hosted N8N: VPS, Traefik reverse proxy, N8N, PostgreSQL, Cron в Docker network](/images/blog/n8n-self-hosted-architecture.jpg)
+
 Создаём структуру директорий и основной `docker-compose.yml` с PostgreSQL и Traefik:
 
 ```bash
