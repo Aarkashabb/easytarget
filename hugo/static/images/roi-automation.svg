@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 655" width="1200" height="655">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#3B82F6"/>
+      <stop offset="100%" style="stop-color:#A855F7"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+  <rect width="1200" height="655" fill="url(#bg)"/>
+  <g opacity="0.08">
+    <path d="M0,500 Q300,400 600,450 T1200,420" stroke="#fff" stroke-width="2" fill="none"/>
+    <path d="M0,520 Q300,420 600,470 T1200,440" stroke="#fff" stroke-width="2" fill="none"/>
+  </g>
+  <text x="600" y="100" font-family="Inter, system-ui, sans-serif" font-size="56" font-weight="800" fill="#fff" text-anchor="middle">ROI Calculator</text>
+  <text x="600" y="150" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="500" fill="#cbd5e1" text-anchor="middle">Workflow Automation Payback Analysis</text>
+  <g transform="translate(200,250)">
+    <rect x="0" y="220" width="100" height="120" rx="6" fill="url(#bar)" opacity="0.6"/>
+    <rect x="140" y="160" width="100" height="180" rx="6" fill="url(#bar)" opacity="0.7"/>
+    <rect x="280" y="100" width="100" height="240" rx="6" fill="url(#bar)" opacity="0.85"/>
+    <rect x="420" y="40" width="100" height="300" rx="6" fill="url(#bar)"/>
+    <rect x="560" y="0" width="100" height="340" rx="6" fill="url(#bar)" filter="url(#glow)"/>
+    <rect x="560" y="0" width="100" height="340" rx="6" fill="url(#bar)"/>
+    <line x1="-20" y1="340" x2="700" y2="340" stroke="#fff" stroke-width="2" opacity="0.5"/>
+    <text x="50" y="370" font-family="Inter" font-size="16" font-weight="600" fill="#fff" text-anchor="middle">M1</text>
+    <text x="190" y="370" font-family="Inter" font-size="16" font-weight="600" fill="#fff" text-anchor="middle">M2</text>
+    <text x="330" y="370" font-family="Inter" font-size="16" font-weight="600" fill="#fff" text-anchor="middle">M3</text>
+    <text x="470" y="370" font-family="Inter" font-size="16" font-weight="600" fill="#fff" text-anchor="middle">M4</text>
+    <text x="610" y="370" font-family="Inter" font-size="16" font-weight="600" fill="#fff" text-anchor="middle">M5</text>
+  </g>
+  <text x="970" y="320" font-family="Inter" font-size="80" font-weight="800" fill="#fff" text-anchor="middle">+340%</text>
+  <text x="970" y="360" font-family="Inter" font-size="20" font-weight="500" fill="#cbd5e1" text-anchor="middle">ROI in 12 months</text>
+</svg>
