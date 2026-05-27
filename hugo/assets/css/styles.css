@@ -629,10 +629,14 @@ a { color: inherit; text-decoration: none; }
   justify-content: center;
   color: var(--c-text-3);
   border-bottom: 1px solid var(--c-line-soft);
+  overflow: hidden;
+  text-decoration: none;
 }
 .icard__thumb svg { width: 28px; height: 28px; opacity: 0.45; }
+.icard__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; }
+.icard:hover .icard__thumb img { transform: scale(1.04); }
 .icard__body { padding: 20px 22px 22px; }
-.icard__tags { display: flex; gap: 6px; margin-bottom: 12px; }
+.icard__tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; justify-content: center; }
 .icard__title { font-size: 16px; font-weight: 700; line-height: 1.35; margin-bottom: 8px; }
 .icard__excerpt { font-size: 13px; color: var(--c-text-2); line-height: 1.55; }
 .icard__meta { font-size: 12px; color: var(--c-text-3); margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--c-line-soft); }
