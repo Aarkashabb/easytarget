@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ block "title" . }}{{ .Title }} — {{ .Site.Params.siteName }}{{ end }}</title>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
-{{- with .Params.canonical }}<link rel="canonical" href="{{ . }}">{{ end }}
+<link rel="canonical" href="{{ with .Params.canonical }}{{ . }}{{ else }}{{ .Permalink }}{{ end }}">
 
 {{- /* Alternate language links for SEO */ -}}
 {{- range .AllTranslations }}
