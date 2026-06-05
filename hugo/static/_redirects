@@ -1,0 +1,8 @@
+# Redirect old /tproduct/ URLs to homepage (product pages removed)
+/tproduct/* / 301
+
+# Redirect old /products/ URLs to homepage
+/products/* / 301
+
+# Redirect /admin to /admin/ (trailing slash)
+/admin /admin/ 301
