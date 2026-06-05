@@ -28,7 +28,7 @@
 <meta property="og:image" content="{{ $ogImageAbs }}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="{{ if eq $ogImage "/images/og-default.jpg" }}630{{ else }}655{{ end }}">
-<meta property="og:image:alt" content="{{ .Title }}">
+<meta property="og:image:alt" content="{{ with .Params.imageAlt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
 {{- $locale := "en_US" -}}
 {{- if eq .Language.Lang "uk" }}{{ $locale = "uk_UA" }}{{ end -}}
 {{- if eq .Language.Lang "ru" }}{{ $locale = "ru_RU" }}{{ end -}}
@@ -45,7 +45,7 @@
 <meta name="twitter:title" content="{{ .Title }}">
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
 <meta name="twitter:image" content="{{ $ogImageAbs }}">
-<meta name="twitter:image:alt" content="{{ .Title }}">
+<meta name="twitter:image:alt" content="{{ with .Params.imageAlt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
 
 {{- /* JSON-LD Structured Data */ -}}
 {{- partial "schema.html" . -}}

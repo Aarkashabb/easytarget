@@ -4,6 +4,7 @@ date: 2026-05-26
 lastmod: 2026-05-27
 description: "Покрокова інструкція з розгортання production-ready self-hosted N8N з Docker, PostgreSQL, HTTPS, автоматичними бекапами та моніторингом. Best practices безпеки включені."
 image: "/images/blog/start-with-self-hosted-n8n-hero.jpg"
+imageAlt: "Логотип N8N зі стійками серверів та з'єднаннями потоків даних — розширювана платформа автоматизації workflow"
 tags: ["N8N", "Self-Hosting", "DevOps", "Docker", "Автоматизація"]
 keywords: ["self-hosted n8n", "n8n docker", "n8n налаштування", "n8n на своєму сервері"]
 author: "Ivan Blagoveshchenskyi"

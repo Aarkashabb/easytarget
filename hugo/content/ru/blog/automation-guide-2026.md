@@ -4,6 +4,7 @@ date: 2026-05-26
 lastmod: 2026-05-27
 description: "Как начать автоматизацию бизнес-процессов в 2026: какие задачи автоматизировать первыми, как выбрать между Make, N8N и Zapier, и как построить workflow, экономящий 10-40 часов в неделю."
 image: "/images/blog/automation-guide-2026-hero.jpg"
+imageAlt: "Развитая цифровая экосистема workflow с облачной аналитикой, AI-интеграцией и бизнес-аналитикой"
 tags: ["Гайд", "Автоматизация", "Бизнес-процессы", "BPA", "Workflow"]
 keywords: ["автоматизация процессов", "автоматизация бизнес-процессов", "business process automation", "workflow automation"]
 author: "Ivan Blagoveshchenskyi"

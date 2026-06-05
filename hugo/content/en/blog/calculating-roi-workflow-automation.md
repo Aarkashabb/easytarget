@@ -3,6 +3,7 @@ title: "How to Calculate ROI for Workflow Automation"
 date: 2024-02-10
 description: "Practical guide to calculating time and cost savings from automation. Real examples for typical business processes."
 image: "/images/roi-automation.svg"
+imageAlt: "ROI calculator with rising bar chart showing 340% payback in 12 months from workflow automation"
 tags: ["ROI", "Business Case", "Automation Strategy"]
 author: "Ivan Blagoveshchenskyi"
 draft: false

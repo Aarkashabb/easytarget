@@ -3,6 +3,7 @@ title: "Безпека у No-Code автоматизації: Best Practices 202
 date: 2024-01-15
 description: "Комплексний гайд з безпеки для N8N, Make та Zapier. Як захистити credentials, API keys та дані клієнтів у no-code workflows."
 image: "/images/security-automation.svg"
+imageAlt: "Щит безпеки з галочкою на фоні зашифрованого коду — найкращі практики безпеки no-code автоматизації"
 tags: ["Безпека", "Best Practices", "N8N", "Make", "Zapier"]
 author: "Ivan Blagoveshchenskyi"
 draft: false
