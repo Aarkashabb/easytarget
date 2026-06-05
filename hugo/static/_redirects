@@ -1,8 +1,22 @@
-# Redirect old /tproduct/ URLs to homepage (product pages removed)
-/tproduct/* / 301
+# Legacy Tilda redirects — old site URLs → new Hugo site
+# Cleans up 13 x 404 errors in Google Search Console
+# Cloudflare Pages reads this file automatically
 
-# Redirect old /products/ URLs to homepage
-/products/* / 301
+# Old Tilda product pages (vape store products) → homepage
+/tproduct/*           /                  301
 
-# Redirect /admin to /admin/ (trailing slash)
-/admin /admin/ 301
+# Old Tilda auto-generated pages (page12345.html pattern) → homepage
+/page*.html           /                  301
+
+# Old Tilda landing pages → relevant new sections
+/prankpack            /                  301
+/contacts             /#contact          301
+/ads                  /                  301
+/prices               /#services         301
+/target               /                  301
+/tilda                /                  301
+/chatbot              /                  301
+
+# Migrated from netlify.toml
+/products/*           /                  301
+/admin                /admin/            301
