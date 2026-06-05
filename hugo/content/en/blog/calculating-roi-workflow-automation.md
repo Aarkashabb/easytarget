@@ -6,6 +6,8 @@ image: "/images/roi-automation.svg"
 imageAlt: "ROI calculator with rising bar chart showing 340% payback in 12 months from workflow automation"
 tags: ["ROI", "Business Case", "Automation Strategy"]
 author: "Ivan Blagoveshchenskyi"
+cluster: "business-automation"
+clusterRole: "spoke"
 draft: false
 ---
 

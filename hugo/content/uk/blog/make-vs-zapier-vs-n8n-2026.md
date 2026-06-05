@@ -8,6 +8,8 @@ imageAlt: "Стовпчикова діаграма порівняння міся
 tags: ["Порівняння", "Make", "Zapier", "N8N", "No-code"]
 keywords: ["make vs zapier", "n8n vs zapier", "make vs n8n", "порівняння платформ автоматизації", "no-code платформи"]
 author: "Ivan Blagoveshchenskyi"
+cluster: "business-automation"
+clusterRole: "spoke"
 draft: false
 ---
 

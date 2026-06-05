@@ -6,6 +6,8 @@ image: "/images/roi-automation.svg"
 imageAlt: "Калькулятор ROI зі зростаючою діаграмою — окупність 340% за 12 місяців від автоматизації workflow"
 tags: ["ROI", "Business Case", "Automation Strategy"]
 author: "Ivan Blagoveshchenskyi"
+cluster: "business-automation"
+clusterRole: "spoke"
 draft: false
 ---
 

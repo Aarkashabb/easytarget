@@ -21,9 +21,15 @@
 
 <section style="background: var(--c-bg); padding: 0 0 96px;">
   <div class="container" style="max-width: 780px;">
+    {{- if eq .Params.clusterRole "spoke" }}
+    {{ partial "cluster-nav.html" . }}
+    {{- end }}
     <div class="card post-content" style="padding: 48px; font-size: 16px; line-height: 1.75;">
       {{ .Content }}
     </div>
+    {{- if eq .Params.clusterRole "pillar" }}
+    {{ partial "cluster-nav.html" . }}
+    {{- end }}
   </div>
 </section>
 

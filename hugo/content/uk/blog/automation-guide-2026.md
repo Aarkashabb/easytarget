@@ -8,6 +8,8 @@ imageAlt: "Розвинена цифрова екосистема workflow з х
 tags: ["Гайд", "Автоматизація", "Бізнес-процеси", "BPA", "Workflow"]
 keywords: ["автоматизація процесів", "автоматизація бізнес-процесів", "business process automation", "workflow automation"]
 author: "Ivan Blagoveshchenskyi"
+cluster: "business-automation"
+clusterRole: "pillar"
 draft: false
 ---
 

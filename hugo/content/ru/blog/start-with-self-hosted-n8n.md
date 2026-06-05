@@ -8,6 +8,8 @@ imageAlt: "Логотип N8N со стойками серверов и соед
 tags: ["N8N", "Self-Hosting", "DevOps", "Docker", "Автоматизация"]
 keywords: ["self-hosted n8n", "n8n docker", "n8n на своём сервере", "n8n настройка"]
 author: "Ivan Blagoveshchenskyi"
+cluster: "business-automation"
+clusterRole: "spoke"
 draft: false
 ---
 

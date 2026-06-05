@@ -8,6 +8,8 @@ imageAlt: "Advanced digital workflow ecosystem with cloud analytics, AI integrat
 tags: ["Guide", "Automation", "Business Process", "BPA", "Workflow"]
 keywords: ["business process automation", "workflow automation", "automation guide", "BPA"]
 author: "Ivan Blagoveshchenskyi"
+cluster: "business-automation"
+clusterRole: "pillar"
 draft: false
 ---
 

@@ -6,6 +6,8 @@ image: "/images/security-automation.svg"
 imageAlt: "Щит безопасности с галочкой на фоне зашифрованного кода — лучшие практики безопасности no-code автоматизации"
 tags: ["Безопасность", "Best Practices", "N8N", "Make", "Zapier"]
 author: "Ivan Blagoveshchenskyi"
+cluster: "business-automation"
+clusterRole: "spoke"
 draft: false
 ---
 

@@ -8,6 +8,8 @@ imageAlt: "Bar chart comparing Zapier, Make, and N8N monthly costs at small, med
 tags: ["Comparison", "Make", "Zapier", "N8N", "No-code"]
 keywords: ["make vs zapier", "n8n vs zapier", "make vs n8n", "automation platform comparison", "no-code platforms"]
 author: "Ivan Blagoveshchenskyi"
+cluster: "business-automation"
+clusterRole: "spoke"
 draft: false
 ---
 

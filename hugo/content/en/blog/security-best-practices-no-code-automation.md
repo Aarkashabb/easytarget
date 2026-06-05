@@ -6,6 +6,8 @@ image: "/images/security-automation.svg"
 imageAlt: "Security shield with checkmark over encrypted code background — no-code automation security best practices"
 tags: ["Security", "Best Practices", "N8N", "Make", "Zapier"]
 author: "Ivan Blagoveshchenskyi"
+cluster: "business-automation"
+clusterRole: "spoke"
 draft: false
 ---
 

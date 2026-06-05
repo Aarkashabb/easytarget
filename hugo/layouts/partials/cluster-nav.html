@@ -1,0 +1,51 @@
+{{- /* Cluster navigation: pillar shows hub, spoke shows callback to pillar.
+       Driven by frontmatter: cluster: "<name>", clusterRole: "pillar" | "spoke" */ -}}
+{{- with .Params.cluster -}}
+  {{- $clusterName := . -}}
+  {{- $lang := $.Site.Language.Lang -}}
+  {{- $clusterPages := where (where site.RegularPages "Section" "blog") "Params.cluster" $clusterName -}}
+  {{- $clusterPages = where $clusterPages "Language.Lang" $lang -}}
+  {{- $pillar := index (where $clusterPages "Params.clusterRole" "pillar") 0 -}}
+  {{- $spokes := where $clusterPages "Params.clusterRole" "spoke" -}}
+  {{- $topicKey := printf "cluster_topic_%s" (replace $clusterName "-" "_") -}}
+  {{- $topicLabel := i18n $topicKey -}}
+
+  {{- if eq $.Params.clusterRole "spoke" -}}
+    {{- /* SPOKE: callback callout near top, linking back to pillar */ -}}
+    {{- with $pillar }}
+    <aside class="cluster-callout cluster-callout--spoke" aria-label="{{ i18n "cluster_part_of" }}">
+      <div class="cluster-callout__label">{{ i18n "cluster_spoke_label" }}</div>
+      <div class="cluster-callout__body">
+        <span class="cluster-callout__series">{{ i18n "cluster_part_of" }}: <strong>{{ $topicLabel }}</strong></span>
+        <a class="cluster-callout__link" href="{{ .RelPermalink }}">
+          {{ i18n "cluster_read_pillar" }} → <em>{{ .Title }}</em>
+        </a>
+      </div>
+    </aside>
+    {{- end }}
+
+  {{- else if eq $.Params.clusterRole "pillar" -}}
+    {{- /* PILLAR: hub block at end of post, listing all spokes */ -}}
+    {{- if $spokes }}
+    <aside class="cluster-hub" aria-label="{{ $topicLabel }} — {{ i18n "cluster_pillar_label" }}">
+      <div class="cluster-hub__head">
+        <div class="cluster-hub__label">{{ i18n "cluster_pillar_label" }}</div>
+        <h2 class="cluster-hub__title">{{ $topicLabel }}</h2>
+        <p class="cluster-hub__intro">{{ i18n "cluster_pillar_intro" }}</p>
+      </div>
+      <ul class="cluster-hub__list">
+        {{- range $spokes }}
+        <li class="cluster-hub__item">
+          <a class="cluster-hub__link" href="{{ .RelPermalink }}">
+            <span class="cluster-hub__item-title">{{ .Title }}</span>
+            {{- with .Description }}
+            <span class="cluster-hub__item-desc">{{ . }}</span>
+            {{- end }}
+          </a>
+        </li>
+        {{- end }}
+      </ul>
+    </aside>
+    {{- end }}
+  {{- end }}
+{{- end -}}
