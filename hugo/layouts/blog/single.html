@@ -14,7 +14,7 @@
 {{- with .Params.image }}
 <section style="background: var(--c-bg); padding: 0 0 48px;">
   <div class="container" style="max-width: 1024px;">
-    <img src="{{ . | relURL }}" alt="{{ with $.Params.imageAlt }}{{ . }}{{ else }}{{ $.Title }}{{ end }}" loading="eager" decoding="async" style="width: 100%; height: auto; border-radius: 12px; display: block;">
+    <img src="{{ . | relURL }}" alt="{{ with $.Params.imageAlt }}{{ . }}{{ else }}{{ $.Title }}{{ end }}" loading="eager" decoding="async" fetchpriority="high" style="width: 100%; height: auto; border-radius: 12px; display: block;">
   </div>
 </section>
 {{- end }}

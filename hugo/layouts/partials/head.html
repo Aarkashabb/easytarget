@@ -55,16 +55,40 @@
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap&subset=cyrillic,cyrillic-ext,latin,latin-ext" rel="stylesheet">
 <link rel="preload" as="font" href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3i6t-tkk3we4Q.woff2" type="font/woff2" crossorigin>
-<link rel="preload" as="font" href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3i6t-tkk3we4Q.woff2" type="font/woff2" crossorigin>
+
+{{- /* LCP hero preload — fetched as soon as <head> is parsed, much earlier than waiting for <img> in body */ -}}
+{{- with .Params.image }}
+<link rel="preload" as="image" href="{{ . | absURL }}" fetchpriority="high">
+{{- end }}
 
 {{- $css := resources.Get "css/styles.css" | resources.Fingerprint "sha256" }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 
-{{- /* Google Analytics 4 */ -}}
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KV15BQBKK3"></script>
+{{- /* Google Analytics 4 — deferred to first interaction OR 3s idle to free up LCP/TBT */ -}}
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-KV15BQBKK3');
+(function(){
+  var loaded=false;
+  function loadGA(){
+    if(loaded)return; loaded=true;
+    var s=document.createElement('script');
+    s.async=true;
+    s.src='https://www.googletagmanager.com/gtag/js?id=G-KV15BQBKK3';
+    document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments)}
+    window.gtag=gtag;
+    gtag('js',new Date());
+    gtag('config','G-KV15BQBKK3');
+  }
+  // Trigger on first user interaction…
+  ['scroll','click','keydown','touchstart','mousemove'].forEach(function(e){
+    addEventListener(e,loadGA,{once:true,passive:true});
+  });
+  // …or after page idle / 3s safety net (whichever first)
+  if('requestIdleCallback' in window){
+    requestIdleCallback(loadGA,{timeout:3000});
+  } else {
+    setTimeout(loadGA,3000);
+  }
+})();
 </script>
