@@ -1,0 +1,107 @@
+{{- /* llms-full.txt — full site content in Markdown for AI assistants */ -}}
+# {{ .Site.Params.siteName }} — Full Site Content
+
+> Complete content of every blog article and case study, in plain Markdown.
+> Designed for AI assistants (ChatGPT, Claude, Perplexity, Gemini) that ingest
+> the whole site in a single request.
+
+**Site:** {{ .Site.BaseURL }}
+**Language of this dump:** {{ .Language.Lang }}
+**Generated:** {{ now.Format "2006-01-02 15:04 UTC" }}
+**Founder:** Ivan Blagoveshchenskyi ({{ .Site.Params.email }})
+**Booking:** {{ .Site.Params.calendly }}
+
+For the lightweight index (titles + descriptions only), see {{ .Site.BaseURL }}llms.txt
+
+---
+
+## Table of Contents
+
+### Blog Articles
+{{- range where .Site.RegularPages "Section" "blog" }}
+- {{ .Title }} → `{{ .Permalink }}`
+{{- end }}
+
+### Case Studies (Portfolio)
+{{- range where .Site.RegularPages "Section" "portfolio" }}
+- {{ .Title }}{{ with .Params.industry_label }} ({{ . }}){{ end }} → `{{ .Permalink }}`
+{{- end }}
+
+---
+
+# Blog Articles
+{{ range where .Site.RegularPages "Section" "blog" }}
+---
+
+## {{ .Title }}
+
+**URL:** {{ .Permalink }}
+**Published:** {{ .Date.Format "2006-01-02" }}{{ if ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02") }} (updated {{ .Lastmod.Format "2006-01-02" }}){{ end }}
+**Author:** {{ with .Params.author }}{{ . }}{{ else }}Ivan Blagoveshchenskyi{{ end }}
+{{- with .Params.tags }}
+**Tags:** {{ delimit . ", " }}
+{{- end }}
+{{- with .Description }}
+**Summary:** {{ . }}
+{{- end }}
+
+{{ .RawContent }}
+
+{{ end }}
+---
+
+# Case Studies (Portfolio)
+{{ range where .Site.RegularPages "Section" "portfolio" }}
+---
+
+## {{ .Title }}
+
+**URL:** {{ .Permalink }}
+{{- with .Params.industry_label }}
+**Industry:** {{ . }}
+{{- end }}
+{{- with .Params.platform }}
+**Platform:** {{ . }}
+{{- end }}
+{{- with .Params.subtitle }}
+**Subtitle:** {{ . }}
+{{- end }}
+{{- with .Description }}
+**Summary:** {{ . }}
+{{- end }}
+{{- with .Params.challenge }}
+
+### Challenge
+{{ . }}
+{{- end }}
+{{- with .Params.solution }}
+
+### Solution
+{{ range . }}
+1. {{ . }}
+{{- end }}
+{{- end }}
+{{- with .Params.results }}
+
+### Results
+{{ range . }}
+- {{ . }}
+{{- end }}
+{{- end }}
+
+{{ .RawContent }}
+
+{{ end }}
+---
+
+# Contact
+
+- **Email:** {{ .Site.Params.email }}
+- **Book a consultation:** {{ .Site.Params.calendly }}
+- **LinkedIn:** {{ .Site.Params.linkedin }}
+- **Telegram:** {{ .Site.Params.telegram }}
+
+---
+
+*End of content dump. For the lightweight version see {{ .Site.BaseURL }}llms.txt*
+*Standard reference: https://llmstxt.org*

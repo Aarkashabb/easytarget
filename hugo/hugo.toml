@@ -7,7 +7,7 @@ pluralizeListTitles = false
 summaryLength = 40
 
 [outputs]
-  home     = ["HTML", "RSS", "JSON", "LLMS"]
+  home     = ["HTML", "RSS", "JSON", "LLMS", "LLMSFULL"]
   section  = ["HTML"]
   page     = ["HTML"]
   taxonomy = ["HTML"]
@@ -16,6 +16,12 @@ summaryLength = 40
 [outputFormats.LLMS]
   mediaType    = "text/plain"
   baseName     = "llms"
+  isPlainText  = true
+  notAlternative = true
+
+[outputFormats.LLMSFULL]
+  mediaType    = "text/plain"
+  baseName     = "llms-full"
   isPlainText  = true
   notAlternative = true
 
