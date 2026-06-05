@@ -1,0 +1,14 @@
+{
+  "name": "easytarget-optimize",
+  "version": "1.0.0",
+  "description": "Image optimization for EasyTarget website",
+  "scripts": {
+    "optimize:images": "node scripts/optimize-images.js"
+  },
+  "devDependencies": {
+    "imagemin": "^8.0.1",
+    "imagemin-webp": "^8.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^11.0.0"
+  }
+}
