@@ -7,11 +7,17 @@ pluralizeListTitles = false
 summaryLength = 40
 
 [outputs]
-  home     = ["HTML", "RSS", "JSON"]
+  home     = ["HTML", "RSS", "JSON", "LLMS"]
   section  = ["HTML"]
   page     = ["HTML"]
   taxonomy = ["HTML"]
   term     = ["HTML"]
+
+[outputFormats.LLMS]
+  mediaType    = "text/plain"
+  baseName     = "llms"
+  isPlainText  = true
+  notAlternative = true
 
 [markup.goldmark.renderer]
   unsafe = true

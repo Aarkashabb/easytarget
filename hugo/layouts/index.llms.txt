@@ -1,0 +1,63 @@
+{{- /* llms.txt — auto-generated for AI assistants (https://llmstxt.org) */ -}}
+# {{ .Site.Params.siteName }}
+
+> {{ with .Site.Home.Description }}{{ . }}{{ else }}Workflow automation services for business processes using N8N, Make, Zapier, and OpenAI API. Custom automation solutions for banking, marketing, e-commerce, SaaS, and more.{{ end }}
+
+EasyTarget is a workflow automation consultancy specializing in no-code and low-code platforms. We build production-ready automation systems that save 10-40 hours per week per team, integrate disparate business tools, and scale operations without adding headcount.
+
+**Founder:** Ivan Blagoveshchenskyi · Workflow Automation Specialist
+**Languages:** Ukrainian (default), English, Russian
+**Contact:** {{ .Site.Params.email }} · [Book consultation]({{ .Site.Params.calendly }})
+**Social:** [LinkedIn]({{ .Site.Params.linkedin }}) · [Telegram]({{ .Site.Params.telegram }})
+
+## Core Services
+
+- **Workflow Automation Development** — Custom N8N, Make, and Zapier workflows for any business process
+- **Self-Hosted N8N Deployment** — Production-ready N8N setups with Docker, PostgreSQL, HTTPS, backups, monitoring
+- **CRM & System Integration** — Connect disparate tools, sync data in real-time, eliminate manual data entry
+- **AI Integration** — OpenAI, ChatGPT, and LLM integration into business workflows
+- **E-commerce Automation** — Order processing, inventory sync, multi-platform catalog management
+- **Financial Reporting Automation** — Automated reports, dashboards, expense tracking
+- **Marketing Automation** — Campaign management, lead nurturing, ad automation
+
+## Main Pages
+
+- [Homepage]({{ .Site.BaseURL }}): Overview of services, process, FAQ, and contact
+- [Portfolio]({{ .Site.BaseURL }}portfolio/): Real-world case studies of automation implementations
+- [Blog]({{ .Site.BaseURL }}blog/): In-depth articles on automation strategy, tool comparisons, and technical guides
+
+## Blog Articles
+
+{{- range where .Site.RegularPages "Section" "blog" }}
+- [{{ .Title }}]({{ .Permalink }}): {{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 200 }}{{ end }}
+{{- end }}
+
+## Case Studies (Portfolio)
+
+{{- range where .Site.RegularPages "Section" "portfolio" }}
+- [{{ .Title }}]({{ .Permalink }}){{ with .Params.industry_label }} ({{ . }}){{ end }}: {{ with .Description }}{{ . }}{{ else }}{{ with .Params.subtitle }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 200 }}{{ end }}{{ end }}
+{{- end }}
+
+## Technology Stack & Expertise
+
+- **Automation platforms:** N8N (preferred for self-hosted/GDPR), Make.com (best for mid-complexity), Zapier (entry-level)
+- **AI/LLM:** OpenAI API, Claude, ChatGPT, Gemini, custom RAG pipelines
+- **Backend:** PostgreSQL, Docker, Traefik, Linux (Ubuntu/Debian)
+- **Integrations:** CRM (HubSpot, Pipedrive), Email (Gmail, Outlook, Mailchimp), Slack, Telegram, Google Workspace, Microsoft 365, e-commerce platforms (Shopify, WooCommerce)
+
+## Translations
+
+{{- range .AllTranslations }}
+- [{{ .Lang | upper }}]({{ .Permalink }}): {{ .Title }}
+{{- end }}
+
+## Optional
+
+- [Sitemap (XML)]({{ .Site.BaseURL }}sitemap.xml): Full URL list for crawlers
+- [RSS Feed]({{ .Site.BaseURL }}index.xml): Blog updates feed
+- [robots.txt]({{ .Site.BaseURL }}robots.txt): Crawler access rules (AI bots explicitly allowed)
+
+---
+
+*Last updated: {{ now.Format "2006-01-02" }}*
+*Generated automatically from site content. For questions, contact {{ .Site.Params.email }}*
