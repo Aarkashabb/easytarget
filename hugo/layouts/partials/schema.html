@@ -130,3 +130,33 @@
   }
 }
 </script>
+
+{{- /* BreadcrumbList Schema — built from .Ancestors (skip homepage per Google spec) */ -}}
+{{- if not .IsHome -}}
+{{- $crumbs := slice -}}
+{{- range (.Ancestors.Reverse) -}}
+  {{- if not .IsHome -}}
+    {{- $crumbs = $crumbs | append (dict "name" (printf "%s" .Title) "url" (printf "%s" .Permalink)) -}}
+  {{- end -}}
+{{- end -}}
+{{- $crumbs = $crumbs | append (dict "name" (printf "%s" .Title) "url" (printf "%s" .Permalink)) -}}
+{{- if gt (len $crumbs) 1 -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {{- range $i, $c := $crumbs -}}
+      {{- if $i }},{{ end }}
+      {
+        "@type": "ListItem",
+        "position": {{ add $i 1 }},
+        "name": "{{ $c.name | replaceRE `\\` `\\\\` | replaceRE `"` `\"` }}",
+        "item": "{{ $c.url }}"
+      }
+    {{- end }}
+  ]
+}
+</script>
+{{- end -}}
+{{- end -}}
