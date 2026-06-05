@@ -104,7 +104,7 @@
       <div class="architect__person">
         <div class="architect__photo">
           {{- if .Params.about_photo }}
-          <img src="{{ .Params.about_photo }}" alt="{{ .Params.about_name }}" />
+          <img src="{{ .Params.about_photo }}" alt="{{ .Params.about_name }}" loading="lazy" decoding="async" width="240" height="240" />
           {{- else }}
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           {{- end }}
