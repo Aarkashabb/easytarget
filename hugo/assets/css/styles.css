@@ -924,8 +924,36 @@ a { color: inherit; text-decoration: none; }
   border-radius: var(--r);
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: var(--c-surface);
+  position: relative;
 }
 .icard:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+
+/* Pillar variant — highlighted with brand gradient border + badge */
+.icard--pillar {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--c-surface), var(--c-surface)) padding-box,
+    linear-gradient(135deg, #1e3a8a, #7c3aed) border-box;
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.08);
+}
+.icard--pillar:hover {
+  box-shadow: 0 10px 32px rgba(124, 58, 237, 0.15);
+}
+.icard__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  background: linear-gradient(135deg, #1e3a8a, #7c3aed);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 5px 12px;
+  border-radius: var(--r-pill);
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.25);
+}
 .icard__thumb {
   aspect-ratio: 16/9;
   background: var(--c-bg);

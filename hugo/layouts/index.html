@@ -177,8 +177,13 @@
 
 <!-- ============ Blog Teaser ============ -->
 {{- $blog := .Site.GetPage "/blog" -}}
-{{- $posts := $blog.Pages | first 3 -}}
-{{- if $posts }}
+{{- /* Show pillar first, then spokes, then unsorted — caps at 6 */ -}}
+{{- $allPosts := $blog.Pages -}}
+{{- $pillars := where $allPosts "Params.clusterRole" "pillar" -}}
+{{- $spokes := where $allPosts "Params.clusterRole" "spoke" -}}
+{{- $others := where $allPosts "Params.clusterRole" "" -}}
+{{- $ordered := $pillars | append $spokes | append $others | first 6 -}}
+{{- if $ordered }}
 <section class="section insights">
   <div class="container">
     <div class="insights__head reveal">
@@ -189,15 +194,17 @@
       <a class="insights__link" href="{{ $blog.RelPermalink }}">{{ i18n "all_posts" }} <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h9M8 3.5L11.5 7 8 10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
     <div class="insights__grid reveal">
-      {{- range $posts }}
-      <article class="icard">
-        <div class="icard__thumb">
+      {{- range $ordered }}
+      {{- $isPillar := eq .Params.clusterRole "pillar" -}}
+      <article class="icard{{ if $isPillar }} icard--pillar{{ end }}">
+        {{- if $isPillar }}<div class="icard__badge">{{ i18n "cluster_pillar_label" }}</div>{{ end }}
+        <a class="icard__thumb" href="{{ .RelPermalink }}" aria-label="{{ .Title }}" tabindex="-1">
           {{- if .Params.image }}
-          <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" />
+          <img src="{{ .Params.image }}" alt="" loading="lazy" decoding="async">
           {{- else }}
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h13a3 3 0 013 3v13H7a3 3 0 01-3-3V4z" stroke="currentColor" stroke-width="1.6"/><path d="M7 8h9M7 12h9M7 16h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           {{- end }}
-        </div>
+        </a>
         <div class="icard__body">
           <div class="icard__tags">{{ range .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}</div>
           <h3 class="icard__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
