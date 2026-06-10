@@ -1,121 +1,72 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.Language.Params.htmlLang | default .Site.Language.Lang }}" dir="ltr">
-<head>
-  {{- partial "head.html" . -}}
-  <title>404 - {{ if eq .Site.Language.Lang "uk" }}Сторінка не знайдена{{ else if eq .Site.Language.Lang "ru" }}Страница не найдена{{ else }}Page Not Found{{ end }}</title>
-</head>
-<body>
-  {{- partial "header.html" . -}}
-  <main class="error-page">
-    <div class="error-container">
-      <div class="error-code">404</div>
-      <h1>
-        {{ if eq .Site.Language.Lang "uk" }}
-          Сторінка не знайдена
-        {{ else if eq .Site.Language.Lang "ru" }}
-          Страница не найдена
-        {{ else }}
-          Page Not Found
-        {{ end }}
-      </h1>
-      <p class="error-message">
-        {{ if eq .Site.Language.Lang "uk" }}
-          На жаль, сторінка, яку ви шукаєте, не існує або була видалена.
-        {{ else if eq .Site.Language.Lang "ru" }}
-          К сожалению, страница, которую вы ищете, не существует или была удалена.
-        {{ else }}
-          Sorry, the page you're looking for doesn't exist or has been removed.
-        {{ end }}
-      </p>
-      <div class="error-actions">
-        <a href="{{ .Site.Home.RelPermalink }}" class="btn btn-primary">
-          {{ if eq .Site.Language.Lang "uk" }}
-            На головну
-          {{ else if eq .Site.Language.Lang "ru" }}
-            На главную
-          {{ else }}
-            Go Home
-          {{ end }}
-        </a>
-        <a href="{{ printf "/%s/portfolio/" .Site.Language.Lang }}" class="btn btn-secondary">
-          {{ if eq .Site.Language.Lang "uk" }}
-            До портфоліо
-          {{ else if eq .Site.Language.Lang "ru" }}
-            К портфолио
-          {{ else }}
-            Portfolio
-          {{ end }}
-        </a>
-      </div>
+{{ define "title" }}{{ if eq .Site.Language.Lang "uk" }}404 — Сторінка не знайдена{{ else if eq .Site.Language.Lang "ru" }}404 — Страница не найдена{{ else }}404 — Page Not Found{{ end }} | {{ .Site.Params.siteName }}{{ end }}
+
+{{ define "main" }}
+
+<section class="not-found">
+  <div class="container not-found__inner">
+    <div class="not-found__code" aria-hidden="true">404</div>
+    <h1 class="not-found__title">
+      {{- if eq .Site.Language.Lang "uk" -}}Сторінку не знайдено
+      {{- else if eq .Site.Language.Lang "ru" -}}Страница не найдена
+      {{- else -}}Page not found
+      {{- end -}}
+    </h1>
+    <p class="not-found__lede">
+      {{- if eq .Site.Language.Lang "uk" -}}
+        Сторінка, яку ви шукаєте, не існує або була переміщена. Можливо, вас зацікавить щось із цього:
+      {{- else if eq .Site.Language.Lang "ru" -}}
+        Страница, которую вы ищете, не существует или была перемещена. Возможно, вас заинтересует что-то из этого:
+      {{- else -}}
+        The page you're looking for doesn't exist or has been moved. You might be interested in:
+      {{- end -}}
+    </p>
+
+    <div class="not-found__actions">
+      {{- $base := .Site.Home.RelPermalink -}}
+      <a class="btn btn--primary btn--lg" href="{{ $base }}">
+        {{- if eq .Site.Language.Lang "uk" -}}На головну
+        {{- else if eq .Site.Language.Lang "ru" -}}На главную
+        {{- else -}}Go home
+        {{- end -}}
+      </a>
+      <a class="btn btn--ghost btn--lg" href="{{ $base }}blog/">
+        {{- if eq .Site.Language.Lang "uk" -}}Читати блог
+        {{- else if eq .Site.Language.Lang "ru" -}}Читать блог
+        {{- else -}}Read blog
+        {{- end -}}
+      </a>
+      <a class="btn btn--ghost btn--lg" href="{{ $base }}portfolio/">
+        {{- if eq .Site.Language.Lang "uk" -}}Портфоліо
+        {{- else if eq .Site.Language.Lang "ru" -}}Портфолио
+        {{- else -}}Portfolio
+        {{- end -}}
+      </a>
     </div>
-  </main>
-  {{- partial "footer.html" . -}}
-  <style>
-    .error-page {
-      min-height: calc(100vh - 200px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-    .error-container {
-      text-align: center;
-      max-width: 600px;
-    }
-    .error-code {
-      font-size: 8rem;
-      font-weight: bold;
-      color: #e74c3c;
-      margin: 0;
-      line-height: 1;
-    }
-    .error-page h1 {
-      font-size: 2.5rem;
-      margin: 1rem 0;
-      color: #2c3e50;
-    }
-    .error-message {
-      font-size: 1.1rem;
-      color: #7f8c8d;
-      margin: 1.5rem 0 2rem;
-      line-height: 1.6;
-    }
-    .error-actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-    .btn-primary {
-      background-color: #3498db;
-      color: white;
-    }
-    .btn-primary:hover {
-      background-color: #2980b9;
-    }
-    .btn-secondary {
-      background-color: #95a5a6;
-      color: white;
-    }
-    .btn-secondary:hover {
-      background-color: #7f8c8d;
-    }
-    @media (max-width: 640px) {
-      .error-code {
-        font-size: 5rem;
-      }
-      .error-page h1 {
-        font-size: 1.8rem;
-      }
-    }
-  </style>
-</body>
-</html>
+
+    <div class="not-found__suggestions">
+      <h2 class="not-found__suggestions-title">
+        {{- if eq .Site.Language.Lang "uk" -}}Популярні статті
+        {{- else if eq .Site.Language.Lang "ru" -}}Популярные статьи
+        {{- else -}}Popular articles
+        {{- end -}}
+      </h2>
+      <ul class="not-found__list">
+        {{- range first 3 (where .Site.RegularPages "Section" "blog") }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{- end }}
+      </ul>
+    </div>
+
+    <p class="not-found__contact">
+      {{- if eq .Site.Language.Lang "uk" -}}
+        Не знайшли потрібного? <a href="{{ .Site.Params.calendly }}" target="_blank" rel="noopener">Запишіться на безкоштовну консультацію</a> — допоможемо.
+      {{- else if eq .Site.Language.Lang "ru" -}}
+        Не нашли нужного? <a href="{{ .Site.Params.calendly }}" target="_blank" rel="noopener">Запишитесь на бесплатную консультацию</a> — поможем.
+      {{- else -}}
+        Couldn't find what you need? <a href="{{ .Site.Params.calendly }}" target="_blank" rel="noopener">Book a free consultation</a> — we'll help.
+      {{- end -}}
+    </p>
+  </div>
+</section>
+
+{{ end }}
