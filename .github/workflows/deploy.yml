@@ -42,3 +42,52 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: wrangler pages deploy hugo/public --project-name=easytarget --branch=main --commit-dirty=true
+
+      - name: Wait for CF Pages CDN propagation
+        run: sleep 30
+
+      - name: Ping IndexNow (Bing/Yandex/Naver)
+        run: |
+          python3 <<'EOF'
+          import urllib.request, json, re
+
+          KEY = "40997a1cebfdff82927fc466b2903a05"
+          HOST = "easytarget.com.ua"
+          SITEMAPS = [
+              f"https://{HOST}/uk/sitemap.xml",
+              f"https://{HOST}/en/sitemap.xml",
+              f"https://{HOST}/ru/sitemap.xml",
+          ]
+
+          urls = set()
+          for sm in SITEMAPS:
+              try:
+                  xml = urllib.request.urlopen(sm, timeout=15).read().decode('utf-8', errors='replace')
+                  urls.update(re.findall(r'<loc>([^<]+)</loc>', xml))
+              except Exception as e:
+                  print(f"WARN: could not fetch {sm}: {e}")
+
+          urls = sorted(urls)
+          print(f"Submitting {len(urls)} URLs to IndexNow")
+
+          payload = {
+              "host": HOST,
+              "key": KEY,
+              "keyLocation": f"https://{HOST}/{KEY}.txt",
+              "urlList": urls,
+          }
+
+          req = urllib.request.Request(
+              "https://api.indexnow.org/IndexNow",
+              data=json.dumps(payload).encode('utf-8'),
+              headers={"Content-Type": "application/json; charset=utf-8"},
+              method="POST",
+          )
+          try:
+              resp = urllib.request.urlopen(req, timeout=30)
+              print(f"IndexNow response: {resp.status} {resp.reason}")
+          except urllib.error.HTTPError as e:
+              print(f"IndexNow HTTP {e.code}: {e.read().decode('utf-8','replace')[:300]}")
+          except Exception as e:
+              print(f"IndexNow error: {e}")
+          EOF
