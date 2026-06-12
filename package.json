@@ -8,7 +8,6 @@
   "devDependencies": {
     "imagemin": "^8.0.1",
     "imagemin-webp": "^8.0.0",
-    "imagemin-mozjpeg": "^10.0.0",
-    "imagemin-pngquant": "^11.0.0"
+    "imagemin-mozjpeg": "^10.0.0"
   }
 }

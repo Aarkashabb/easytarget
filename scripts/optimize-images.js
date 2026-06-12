@@ -1,71 +1,62 @@
 #!/usr/bin/env node
-
-const imagemin = require('imagemin');
-const imageminWebp = require('imagemin-webp');
-const imageminMozjpeg = require('imagemin-mozjpeg');
-const imageminPngquant = require('imagemin-pngquant');
-const path = require('path');
+/**
+ * Convert images to WebP alongside originals.
+ * - JPG hero/inline images in hugo/static/images/blog → .webp
+ * - PNG workflow diagrams in hugo/static/img/workflows → .webp
+ *
+ * Keeps originals as <picture> fallback for browsers without WebP.
+ * Re-runnable: skips files where .webp is newer than the source.
+ */
 const fs = require('fs');
+const path = require('path');
+const sharp = require('sharp');
 
-async function optimizeImages() {
-  console.log('🖼️  Starting image optimization...\n');
+const ROOTS = [
+  { dir: path.join(__dirname, '..', 'hugo', 'static', 'images'), match: /\.jpe?g$/i },
+  { dir: path.join(__dirname, '..', 'hugo', 'static', 'img', 'workflows'), match: /\.png$/i },
+];
 
-  // Optimize PNG to WebP (workflows)
-  try {
-    console.log('📦 Converting PNG workflows to WebP...');
-    const files = await imagemin(['hugo/static/img/workflows/*.png'], {
-      destination: 'hugo/static/img/workflows',
-      plugins: [
-        imageminWebp({ quality: 80 })
-      ]
-    });
-
-    files.forEach(file => {
-      const inputSize = fs.statSync(file.replace('.webp', '.png')).size / 1024;
-      const outputSize = fs.statSync(file).size / 1024;
-      const saved = ((1 - outputSize / inputSize) * 100).toFixed(1);
-      console.log(`  ✅ ${path.basename(file)}: ${inputSize.toFixed(1)}KB → ${outputSize.toFixed(1)}KB (↓${saved}%)`);
-    });
-  } catch (error) {
-    console.error('❌ PNG optimization failed:', error.message);
+async function walk(dir, match, out = []) {
+  let entries;
+  try { entries = await fs.promises.readdir(dir, { withFileTypes: true }); }
+  catch { return out; }
+  for (const e of entries) {
+    const fp = path.join(dir, e.name);
+    if (e.isDirectory()) await walk(fp, match, out);
+    else if (match.test(e.name)) out.push(fp);
   }
-
-  // Optimize JPG (blog images)
-  try {
-    console.log('\n🎨 Optimizing JPEG blog images...');
-    const files = await imagemin(['hugo/static/images/blog/*.jpg'], {
-      destination: 'hugo/static/images/blog',
-      plugins: [
-        imageminMozjpeg({ quality: 75 })
-      ]
-    });
-
-    files.forEach(file => {
-      const size = fs.statSync(file).size / 1024;
-      console.log(`  ✅ ${path.basename(file)}: ${size.toFixed(1)}KB`);
-    });
-  } catch (error) {
-    console.error('❌ JPEG optimization failed:', error.message);
-  }
-
-  console.log('\n✅ Image optimization complete!\n');
-
-  // Print summary
-  const pngSize = fs.readdirSync('hugo/static/img/workflows')
-    .filter(f => f.endsWith('.png'))
-    .reduce((sum, f) => sum + fs.statSync(`hugo/static/img/workflows/${f}`).size, 0) / 1024;
-
-  const webpSize = fs.readdirSync('hugo/static/img/workflows')
-    .filter(f => f.endsWith('.webp'))
-    .reduce((sum, f) => sum + fs.statSync(`hugo/static/img/workflows/${f}`).size, 0) / 1024;
-
-  console.log('📊 Summary:');
-  console.log(`  PNG total:  ${pngSize.toFixed(1)}KB`);
-  console.log(`  WebP total: ${webpSize.toFixed(1)}KB`);
-  console.log(`  Total saved: ${(pngSize - webpSize).toFixed(1)}KB (${((1 - webpSize / pngSize) * 100).toFixed(1)}%)\n`);
+  return out;
 }
 
-optimizeImages().catch(error => {
-  console.error('Error:', error);
-  process.exit(1);
-});
+(async () => {
+  let convertedAll = 0, skippedAll = 0, savedAll = 0;
+
+  for (const { dir, match } of ROOTS) {
+    const files = await walk(dir, match);
+    if (!files.length) continue;
+    console.log(`\n${path.relative(process.cwd(), dir)}: ${files.length} ${match.source} files`);
+
+    for (const src of files) {
+      const dst = src.replace(match, '.webp');
+      const srcStat = await fs.promises.stat(src);
+      const dstStat = await fs.promises.stat(dst).catch(() => null);
+      if (dstStat && dstStat.mtimeMs >= srcStat.mtimeMs) {
+        skippedAll++;
+        continue;
+      }
+
+      await sharp(src).webp({ quality: 82, effort: 6 }).toFile(dst);
+      const dstBytes = (await fs.promises.stat(dst)).size;
+      const saved = srcStat.size - dstBytes;
+      savedAll += saved;
+      convertedAll++;
+      const pct = ((saved / srcStat.size) * 100).toFixed(0);
+      const rel = path.relative(dir, src).replace(/\\/g, '/');
+      console.log(
+        `  ${rel.padEnd(45)} ${(srcStat.size / 1024).toFixed(1).padStart(7)} KB → ${(dstBytes / 1024).toFixed(1).padStart(7)} KB  (-${pct}%)`
+      );
+    }
+  }
+
+  console.log(`\nConverted: ${convertedAll}, Skipped: ${skippedAll}, Total saved: ${(savedAll / 1024).toFixed(1)} KB`);
+})();

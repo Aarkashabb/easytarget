@@ -16,7 +16,11 @@
       <article class="icard">
         <a class="icard__thumb" href="{{ .RelPermalink }}" aria-label="{{ .Title }}" tabindex="-1">
           {{- with .Params.image }}
-          <img src="{{ . | relURL }}" alt="" loading="lazy" decoding="async">
+          {{- $webp := replaceRE `\.(jpe?g|png)$` ".webp" . }}
+          <picture>
+            <source srcset="{{ $webp | relURL }}" type="image/webp">
+            <img src="{{ . | relURL }}" alt="" loading="lazy" decoding="async">
+          </picture>
           {{- else }}
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h13a3 3 0 013 3v13H7a3 3 0 01-3-3V4z" stroke="currentColor" stroke-width="1.6"/><path d="M7 8h9M7 12h9M7 16h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           {{- end }}
