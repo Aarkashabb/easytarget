@@ -15,7 +15,7 @@ draft: false
 
 N8N Cloud starts at $20+/month for basic usage. A self-hosted instance on a $6-12 VPS gives you unlimited executions, full data ownership, and no surprise bills. This guide walks you from a blank VPS to a production-ready N8N instance with HTTPS, PostgreSQL, automated backups, and monitoring.
 
-### What you will have after this guide:
+## What you will have after this guide:
 
 - Production N8N with PostgreSQL, Traefik, and automatic HTTPS
 - Automated daily backups with rotation and off-site storage

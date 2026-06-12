@@ -34,7 +34,7 @@
         </a>
         <div class="pcard__body">
           <div class="pcard__industry">{{ $page.Params.industry_label }}</div>
-          <h3 class="pcard__title">{{ $page.Title }}</h3>
+          <h2 class="pcard__title">{{ $page.Title }}</h2>
           <p>{{ $page.Params.short_body }}</p>
           <div class="pcard__stack">
             {{- range first 3 $page.Params.stack }}<span class="tag">{{ . }}</span>{{ end }}

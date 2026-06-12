@@ -13,26 +13,26 @@
   <div class="container">
     <div class="case-summary__grid">
       <div class="case-cell">
-        <h3>
+        <h2>
           <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 1l8 14H1L9 1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 7v3M9 12.5v.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           {{ i18n "challenge_title" }}
-        </h3>
+        </h2>
         <p>{{ .Params.challenge }}</p>
       </div>
       <div class="case-cell">
-        <h3>
+        <h2>
           <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M10 1L3 10h5l-1 7 7-9H9l1-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/></svg>
           {{ i18n "solution_title" }}
-        </h3>
+        </h2>
         <ol>
           {{- range .Params.solution }}<li>{{ . }}</li>{{ end }}
         </ol>
       </div>
       <div class="case-cell case-cell--result">
-        <h3>
+        <h2>
           <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="7.5" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="9" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="9" r="1.2" fill="currentColor"/></svg>
           {{ i18n "result_title" }}
-        </h3>
+        </h2>
         <p>{{ .Params.short_body }}</p>
         <div class="case-cell__metric-wrap">
           <div class="case-cell__metric">{{ .Params.result_value }}<span class="case-cell__metric-unit">{{ .Params.result_unit }}</span></div>
