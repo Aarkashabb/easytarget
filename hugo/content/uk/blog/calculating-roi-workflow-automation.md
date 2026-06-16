@@ -1,9 +1,10 @@
 ---
 title: "Як розраховувати ROI для workflow автоматизації"
 date: 2024-02-10
+lastmod: 2026-06-16
 description: "Практичний гайд для підрахунку економії часу та грошей від автоматизації. Приклади розрахунків для типових процесів."
-image: "/images/roi-automation.svg"
-imageAlt: "Калькулятор ROI зі зростаючою діаграмою — окупність 340% за 12 місяців від автоматизації workflow"
+image: "/images/blog/roi-workflow-automation-hero.jpg"
+imageAlt: "Зростаюча гістограма з позначкою 340% ROI — розрахунок окупності workflow автоматизації"
 tags: ["ROI", "Business Case", "Automation Strategy"]
 author: "Ivan Blagoveshchenskyi"
 cluster: "business-automation"
