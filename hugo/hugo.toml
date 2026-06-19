@@ -4,6 +4,9 @@ defaultContentLanguage = "uk"
 defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
 pluralizeListTitles = false
+
+[taxonomies]
+  tag = "tags"
 summaryLength = 40
 
 [outputs]

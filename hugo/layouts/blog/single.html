@@ -17,7 +17,7 @@
   <div class="container" style="max-width: 1024px;">
     <picture>
       <source srcset="{{ $webp | relURL }}" type="image/webp">
-      <img src="{{ . | relURL }}" alt="{{ with $.Params.imageAlt }}{{ . }}{{ else }}{{ $.Title }}{{ end }}" loading="eager" decoding="async" fetchpriority="high" style="width: 100%; height: auto; border-radius: 12px; display: block;">
+      <img src="{{ . | relURL }}" alt="{{ with $.Params.imageAlt }}{{ . }}{{ else }}{{ $.Title }}{{ end }}" width="1200" height="655" loading="eager" decoding="async" fetchpriority="high" style="width: 100%; height: auto; border-radius: 12px; display: block;">
     </picture>
   </div>
 </section>
