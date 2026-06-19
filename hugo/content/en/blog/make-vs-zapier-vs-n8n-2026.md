@@ -75,4 +75,4 @@ Before deciding, run [ROI numbers for your specific case](/en/blog/calculating-r
 
 There is no universally correct answer to the platform question. The right choice depends on your team size, technical capacity, data requirements, and budget. When in doubt, start with a free pilot on Make or N8N.
 
-**Want a professional assessment for your specific case?** [Book a free consultation](https://calendly.com/blagoveshchenskyivan/30min) — we will help you pick the right platform and estimate implementation effort. Or see [real-world implementations in our portfolio](/en/portfolio/).
+**Want a professional assessment for your specific case?** [Book a free consultation](https://calendly.com/blagoveshchenskyivan/30min) — we will help you pick the right platform and estimate implementation effort. Or see real N8N case studies: [webhook-based account management system](/en/portfolio/service-account-management/), [AI task manager with Gemini](/en/portfolio/ai-task-management/), [banking API integration](/en/portfolio/banking-data-integration/).

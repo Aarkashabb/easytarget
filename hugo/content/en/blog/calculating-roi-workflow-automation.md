@@ -134,6 +134,8 @@ Based on projects we've delivered:
 | Banking / Fintech | Document processing, KYC | 4–8 months |
 | SaaS / IT | Customer support, billing | 2–5 months |
 
+Case studies from our practice: [marketing budget automation](/en/portfolio/marketing-budget-automation/) (2 hours → 5 min/day), [automated financial reporting](/en/portfolio/automated-financial-reports/) (4+ hours/month saved), [e-commerce inventory sync](/en/portfolio/ecommerce-inventory-sync/) (zero manual entry).
+
 ## Common ROI Calculation Mistakes
 
 ### Mistake 1: Assuming 100% Automation
@@ -210,4 +212,4 @@ Not sure where to start? [Schedule a free consultation](https://calendly.com/bla
 
 **Security impacts ROI calculations?** The costs of secure automation can affect your payback period. Read [Security Best Practices for No-Code Automation](/en/blog/security-best-practices-no-code-automation/) to include security expenses in your ROI models.
 
-**Real results from clients:** See our [marketing automation case studies](/en/portfolio/) and [financial reporting projects](/en/portfolio/) — real ROI numbers from our customers.
+**Real results from clients:** See case studies with real numbers: [marketing — 2 hours → 5 min/day](/en/portfolio/marketing-budget-automation/), [financial reports — 4+ hours/month saved](/en/portfolio/automated-financial-reports/), [e-commerce — zero manual entry](/en/portfolio/ecommerce-inventory-sync/).

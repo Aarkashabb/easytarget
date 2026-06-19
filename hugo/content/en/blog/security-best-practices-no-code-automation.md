@@ -221,4 +221,4 @@ Need a security consultation for your workflows? [Schedule a consultation](https
 
 **Calculating ROI while considering security?** Don't forget that security infrastructure has costs. Our [Guide to Calculating ROI for Workflow Automation](/en/blog/calculating-roi-workflow-automation/) shows how to factor in security and infrastructure costs when calculating payback periods.
 
-**Real-world secure automation examples:** Check out our [Banking Data Integration case study](/en/portfolio/) — a real example of how we built a secure system for transferring sensitive financial data for clients with high security requirements.
+**Real-world secure automation examples:** Check out our [Banking Data Integration case study](/en/portfolio/banking-data-integration/) — a real example of how we built a secure system for transferring sensitive financial data for clients with high security requirements.

@@ -328,7 +328,7 @@ Self-hosted N8N складніший, ніж здається, особливо 
 
 Перевірте окупність такого розгортання заздалегідь — наш [гайд з розрахунку ROI для workflow автоматизації](/blog/calculating-roi-workflow-automation/) допоможе порахувати ваш конкретний кейс.
 
-> 🚀 **Ми розгорнемо production N8N під ключ:** сервер, безпека, бекапи, моніторинг. Без головного болю. [Забронюйте консультацію](https://calendly.com/blagoveshchenskyivan/30min) або подивіться [case studies в нашому портфоліо](/portfolio/).
+> 🚀 **Ми розгорнемо production N8N під ключ:** сервер, безпека, бекапи, моніторинг. Без головного болю. [Забронюйте консультацію](https://calendly.com/blagoveshchenskyivan/30min) або подивіться реальні N8N кейси: [банківська інтеграція](/portfolio/banking-data-integration/), [управління сервісними акаунтами](/portfolio/service-account-management/), [AI-автоматизація завдань](/portfolio/ai-task-management/).
 
 ## Підсумок
 

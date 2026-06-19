@@ -315,7 +315,7 @@ Self-hosted N8N is more demanding than it appears, especially at scale. If you a
 
 Validate the payback for your specific case before committing — our [ROI calculation guide for workflow automation](/en/blog/calculating-roi-workflow-automation/) walks through the numbers.
 
-> 🚀 **We deploy production N8N turnkey:** server configuration, security hardening, backups, and monitoring. No headaches. [Book a consultation](https://calendly.com/blagoveshchenskyivan/30min) or browse [case studies in our portfolio](/en/portfolio/).
+> 🚀 **We deploy production N8N turnkey:** server configuration, security hardening, backups, and monitoring. No headaches. [Book a consultation](https://calendly.com/blagoveshchenskyivan/30min) or browse real N8N case studies: [banking integration](/en/portfolio/banking-data-integration/), [service account management](/en/portfolio/service-account-management/), [AI task automation](/en/portfolio/ai-task-management/).
 
 ## Summary
 
