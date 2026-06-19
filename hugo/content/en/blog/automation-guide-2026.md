@@ -36,6 +36,8 @@ Start with your most painful bottlenecks. The best candidates for automation are
 - Social media content publishing
 - Trigger-based email campaigns
 
+Real examples from our work: [marketing budget automation](/en/portfolio/marketing-budget-automation/) (2 hours → 5 minutes daily), [e-commerce inventory sync](/en/portfolio/ecommerce-inventory-sync/) (zero manual entry), [automated financial reporting](/en/portfolio/automated-financial-reports/) (4+ hours/month saved).
+
 Before building anything, calculate the payback. Our [guide on calculating ROI for workflow automation](/en/blog/calculating-roi-workflow-automation/) has ready-to-use formulas and worked examples.
 
 ## Automation Tools in 2026: Make, N8N, Zapier
@@ -68,8 +70,10 @@ Do not try to automate everything at once. Companies that start with one simple 
 
 The more systems you connect, the larger your attack surface. Before piping credentials, leads, or financial data through automation tooling, run through [security best practices for no-code automation](/en/blog/security-best-practices-no-code-automation/). Five minutes of reading saves weeks of incident response.
 
+A concrete example: the [Monobank banking integration case](/en/portfolio/banking-data-integration/) — financial data flows through encrypted channels with a full audit trail and zero manual access.
+
 ## Conclusion
 
 Process automation in 2026 is not about technology — it is about freeing your team from routine and refocusing on work that actually creates value. Start with one process, measure the outcome, and scale.
 
-**Need help building your first workflow?** [Book a free consultation](https://calendly.com/blagoveshchenskyivan/30min) — we will review your case and propose a tailored solution. Or browse [case studies from our portfolio](/en/portfolio/) to see real-world automation implementations.
+**Need help building your first workflow?** [Book a free consultation](https://calendly.com/blagoveshchenskyivan/30min) — we will review your case and propose a tailored solution. Or browse real automation case studies: [marketing](/en/portfolio/marketing-budget-automation/), [e-commerce](/en/portfolio/ecommerce-inventory-sync/), [AI productivity](/en/portfolio/ai-task-management/), [finance](/en/portfolio/automated-financial-reports/).
