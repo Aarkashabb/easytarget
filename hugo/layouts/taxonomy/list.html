@@ -1,0 +1,53 @@
+{{ define "head" }}
+{{ partial "head.html" . }}
+<meta name="robots" content="noindex, follow">
+{{ end }}
+
+{{ define "title" }}{{ .Title }} | {{ .Site.Params.siteName }}{{ end }}
+
+{{ define "main" }}
+
+<section class="portfolio-hero">
+  <div class="container">
+    <span class="portfolio-hero__eyebrow">{{ i18n "nav_blog" }}</span>
+    <h1>#{{ .Title }}</h1>
+    <p class="portfolio-hero__sub">{{ len .Pages }} {{ i18n "all_posts" }}</p>
+  </div>
+</section>
+
+<section class="section insights" style="background: var(--c-bg);">
+  <div class="container">
+    <div class="insights__grid">
+      {{- range .Pages }}
+      <article class="icard">
+        <a class="icard__thumb" href="{{ .RelPermalink }}" aria-label="{{ .Title }}" tabindex="-1">
+          {{- with .Params.image }}
+          {{- $webp := replaceRE `\.(jpe?g|png)$` ".webp" . }}
+          <picture>
+            <source srcset="{{ $webp | relURL }}" type="image/webp">
+            <img src="{{ . | relURL }}" alt="" loading="lazy" decoding="async">
+          </picture>
+          {{- else }}
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h13a3 3 0 013 3v13H7a3 3 0 01-3-3V4z" stroke="currentColor" stroke-width="1.6"/><path d="M7 8h9M7 12h9M7 16h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          {{- end }}
+        </a>
+        <div class="icard__body">
+          <div class="icard__tags">
+            {{- range .Params.tags }}<a class="tag" href="{{ "tags/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a>{{ end }}
+          </div>
+          <h2 class="icard__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <p class="icard__excerpt">{{ .Summary }}</p>
+          <div class="icard__meta">{{ .Date.Format "02 Jan 2006" }} · {{ .ReadingTime }} {{ i18n "min_read" }}</div>
+        </div>
+      </article>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}
+
+{{ define "scripts" }}
+{{- $js := resources.Get "js/site.js" | resources.Fingerprint "sha256" }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{ end }}
