@@ -2,7 +2,7 @@
 title: "Self-Hosted N8N: повний гайд з production розгортання (2026)"
 date: 2026-05-26
 lastmod: 2026-05-27
-description: "Покрокова інструкція з розгортання production-ready self-hosted N8N з Docker, PostgreSQL, HTTPS, автоматичними бекапами та моніторингом. Best practices безпеки включені."
+description: "Покрокова інструкція з розгортання self-hosted N8N: Docker, PostgreSQL, HTTPS, автоматичні бекапи та моніторинг. Best practices безпеки для production."
 image: "/images/blog/start-with-self-hosted-n8n-hero.jpg"
 imageAlt: "Логотип N8N зі стійками серверів та з'єднаннями потоків даних — розширювана платформа автоматизації workflow"
 tags: ["N8N", "Self-Hosting", "DevOps", "Docker", "Автоматизація"]
