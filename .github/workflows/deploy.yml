@@ -29,6 +29,9 @@ jobs:
         working-directory: ./hugo
         run: hugo --minify --gc
 
+      - name: Verify technical SEO invariants
+        run: python3 scripts/check_seo_invariants.py
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
