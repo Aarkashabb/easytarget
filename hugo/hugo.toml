@@ -4,13 +4,13 @@ defaultContentLanguage = "uk"
 defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
 pluralizeListTitles = false
+summaryLength = 40
 
 [taxonomies]
   tag = "tags"
-summaryLength = 40
 
 [outputs]
-  home     = ["HTML", "RSS", "JSON", "LLMS", "LLMSFULL"]
+  home     = ["HTML", "RSS", "LLMS", "LLMSFULL"]
   section  = ["HTML"]
   page     = ["HTML"]
   taxonomy = ["HTML"]
@@ -31,25 +31,29 @@ summaryLength = 40
 [markup.goldmark.renderer]
   unsafe = true
 
+[minify.tdewolff.html]
+  keepComments = true
+
 [languages]
   [languages.uk]
-    label        = "Українська"
+    languageName = "Українська"
+    languageCode = "uk-UA"
     contentDir   = "content/uk"
     weight       = 1
     [languages.uk.params]
       htmlLang = "uk"
   [languages.en]
-    label        = "English"
+    languageName = "English"
+    languageCode = "en-US"
     contentDir   = "content/en"
     weight       = 2
-    locale       = "en-US"
     [languages.en.params]
       htmlLang = "en"
   [languages.ru]
-    label        = "Русский"
+    languageName = "Русский"
+    languageCode = "ru-RU"
     contentDir   = "content/ru"
     weight       = 3
-    locale       = "ru-RU"
     [languages.ru.params]
       htmlLang = "ru"
 

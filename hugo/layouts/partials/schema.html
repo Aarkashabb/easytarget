@@ -7,7 +7,7 @@
   "@type": "Organization",
   "name": "{{ .Site.Params.siteName }}",
   "url": "{{ .Site.BaseURL }}",
-  "logo": "{{ .Site.BaseURL }}images/logo.svg",
+  "logo": "{{ "favicon.svg" | absURL }}",
   "description": "Workflow automation services for business processes using N8N, Make, Zapier. Custom automation solutions for banking, marketing, e-commerce, and more.",
   "contactPoint": {
     "@type": "ContactPoint",
@@ -65,7 +65,7 @@
     "name": "{{ .Site.Params.siteName }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ "images/logo.svg" | absURL }}"
+      "url": "{{ "favicon.svg" | absURL }}"
     }
   },
   "mainEntityOfPage": {

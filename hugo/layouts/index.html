@@ -248,7 +248,7 @@
     <a class="btn btn--primary btn--lg" href="{{ .Site.Params.calendly }}" target="_blank" rel="noopener">{{ .Params.cta_button }} <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M2 6.5h12M5.5 2v3M10.5 2v3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></a>
     <div class="final-cta__email">
       <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M2.5 4.5l5.5 4 5.5-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>{{ i18n "or_email" }} <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></span>
+      <span>{{ i18n "or_email" }} {{ printf "<!--email_off-->" | safeHTML }}<a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>{{ printf "<!--/email_off-->" | safeHTML }}</span>
     </div>
   </div>
 </section>
