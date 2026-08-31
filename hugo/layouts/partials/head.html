@@ -3,8 +3,25 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ block "title" . }}{{ .Title }} — {{ .Site.Params.siteName }}{{ end }}</title>
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
+{{- $defaultTitle := printf "%s — %s" .Title .Site.Params.siteName -}}
+{{- if .IsHome -}}
+  {{- $defaultTitle = printf "%s — %s" (i18n "site_tagline") .Site.Params.siteName -}}
+{{- else if eq .Kind "404" -}}
+  {{- if eq .Site.Language.Lang "uk" -}}
+    {{- $defaultTitle = printf "404 — Сторінка не знайдена | %s" .Site.Params.siteName -}}
+  {{- else if eq .Site.Language.Lang "ru" -}}
+    {{- $defaultTitle = printf "404 — Страница не найдена | %s" .Site.Params.siteName -}}
+  {{- else -}}
+    {{- $defaultTitle = printf "404 — Page Not Found | %s" .Site.Params.siteName -}}
+  {{- end -}}
+{{- end -}}
+<title>{{ $defaultTitle }}</title>
+{{- $metaDescription := .Description -}}
+{{- if not $metaDescription -}}{{- $metaDescription = .Summary -}}{{- end -}}
+{{- if not $metaDescription -}}{{- $metaDescription = .Site.Home.Description -}}{{- end -}}
+{{- if not $metaDescription -}}{{- $metaDescription = .Site.Home.Summary -}}{{- end -}}
+{{- if not $metaDescription -}}{{- $metaDescription = .Site.Params.siteName -}}{{- end -}}
+<meta name="description" content="{{ $metaDescription }}">
 <link rel="canonical" href="{{ with .Params.canonical }}{{ . }}{{ else }}{{ .Permalink }}{{ end }}">
 
 {{- /* Alternate language links for SEO */ -}}
@@ -19,9 +36,9 @@
 {{- $ogImage := "/images/og-default.jpg" -}}
 {{- with .Params.image }}{{ $ogImage = . }}{{ end }}
 {{- $ogImageAbs := $ogImage | absURL -}}
-<meta property="og:type" content="{{ if eq .Type "blog" }}article{{ else }}website{{ end }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:title" content="{{ .Title }}">
-<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
+<meta property="og:description" content="{{ $metaDescription }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ .Site.Params.siteName }}">
 <meta property="og:image" content="{{ $ogImageAbs }}">
@@ -43,7 +60,7 @@
 {{- /* Twitter Card */ -}}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ .Title }}">
-<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
+<meta name="twitter:description" content="{{ $metaDescription }}">
 <meta name="twitter:image" content="{{ $ogImageAbs }}">
 <meta name="twitter:image:alt" content="{{ with .Params.imageAlt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
 

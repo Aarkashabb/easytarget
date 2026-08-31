@@ -1,4 +1,4 @@
-{{ define "title" }}{{ .Params.meta_title | default .Site.Params.siteName }} — {{ i18n "site_tagline" }}{{ end }}
+{{ define "title" }}{{ .Params.meta_title | default (i18n "site_tagline") }} — {{ .Site.Params.siteName }}{{ end }}
 {{ define "main" }}
 {{- $p := . -}}
 
