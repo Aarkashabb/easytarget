@@ -38,10 +38,18 @@ def request(base_host: str, port: int, host_header: str, path: str) -> CheckResu
     return CheckResult(status=resp.status, location=location, body=body)
 
 
-def wait_for_server(base_host: str, port: int, timeout_s: int = 60) -> None:
+def wait_for_server(
+    base_host: str,
+    port: int,
+    proc: subprocess.Popen[str],
+    timeout_s: int = 60,
+) -> None:
     deadline = time.time() + timeout_s
     last_error: Exception | None = None
     while time.time() < deadline:
+        exit_code = proc.poll()
+        if exit_code is not None:
+            raise RuntimeError(f"Pages dev server exited during startup with code {exit_code}")
         try:
             conn = http.client.HTTPConnection(base_host, port, timeout=2)
             conn.request("GET", "/", headers={"Host": CANONICAL_HOST, "Connection": "close"})
@@ -124,7 +132,7 @@ def main() -> int:
     thread.start()
 
     try:
-        wait_for_server("127.0.0.1", args.port)
+        wait_for_server("127.0.0.1", args.port, proc)
         for path in ["/", "/en/", "/portfolio/", "/?utm_source=baseline&utm_medium=test"]:
             assert_redirect(args.port, path)
         for path in ["/", "/en/", "/portfolio/", "/?utm_source=baseline&utm_medium=test"]:
@@ -134,6 +142,9 @@ def main() -> int:
         if logs:
             print("--- wrangler pages dev log ---", file=sys.stderr)
             print("".join(logs[-200:]), file=sys.stderr)
+        annotation = " | ".join(line.strip() for line in logs[-20:] if line.strip())
+        annotation = annotation.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
+        print(f"::error title=www redirect regression::{exc}: {annotation}", file=sys.stderr)
         return 1
     finally:
         try:
