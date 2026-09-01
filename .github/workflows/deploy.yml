@@ -29,6 +29,9 @@ jobs:
         working-directory: ./hugo
         run: hugo --minify --gc
 
+      - name: Verify sitemap contains no noindex URLs
+        run: python3 scripts/check_noindex_sitemap.py --build-dir hugo/public
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
