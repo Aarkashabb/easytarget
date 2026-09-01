@@ -38,7 +38,7 @@
 - **CI workflow**: `.github/workflows/deploy.yml`
 - **SEO briefs**: `docs/briefs/`
 - **Article source drafts (gitignored)**: `Blog/` (.docx + hi-res PNGs from Gemini/ChatGPT)
-- **Legacy `netlify.toml`**: still in repo for reference but **NOT USED** by Cloudflare Pages — headers/redirects live in `hugo/static/_headers` and `hugo/static/_redirects`
+- **Legacy `netlify.toml`**: still in repo for reference but **NOT USED** by Cloudflare Pages — headers live in `hugo/static/_headers`, path-only redirects live in `hugo/static/_redirects`, and host-level redirects (like www -> apex) live in `functions/_middleware.js`
 
 ## 📊 Analytics & SEO
 - **Google Analytics 4 ID**: `G-KV15BQBKK3` (loaded lazily in `head.html` on first interaction or 3s idle)
@@ -162,7 +162,7 @@ Edit: `hugo/layouts/partials/head.html`
 Edit: `hugo/hugo.toml`
 
 ### Adding redirects
-Edit: `hugo/static/_redirects` (Cloudflare Pages format: `/old-path /new-path 301`). One per line. Splats (`*`) supported.
+Edit: `hugo/static/_redirects` for path-only Cloudflare Pages redirects (`/old-path /new-path 301`). One per line. Splats (`*`) supported. Host-level redirects such as `www.easytarget.com.ua` -> `easytarget.com.ua` live in `functions/_middleware.js`.
 
 ### Cache invalidation
 Cloudflare Pages purges its CDN on every deploy automatically. For manual purge use dashboard → Caching → Purge Everything.
