@@ -32,10 +32,10 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Install Wrangler
-        run: npm install -g wrangler@4
+        run: npm install -g wrangler@4.127.1
 
       - name: Verify www redirect regression
         run: python3 scripts/check_www_redirect.py --build-dir hugo/public
