@@ -1,5 +1,13 @@
 {{ define "title" }}{{ .Title }} — {{ .Site.Params.siteName }}{{ end }}
 {{ define "main" }}
+{{- $price := dict -}}
+{{- if eq .Lang "uk" -}}
+  {{- with site.Data.pricing.uk.portfolio -}}
+    {{- with index . $.File.ContentBaseName -}}
+      {{- $price = . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
 
 <section class="case-hero">
   <div class="container">
@@ -39,6 +47,13 @@
           <div class="case-cell__metric-label">{{ .Params.result_label }}</div>
         </div>
       </div>
+      {{- with $price }}
+      <div class="case-cell case-cell--price">
+        <div class="case-cell__price-label">{{ .label }}</div>
+        <div class="case-cell__price-value">{{ .value }}</div>
+        {{- with .note }}<div class="case-cell__price-note">{{ . }}</div>{{ end }}
+      </div>
+      {{- end }}
     </div>
   </div>
 </section>
@@ -109,6 +124,18 @@
     </div>
   </div>
 </section>
+
+{{- if eq .Lang "uk" }}
+<section class="page-links case-links">
+  <div class="container">
+    <div class="page-links__grid reveal">
+      <a class="page-links__item" href="{{ with .Site.GetPage "/tsiny" }}{{ .RelPermalink }}{{ end }}">Публічний прайс</a>
+      <a class="page-links__item" href="{{ with .Site.GetPage "/ai-avtomatyzaciya" }}{{ .RelPermalink }}{{ end }}">AI-автоматизація</a>
+      <a class="page-links__item" href="{{ with .Site.GetPage "/chat-boty" }}{{ .RelPermalink }}{{ end }}">Чат-боти</a>
+    </div>
+  </div>
+</section>
+{{- end }}
 
 <section class="final-cta">
   <div class="container">

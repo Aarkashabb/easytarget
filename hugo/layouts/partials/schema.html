@@ -115,6 +115,48 @@
 </script>
 {{- end -}}
 
+{{- /* Service Schema - for public service pages with visible price cards */ -}}
+{{- if and (eq .Lang "uk") (eq .Params.schema_type "Service") -}}
+{{- $servicePricing := dict -}}
+{{- with site.Data.pricing.uk.pages -}}
+  {{- with index . $.File.ContentBaseName -}}
+    {{- $servicePricing = . -}}
+  {{- end -}}
+{{- end -}}
+{{- with $servicePricing.cards -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": {{ $.Title | jsonify }},
+  "description": {{ $.Description | jsonify }},
+  "serviceType": {{ $servicePricing.service_type | jsonify }},
+  "provider": {
+    "@type": "Organization",
+    "name": {{ $.Site.Params.siteName | jsonify }},
+    "url": "{{ $.Site.BaseURL }}"
+  },
+  "offers": [
+    {{- range $i, $card := . -}}
+    {{- if $i }},{{ end }}
+    {
+      "@type": "Offer",
+      "name": {{ $card.title | jsonify }},
+      "priceCurrency": "USD",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": {{ $card.min_price }},
+        "maxPrice": {{ $card.max_price }},
+        "priceCurrency": "USD"
+      }
+    }
+    {{- end }}
+  ]
+}
+</script>
+{{- end -}}
+{{- end -}}
+
 {{- /* WebPage Schema - for all pages */ -}}
 <script type="application/ld+json">
 {

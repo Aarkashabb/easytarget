@@ -24,6 +24,14 @@
 
     <div class="portfolio-grid" id="portfolio-grid">
       {{- range $i, $page := .Pages }}
+      {{- $casePricing := dict -}}
+      {{- if eq $page.Lang "uk" -}}
+        {{- with site.Data.pricing.uk.portfolio -}}
+          {{- with index . $page.File.ContentBaseName -}}
+            {{- $casePricing = . -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
       <article class="pcard" data-industry="{{ $page.Params.industry }}">
         <a class="pcard__thumb" href="{{ $page.RelPermalink }}" aria-hidden="true" tabindex="-1">
           <span class="pcard__thumb-id">CASE.{{ printf "%02d" (add $i 1) }}</span>
@@ -34,6 +42,13 @@
         </a>
         <div class="pcard__body">
           <div class="pcard__industry">{{ $page.Params.industry_label }}</div>
+          {{- with $casePricing }}
+          <div class="pcard__price">
+            <span class="pcard__price-label">{{ .label }}</span>
+            <span class="pcard__price-value">{{ .value }}</span>
+            {{- with .note }}<div class="pcard__price-note">{{ . }}</div>{{ end }}
+          </div>
+          {{- end }}
           <h2 class="pcard__title">{{ $page.Title }}</h2>
           <p>{{ $page.Params.short_body }}</p>
           <div class="pcard__stack">

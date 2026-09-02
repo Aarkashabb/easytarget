@@ -50,6 +50,35 @@
   </div>
 </section>
 
+{{- if .IsHome }}
+{{- with .Params.pricing_teaser_items }}
+<!-- ============ Pricing Teaser ============ -->
+<section class="section pricing-teaser" id="pricing">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>{{ $.Params.pricing_teaser_title }}</h2>
+      <p>{{ $.Params.pricing_teaser_lede }}</p>
+    </div>
+    <div class="pricing-grid pricing-grid--home reveal">
+      {{- range . }}
+      <article class="pricing-card pricing-card--compact">
+        <h3>{{ .title }}</h3>
+        <div class="pricing-card__price">
+          <span class="pricing-card__price-value">{{ .price }}</span>
+        </div>
+        <p class="pricing-card__text">{{ .note }}</p>
+      </article>
+      {{- end }}
+    </div>
+    <div class="pricing-teaser__foot reveal">
+      <p>{{ $.Params.pricing_teaser_disclaimer }}</p>
+      <a class="btn btn--ghost" href="{{ $.Params.pricing_teaser_cta_href }}">{{ $.Params.pricing_teaser_cta_text }}</a>
+    </div>
+  </div>
+</section>
+{{- end }}
+{{- end }}
+
 <!-- ============ Recent Projects ============ -->
 <section class="section projects" id="projects">
   <div class="container">

@@ -1,0 +1,149 @@
+{{ define "title" }}{{ .Title }} — {{ .Site.Params.siteName }}{{ end }}
+{{ define "main" }}
+{{- $pricing := dict -}}
+{{- if eq .Lang "uk" -}}
+  {{- with site.Data.pricing.uk -}}
+    {{- with index .pages $.File.ContentBaseName -}}
+      {{- $pricing = . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <span class="page-hero__eyebrow">{{ .Params.eyebrow | default (i18n "nav_services") }}</span>
+    <h1>{{ .Title }}</h1>
+    {{- with .Description }}
+    <p class="page-hero__lead">{{ . }}</p>
+    {{- end }}
+    {{- with $pricing.disclaimer }}
+    <p class="page-hero__note">{{ . }}</p>
+    {{- end }}
+  </div>
+</section>
+
+{{- with $pricing.cards }}
+<section class="pricing-section">
+  <div class="container">
+    <div class="section-head pricing-section__head reveal">
+      <h2>{{ $pricing.cards_title }}</h2>
+      {{- with $pricing.cards_lede }}<p>{{ . }}</p>{{ end }}
+    </div>
+    <div class="pricing-grid reveal">
+      {{- range . }}
+      <article class="pricing-card">
+        <div class="pricing-card__header">
+          <h3>{{ .title }}</h3>
+          <div class="pricing-card__price">
+            <span class="pricing-card__price-value">{{ .price_text }}</span>
+            {{- with .duration }}<span class="pricing-card__duration">{{ . }}</span>{{ end }}
+          </div>
+        </div>
+        {{- with .includes }}
+        <div class="pricing-card__block">
+          <div class="pricing-card__label">Що входить</div>
+          <ul class="pricing-card__list">
+            {{- range . }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        </div>
+        {{- end }}
+        {{- with .separate }}
+        <div class="pricing-card__block">
+          <div class="pricing-card__label">Оплачується окремо</div>
+          <ul class="pricing-card__list pricing-card__list--separate">
+            {{- range . }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        </div>
+        {{- end }}
+        {{- with .factors }}
+        <div class="pricing-card__block pricing-card__block--factors">
+          <div class="pricing-card__label">Фактори ціни</div>
+          <ul class="pricing-card__chips">
+            {{- range . }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        </div>
+        {{- end }}
+      </article>
+      {{- end }}
+    </div>
+    {{- with $pricing.disclaimer }}
+    <p class="pricing-section__note">{{ . }}</p>
+    {{- end }}
+  </div>
+</section>
+{{- end }}
+
+{{- with .Content }}
+<section class="page-content">
+  <div class="container">
+    <article class="card post-content page-content__card">
+      {{ . }}
+    </article>
+  </div>
+</section>
+{{- end }}
+
+{{- with $pricing.table_rows }}
+<section class="pricing-table-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>{{ $pricing.table_title }}</h2>
+      {{- with $pricing.table_lede }}<p>{{ . }}</p>{{ end }}
+    </div>
+    <div class="pricing-table-wrap reveal">
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Проєкт</th>
+            <th>Орієнтовна ціна</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{- range . }}
+          <tr>
+            <td>{{ .project }}</td>
+            <td>{{ .price }}</td>
+          </tr>
+          {{- end }}
+        </tbody>
+      </table>
+    </div>
+    {{- with $pricing.explanation_title }}
+    <div class="pricing-explain reveal">
+      <h3>{{ . }}</h3>
+      <ul>
+        {{- range $pricing.explanation_items }}<li>{{ . }}</li>{{ end }}
+      </ul>
+    </div>
+    {{- end }}
+  </div>
+</section>
+{{- end }}
+
+{{- with $pricing.related_links }}
+<section class="page-links">
+  <div class="container">
+    <div class="page-links__grid reveal">
+      {{- range . }}
+      <a class="page-links__item" href="{{ .href }}">{{ .text }}</a>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}
+
+{{- with $pricing.cta_title }}
+<section class="final-cta final-cta--page" id="contact">
+  <div class="container reveal">
+    <h2>{{ . }}</h2>
+    {{- with $pricing.cta_lede }}<p>{{ . }}</p>{{ end }}
+    <a class="btn btn--primary btn--lg" href="{{ $pricing.cta_href | default $.Site.Params.calendly }}" target="_blank" rel="noopener">{{ $pricing.cta_button | default (i18n "nav_cta") }} <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M2 6.5h12M5.5 2v3M10.5 2v3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></a>
+  </div>
+</section>
+{{- end }}
+{{ end }}
+
+{{ define "scripts" }}
+{{- $js := resources.Get "js/site.js" | resources.Fingerprint "sha256" }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{ end }}
