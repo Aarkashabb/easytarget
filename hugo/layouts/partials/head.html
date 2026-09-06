@@ -14,7 +14,9 @@
 {{- range .AllTranslations }}
 <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
 {{- end }}
-<link rel="alternate" hreflang="x-default" href="{{ .Site.BaseURL }}">
+{{- range where .AllTranslations "Lang" "uk" }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{- end }}
 
 {{- /* Open Graph */ -}}
 {{- $ogImage := "/images/og-default.jpg" -}}
