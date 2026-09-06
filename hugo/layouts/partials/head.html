@@ -6,6 +6,12 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{- $is404 := eq .Kind "404" -}}
+{{- if $is404 }}
+<title>{{ if eq .Site.Language.Lang "uk" }}404 - Сторінку не знайдено{{ else if eq .Site.Language.Lang "ru" }}404 - Страница не найдена{{ else }}404 - Page not found{{ end }} | {{ .Site.Params.siteName }}</title>
+<meta name="description" content="{{ if eq .Site.Language.Lang "uk" }}Сторінку не знайдено. Поверніться на головну або перейдіть до блогу чи портфоліо EasyTarget.{{ else if eq .Site.Language.Lang "ru" }}Страница не найдена. Вернитесь на главную или перейдите в блог либо портфолио EasyTarget.{{ else }}Page not found. Return home or browse the EasyTarget blog and portfolio.{{ end }}">
+<meta name="robots" content="noindex, follow">
+{{- else }}
 <title>{{ block "title" . }}{{ .Title }} — {{ .Site.Params.siteName }}{{ end }}</title>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
 <link rel="canonical" href="{{ with .Params.canonical }}{{ . }}{{ else }}{{ .Permalink }}{{ end }}">
@@ -17,8 +23,10 @@
 {{- range where .AllTranslations "Lang" "uk" }}
 <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
 {{- end }}
+{{- end }}
 
 {{- /* Open Graph */ -}}
+{{- if not $is404 }}
 {{- $ogImage := "/images/og-default.jpg" -}}
 {{- with .Params.image }}{{ $ogImage = . }}{{ end }}
 {{- $ogImageAbs := $ogImage | absURL -}}
@@ -52,6 +60,7 @@
 
 {{- /* JSON-LD Structured Data */ -}}
 {{- partial "schema.html" . -}}
+{{- end }}
 
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <link rel="preload" as="font" href="/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" type="font/woff2" crossorigin>
