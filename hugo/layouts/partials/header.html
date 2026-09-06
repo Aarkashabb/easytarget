@@ -26,12 +26,17 @@
           {{- $lang := .lang -}}
           {{- $label := .label -}}
           {{- $href := "" -}}
-          {{- range $p.AllTranslations -}}
-            {{- if eq .Lang $lang -}}{{- $href = .RelPermalink -}}{{- end -}}
-          {{- end -}}
-          {{- if not $href -}}
+          {{- if eq $p.Kind "404" -}}
             {{- if eq $lang "uk" -}}{{- $href = "/" -}}
             {{- else -}}{{- $href = printf "/%s/" $lang -}}{{- end -}}
+          {{- else -}}
+            {{- range $p.AllTranslations -}}
+              {{- if eq .Lang $lang -}}{{- $href = .RelPermalink -}}{{- end -}}
+            {{- end -}}
+            {{- if not $href -}}
+              {{- if eq $lang "uk" -}}{{- $href = "/" -}}
+              {{- else -}}{{- $href = printf "/%s/" $lang -}}{{- end -}}
+            {{- end -}}
           {{- end -}}
           <a href="{{ $href }}"{{ if eq $lang $curLang }} class="is-active"{{ end }}>{{ $label }}</a>
         {{- end }}

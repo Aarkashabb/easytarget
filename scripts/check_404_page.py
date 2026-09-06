@@ -123,7 +123,14 @@ def validate_page(path: Path, expected: PageExpectation) -> list[str]:
     if parser.canonicals:
         errors.append(f"{path}: 404 page must not declare canonical {parser.canonicals}")
     if parser.alternates:
-        errors.append(f"{path}: 404 page must not declare hreflang alternates")
+        errors.append(f"{path}: 404 page must not declare hreflang alternates {parser.alternates!r}")
+    generated_404_links = sorted(
+        href
+        for href in parser.hrefs
+        if href.split("#", 1)[0].split("?", 1)[0].endswith("404.html")
+    )
+    if generated_404_links:
+        errors.append(f"{path}: must not link to generated 404 assets {generated_404_links!r}")
     if parser.json_ld_count:
         errors.append(f"{path}: 404 page must not contain JSON-LD")
 
