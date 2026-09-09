@@ -10,6 +10,12 @@
     <nav class="site-nav" aria-label="{{ i18n "nav_aria_label" }}">
       {{- $home := .Site.GetPage "/" -}}
       <a href="{{ $home.RelPermalink }}#services">{{ i18n "nav_services" }}</a>
+      {{- $blog := .Site.GetPage "/blog" -}}
+      {{- if eq .Section "blog" }}
+      <a href="{{ $blog.RelPermalink }}" class="is-active" aria-current="page">{{ i18n "nav_blog" }}</a>
+      {{- else }}
+      <a href="{{ $blog.RelPermalink }}">{{ i18n "nav_blog" }}</a>
+      {{- end }}
       {{- $portfolio := .Site.GetPage "/portfolio" -}}
       {{- if eq .Section "portfolio" }}
       <a href="{{ $portfolio.RelPermalink }}" class="is-active" aria-current="page">{{ i18n "nav_portfolio" }}</a>
