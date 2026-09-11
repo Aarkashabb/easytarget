@@ -6,6 +6,8 @@ description: "A practical guide to AI integration: where AI delivers maximum ROI
 tags: ["AI", "OpenAI", "N8N", "Make", "Automation"]
 keywords: ["AI integration business", "connect openai to n8n", "AI customer support automation", "AI lead qualification", "AI document processing"]
 author: "Ivan Blagoveshchenskyi"
+image: "/images/blog/ai-integration-business-hero-2.png"
+imageAlt: "AI workflow connects incoming business data to validation, a language model and a human decision point"
 cluster: "ai-integration"
 clusterRole: "pillar"
 draft: false
@@ -84,6 +86,8 @@ Automated personalized first-touch email sent
 
 > 💡 **Tip:** For lead qualification, OpenAI structured output works best — ask the AI to return a JSON object with specific fields rather than free text. This simplifies downstream processing in the workflow.
 
+![AI triages an incoming lead, assigns a priority, and routes it to a manager](/images/blog/ai-integration-business-intake-triage.png)
+
 ## Case 3: AI for Document Processing
 
 Companies receive dozens of documents daily: invoices, contracts, technical specifications, reports. Manually extracting data from them is monotonous and expensive. AI handles it in seconds.
@@ -95,6 +99,8 @@ Companies receive dozens of documents daily: invoices, contracts, technical spec
 - Translate technical documents with automatic formatting preservation
 
 Tooling: OpenAI Vision API for image and scan processing, standard Chat API for text documents. Both connect through N8N or Make without any custom code.
+
+![AI workflow extracts fields from a document and sends structured data to a business system](/images/blog/ai-integration-business-document-extraction.png)
 
 ## Cost and Model Selection
 
@@ -112,6 +118,8 @@ Practical approach: always start with the cheapest model and step up only when q
 Before sending customer data to external LLM APIs, clarify your privacy requirements. OpenAI, Anthropic, and Google offer options to prevent corporate data from being used for model training — connect via enterprise plans or API with the appropriate settings enabled.
 
 > ⚠️ **Important:** For financial, medical, or legal data, consider self-hosted LLMs: Llama 3, Mistral, or equivalents deployed on your own infrastructure. [N8N self-hosted](/en/blog/start-with-self-hosted-n8n/) + local LLM = fully private AI automation with zero data leaving your environment.
+
+![Data boundary between business systems, an AI API, and a private environment](/images/blog/ai-integration-business-data-boundary.png)
 
 ## Where to Start: First Steps
 
