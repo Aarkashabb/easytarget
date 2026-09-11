@@ -18,7 +18,9 @@
           {{- with .Params.image }}
           {{- $webp := replaceRE `\.(jpe?g|png)$` ".webp" . }}
           <picture>
+            {{- if fileExists (printf "static%s" $webp) }}
             <source srcset="{{ $webp | relURL }}" type="image/webp">
+            {{- end }}
             <img src="{{ . | relURL }}" alt="" loading="lazy" decoding="async">
           </picture>
           {{- else }}
