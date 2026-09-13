@@ -6,7 +6,7 @@ description: "Практичний гайд: де AI дає максимальн
 tags: ["AI", "OpenAI", "N8N", "Make", "Автоматизація"]
 keywords: ["AI інтеграція бізнес", "підключити openai до n8n", "автоматизація підтримки ai", "кваліфікація лідів ai", "обробка документів ai"]
 author: "Ivan Blagoveshchenskyi"
-image: "/images/blog/ai-integration-business-hero-2.png"
+image: "/images/blog/ai-integration-business-hero-2.webp"
 imageAlt: "AI workflow з'єднує вхідні бізнес-дані з валідацією, мовною моделлю та рішенням людини"
 cluster: "ai-integration"
 clusterRole: "pillar"
@@ -86,7 +86,7 @@ AI аналізує текст заявки:
 
 > 💡 **Порада:** Для кваліфікації лідів найкраще працює structured output від OpenAI — попросіть AI повернути JSON з конкретними полями замість вільного тексту. Це спрощує подальшу обробку у workflow.
 
-![AI обробляє вхідну заявку, визначає пріоритет і передає її менеджеру](/images/blog/ai-integration-business-intake-triage.png)
+![AI обробляє вхідну заявку, визначає пріоритет і передає її менеджеру](/images/blog/ai-integration-business-intake-triage.webp)
 
 ## Кейс 3: AI для роботи з документами
 
@@ -102,7 +102,7 @@ AI аналізує текст заявки:
 
 Інструментарій: OpenAI Vision API для обробки зображень та сканів, звичайний Chat API для текстових документів. Обидва підключаються через N8N або Make без жодного додаткового коду.
 
-![AI workflow вилучає поля з документа та передає структуровані дані в бізнес-систему](/images/blog/ai-integration-business-document-extraction.png)
+![AI workflow вилучає поля з документа та передає структуровані дані в бізнес-систему](/images/blog/ai-integration-business-document-extraction.webp)
 
 ## Вартість та оптимізація AI-запитів
 
@@ -123,7 +123,7 @@ AI аналізує текст заявки:
 
 > ⚠️ **Важливо:** Для фінансових, медичних або юридичних даних рекомендуємо self-hosted LLM: Llama 3, Mistral або аналоги на власній інфраструктурі. [N8N self-hosted](/blog/start-with-self-hosted-n8n/) + локальна LLM = повністю приватна AI-автоматизація.
 
-![Межа даних між бізнес-системами, AI API та приватним середовищем](/images/blog/ai-integration-business-data-boundary.png)
+![Межа даних між бізнес-системами, AI API та приватним середовищем](/images/blog/ai-integration-business-data-boundary.webp)
 
 ## З чого почати: перші кроки
 

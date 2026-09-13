@@ -6,7 +6,7 @@ description: "Concrete workflow designs for automating your online store: order 
 tags: ["E-commerce", "Automation", "N8N", "Make", "Shopify"]
 keywords: ["e-commerce automation", "order processing workflow", "inventory sync automation", "abandoned cart recovery"]
 author: "Ivan Blagoveshchenskyi"
-image: "/images/blog/ecommerce-automation-order-lifecycle-2.png"
+image: "/images/blog/ecommerce-automation-order-lifecycle-2.webp"
 imageAlt: "Automated order lifecycle connects storefront, inventory, CRM, customer notifications and fulfillment"
 cluster: "business-automation"
 clusterRole: "spoke"
@@ -45,7 +45,7 @@ This is the most critical workflow for any store. One trigger fires the entire a
 
 > 💡 **Tip:** Add a branch: if the item is out of stock, automatically notify the customer with an expected restock date and a curated list of similar available products.
 
-![Automated order lifecycle from checkout to delivery](/images/blog/ecommerce-automation-order-lifecycle-2.png)
+![Automated order lifecycle from checkout to delivery](/images/blog/ecommerce-automation-order-lifecycle-2.webp)
 
 ## Workflow 2: Multi-Platform Inventory Sync
 
@@ -57,7 +57,7 @@ How to build the sync workflow: designate one platform as the master source of t
 
 Result: zero overselling incidents, accurate inventory on all channels 24/7, with zero manual synchronization work.
 
-![Inventory synchronization between the source system and sales channels](/images/blog/ecommerce-automation-inventory-sync.png)
+![Inventory synchronization between the source system and sales channels](/images/blog/ecommerce-automation-inventory-sync.webp)
 
 ## Workflow 3: Triggered Customer Communications
 
@@ -79,7 +79,7 @@ Result: zero overselling incidents, accurate inventory on all channels 24/7, wit
 
 Each of these trigger sequences is built in Make or N8N as a standalone workflow connected to your email platform (Klaviyo, Mailchimp, SendGrid) and SMS provider.
 
-![Customer journey with automated post-order and abandoned-cart communications](/images/blog/ecommerce-automation-customer-journey.png)
+![Customer journey with automated post-order and abandoned-cart communications](/images/blog/ecommerce-automation-customer-journey.webp)
 
 ## Workflow 4: Automated Reporting and Analytics
 
@@ -97,7 +97,7 @@ Schedule: every Monday at 08:00
 
 Time to prepare the weekly report: from 2–3 hours to zero. Data is always current and free of manual entry errors. For a deeper look at measuring the financial impact, see our guide on [calculating ROI from workflow automation](/en/blog/calculating-roi-workflow-automation/).
 
-![Automated operational data collection and weekly report delivery](/images/blog/ecommerce-automation-operations-reporting.png)
+![Automated operational data collection and weekly report delivery](/images/blog/ecommerce-automation-operations-reporting.webp)
 
 ## Which Tools to Use
 

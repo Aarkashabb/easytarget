@@ -6,7 +6,7 @@ description: "Конкретні workflow-схеми для автоматиза
 tags: ["E-commerce", "Автоматизація", "N8N", "Make", "Shopify"]
 keywords: ["автоматизація e-commerce", "обробка замовлень автоматично", "синхронізація залишків інтернет-магазин", "abandoned cart workflow"]
 author: "Ivan Blagoveshchenskyi"
-image: "/images/blog/ecommerce-automation-order-lifecycle-2.png"
+image: "/images/blog/ecommerce-automation-order-lifecycle-2.webp"
 imageAlt: "Автоматизований цикл замовлення з'єднує вітрину магазину, залишки, CRM, повідомлення клієнту та доставку"
 cluster: "business-automation"
 clusterRole: "spoke"
@@ -45,7 +45,7 @@ draft: false
 
 > 💡 **Порада:** Додайте розгалуження: якщо товар не в наявності — автоматично надсилайте клієнту повідомлення із зазначеним терміном очікування та пропозицією схожих товарів.
 
-![Автоматизований життєвий цикл замовлення від оформлення до доставки](/images/blog/ecommerce-automation-order-lifecycle-2.png)
+![Автоматизований життєвий цикл замовлення від оформлення до доставки](/images/blog/ecommerce-automation-order-lifecycle-2.webp)
 
 ## Workflow 2: Синхронізація товарів між платформами
 
@@ -57,7 +57,7 @@ draft: false
 
 Результат: нуль випадків overselling, актуальні залишки на всіх майданчиках 24/7 без жодної ручної роботи.
 
-![Синхронізація залишків між основною системою та каналами продажу](/images/blog/ecommerce-automation-inventory-sync.png)
+![Синхронізація залишків між основною системою та каналами продажу](/images/blog/ecommerce-automation-inventory-sync.webp)
 
 ## Workflow 3: Тригерні комунікації з клієнтами
 
@@ -79,7 +79,7 @@ draft: false
 
 Всі ці тригери будуються в Make або N8N як окремі workflows, підключені до вашої email-платформи (Klaviyo, Mailchimp, SendGrid) та SMS-провайдера.
 
-![Клієнтський шлях з автоматичними повідомленнями після замовлення та для покинутого кошика](/images/blog/ecommerce-automation-customer-journey.png)
+![Клієнтський шлях з автоматичними повідомленнями після замовлення та для покинутого кошика](/images/blog/ecommerce-automation-customer-journey.webp)
 
 ## Workflow 4: Автоматичні звіти та аналітика
 
@@ -97,7 +97,7 @@ draft: false
 
 Час на підготовку тижневого звіту: з 2–3 годин до нуля. Дані завжди свіжі та без помилок ручного введення. Детальніше про [розрахунок ROI від автоматизації](/blog/calculating-roi-workflow-automation/) — в окремій статті.
 
-![Автоматизований збір операційних даних і надсилання щотижневого звіту](/images/blog/ecommerce-automation-operations-reporting.png)
+![Автоматизований збір операційних даних і надсилання щотижневого звіту](/images/blog/ecommerce-automation-operations-reporting.webp)
 
 ## Які інструменти використовувати
 

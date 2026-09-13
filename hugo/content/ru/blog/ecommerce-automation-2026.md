@@ -6,7 +6,7 @@ description: "Конкретные workflow-схемы для автоматиз
 tags: ["E-commerce", "Автоматизация", "N8N", "Make", "Shopify"]
 keywords: ["автоматизация e-commerce", "обработка заказов автоматически", "синхронизация остатков интернет-магазин", "abandoned cart workflow"]
 author: "Ivan Blagoveshchenskyi"
-image: "/images/blog/ecommerce-automation-order-lifecycle-2.png"
+image: "/images/blog/ecommerce-automation-order-lifecycle-2.webp"
 imageAlt: "Автоматизированный цикл заказа связывает витрину магазина, остатки, CRM, сообщения клиенту и доставку"
 cluster: "business-automation"
 clusterRole: "spoke"
@@ -45,7 +45,7 @@ draft: false
 
 > 💡 **Совет:** Добавьте ветвление: если товар не в наличии — автоматически отправляйте клиенту уведомление с указанием срока ожидания и предложением похожих товаров.
 
-![Автоматизированный жизненный цикл заказа от оформления до доставки](/images/blog/ecommerce-automation-order-lifecycle-2.png)
+![Автоматизированный жизненный цикл заказа от оформления до доставки](/images/blog/ecommerce-automation-order-lifecycle-2.webp)
 
 ## Workflow 2: Синхронизация товаров между платформами
 
@@ -57,7 +57,7 @@ draft: false
 
 Результат: ноль случаев overselling, актуальные остатки на всех площадках 24/7 без какой-либо ручной работы.
 
-![Синхронизация остатков между основной системой и каналами продаж](/images/blog/ecommerce-automation-inventory-sync.png)
+![Синхронизация остатков между основной системой и каналами продаж](/images/blog/ecommerce-automation-inventory-sync.webp)
 
 ## Workflow 3: Триггерные коммуникации с клиентами
 
@@ -79,7 +79,7 @@ draft: false
 
 Все эти триггеры строятся в Make или N8N как отдельные workflows, подключённые к вашей email-платформе (Klaviyo, Mailchimp, SendGrid) и SMS-провайдеру.
 
-![Путь клиента с автоматическими сообщениями после заказа и для брошенной корзины](/images/blog/ecommerce-automation-customer-journey.png)
+![Путь клиента с автоматическими сообщениями после заказа и для брошенной корзины](/images/blog/ecommerce-automation-customer-journey.webp)
 
 ## Workflow 4: Автоматические отчёты и аналитика
 
@@ -97,7 +97,7 @@ draft: false
 
 Время на подготовку еженедельного отчёта: с 2–3 часов до нуля. Данные всегда свежие и без ошибок ручного ввода. Подробнее о [расчёте ROI от автоматизации](/ru/blog/calculating-roi-workflow-automation/) — в отдельной статье.
 
-![Автоматический сбор операционных данных и отправка еженедельного отчёта](/images/blog/ecommerce-automation-operations-reporting.png)
+![Автоматический сбор операционных данных и отправка еженедельного отчёта](/images/blog/ecommerce-automation-operations-reporting.webp)
 
 ## Какие инструменты использовать
 
