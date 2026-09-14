@@ -1,1 +1,7 @@
-<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}"{{- with .Title }} title="{{ . }}"{{- end }} loading="lazy" decoding="async">
+{{- $formats := partial "image-formats.html" .Destination -}}
+<picture>
+  {{- if ne $formats.webp $formats.fallback }}
+  <source srcset="{{ $formats.webp | safeURL }}" type="image/webp">
+  {{- end }}
+  <img src="{{ $formats.fallback | safeURL }}" alt="{{ .Text }}"{{- with .Title }} title="{{ . }}"{{- end }} loading="lazy" decoding="async">
+</picture>

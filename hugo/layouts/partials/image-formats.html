@@ -1,0 +1,23 @@
+{{- $src := . -}}
+{{- $webp := $src -}}
+{{- $fallback := $src -}}
+
+{{- if strings.HasSuffix (lower $src) ".webp" -}}
+  {{- $png := replaceRE `(?i)\.webp$` ".png" $src -}}
+  {{- $jpg := replaceRE `(?i)\.webp$` ".jpg" $src -}}
+  {{- $jpeg := replaceRE `(?i)\.webp$` ".jpeg" $src -}}
+  {{- if fileExists (printf "static%s" $png) -}}
+    {{- $fallback = $png -}}
+  {{- else if fileExists (printf "static%s" $jpg) -}}
+    {{- $fallback = $jpg -}}
+  {{- else if fileExists (printf "static%s" $jpeg) -}}
+    {{- $fallback = $jpeg -}}
+  {{- end -}}
+{{- else -}}
+  {{- $candidate := replaceRE `(?i)\.(jpe?g|png)$` ".webp" $src -}}
+  {{- if and (ne $candidate $src) (fileExists (printf "static%s" $candidate)) -}}
+    {{- $webp = $candidate -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return (dict "webp" $webp "fallback" $fallback) -}}

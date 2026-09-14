@@ -25,11 +25,17 @@
 {{- end }}
 {{- end }}
 
-{{- /* Open Graph */ -}}
+{{- /* Open Graph: use the original-format fallback for broad crawler support. */ -}}
 {{- if not $is404 }}
 {{- $ogImage := "/images/og-default.jpg" -}}
-{{- with .Params.image }}{{ $ogImage = . }}{{ end }}
+{{- with .Params.image }}
+  {{- $formats := partial "image-formats.html" . -}}
+  {{- $ogImage = $formats.fallback -}}
+{{- end }}
 {{- $ogImageAbs := $ogImage | absURL -}}
+{{- $ogImageType := "image/jpeg" -}}
+{{- if strings.HasSuffix (lower $ogImage) ".png" }}{{ $ogImageType = "image/png" }}{{ end -}}
+{{- if strings.HasSuffix (lower $ogImage) ".webp" }}{{ $ogImageType = "image/webp" }}{{ end -}}
 <meta property="og:type" content="{{ if eq .Type "blog" }}article{{ else }}website{{ end }}">
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
@@ -39,7 +45,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="{{ if eq $ogImage "/images/og-default.jpg" }}630{{ else }}655{{ end }}">
 <meta property="og:image:alt" content="{{ with .Params.imageAlt }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
-<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:type" content="{{ $ogImageType }}">
 {{- $locale := "en_US" -}}
 {{- if eq .Language.Lang "uk" }}{{ $locale = "uk_UA" }}{{ end -}}
 {{- if eq .Language.Lang "ru" }}{{ $locale = "ru_RU" }}{{ end -}}
@@ -66,12 +72,10 @@
 <link rel="preload" as="font" href="/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts/fonts.css">
 
-{{- /* LCP hero preload — fetched as soon as <head> is parsed.
-       Prefer .webp (~30-60% smaller); modern browsers since 2020 support it (96%+ global).
-       Fallback to original JPG/PNG for older browsers via type="image/jpeg". */ -}}
+{{- /* LCP hero preload: request the same WebP selected by <picture>. */ -}}
 {{- with .Params.image }}
-{{- $webp := replaceRE `\.(jpe?g|png)$` ".webp" . -}}
-<link rel="preload" as="image" href="{{ $webp | absURL }}" type="image/webp" fetchpriority="high">
+{{- $formats := partial "image-formats.html" . -}}
+<link rel="preload" as="image" href="{{ $formats.webp | absURL }}"{{ if strings.HasSuffix (lower $formats.webp) ".webp" }} type="image/webp"{{ end }} fetchpriority="high">
 {{- end }}
 
 {{- $css := resources.Get "css/styles.css" | resources.Fingerprint "sha256" }}
