@@ -54,3 +54,8 @@ cluster_spoke_label: "📚 Поглиблений матеріал з серії
 cluster_read_pillar: "Читати базовий гайд"
 cluster_topic_business_automation: "Автоматизація бізнес-процесів"
 cluster_topic_ai_integration: "AI інтеграція"
+pricing_includes: "Що входить"
+pricing_separate: "Оплачується окремо"
+pricing_factors: "Фактори ціни"
+pricing_project: "Проєкт"
+pricing_estimated_price: "Орієнтовна ціна"

@@ -1,11 +1,9 @@
 {{ define "title" }}{{ .Title }} — {{ .Site.Params.siteName }}{{ end }}
 {{ define "main" }}
 {{- $pricing := dict -}}
-{{- if eq .Lang "uk" -}}
-  {{- with site.Data.pricing.uk -}}
-    {{- with index .pages $.File.ContentBaseName -}}
-      {{- $pricing = . -}}
-    {{- end -}}
+{{- with index site.Data.pricing .Lang -}}
+  {{- with index .pages $.File.ContentBaseName -}}
+    {{- $pricing = . -}}
   {{- end -}}
 {{- end -}}
 
@@ -41,7 +39,7 @@
         </div>
         {{- with .includes }}
         <div class="pricing-card__block">
-          <div class="pricing-card__label">Що входить</div>
+          <div class="pricing-card__label">{{ i18n "pricing_includes" }}</div>
           <ul class="pricing-card__list">
             {{- range . }}<li>{{ . }}</li>{{ end }}
           </ul>
@@ -49,7 +47,7 @@
         {{- end }}
         {{- with .separate }}
         <div class="pricing-card__block">
-          <div class="pricing-card__label">Оплачується окремо</div>
+          <div class="pricing-card__label">{{ i18n "pricing_separate" }}</div>
           <ul class="pricing-card__list pricing-card__list--separate">
             {{- range . }}<li>{{ . }}</li>{{ end }}
           </ul>
@@ -57,7 +55,7 @@
         {{- end }}
         {{- with .factors }}
         <div class="pricing-card__block pricing-card__block--factors">
-          <div class="pricing-card__label">Фактори ціни</div>
+          <div class="pricing-card__label">{{ i18n "pricing_factors" }}</div>
           <ul class="pricing-card__chips">
             {{- range . }}<li>{{ . }}</li>{{ end }}
           </ul>
@@ -94,8 +92,8 @@
       <table class="pricing-table">
         <thead>
           <tr>
-            <th>Проєкт</th>
-            <th>Орієнтовна ціна</th>
+            <th>{{ i18n "pricing_project" }}</th>
+            <th>{{ i18n "pricing_estimated_price" }}</th>
           </tr>
         </thead>
         <tbody>

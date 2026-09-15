@@ -246,3 +246,161 @@ uk:
       label: "Вартість аналогічного рішення"
       value: "$320-600"
       note: "Орієнтир для синхронізації товарних залишків і мінімізації помилок."
+
+en:
+  pages:
+    tsiny:
+      eyebrow: "Public pricing"
+      cards_title: "Hourly rate, minimum engagement, and support"
+      cards_lede: "These are public guidelines for an initial estimate, not a binding quote."
+      disclaimer: "The final price depends on the number of systems, integration depth, data quality, security, and infrastructure. Servers, APIs, and subscriptions are billed separately or included in the individual estimate."
+      cards:
+        - title: "EasyTarget hourly rate"
+          price_text: "$20-35/hr"
+          min_price: 20
+          max_price: 35
+          duration: "Depending on the project"
+          includes:
+            - "rate for direct client work"
+            - "suitable for small tasks and diagnostics"
+          separate:
+            - "all external expenses"
+          factors:
+            - "integration complexity"
+            - "speed of approvals"
+        - title: "Minimum engagement"
+          price_text: "from $200"
+          min_price: 200
+          max_price: 200
+          duration: "For a standalone task"
+          includes:
+            - "a short automation or focused AI task"
+            - "a quick assessment before launch"
+          separate:
+            - "paid services and infrastructure"
+          factors:
+            - "data volume"
+            - "number of systems"
+        - title: "Post-launch support"
+          price_text: "$50/mo - 3 hrs, $100/mo - 8 hrs"
+          min_price: 50
+          max_price: 100
+          duration: "Monthly"
+          includes:
+            - "minor fixes and monitoring"
+            - "post-release support"
+          separate:
+            - "major enhancements, new integrations, and servers"
+          factors:
+            - "number of incidents"
+            - "required response time"
+      table_title: "Typical projects and budget guidelines"
+      table_lede: "All amounts below are public estimates and do not disclose internal project economics."
+      table_rows:
+        - project: "Reporting automation: daily sales and advertising reports from CRM to Telegram"
+          price: "$440-760"
+        - project: "Order synchronization between two CRMs with customer matching"
+          price: "$760-1,280"
+        - project: "Automated processing of bank statements and invoices"
+          price: "$280-480"
+        - project: "Inventory synchronization across multiple warehouses"
+          price: "$320-600"
+        - project: "Bot for receiving and distributing leads among managers"
+          price: "$280-480"
+        - project: "Chatbot for lead tracking in CRM"
+          price: "$360-640"
+        - project: "Bot for checking debts and receipts and sending reminders"
+          price: "$320-600"
+        - project: "HR RAG bot with a knowledge base and document search"
+          price: "$1,200-2,160"
+        - project: "Voice AI agent for automated outbound calling and screening"
+          price: "$1,440-3,000"
+      explanation_title: "How the cost is calculated"
+      explanation_items:
+        - "The number of systems and channels that need to be connected."
+        - "The depth of integrations, webhooks, and exception-handling logic."
+        - "Data quality, security, hosting, and access requirements."
+        - "APIs, servers, and subscriptions are billed separately or included in the individual estimate."
+      cta_title: "Need a precise estimate?"
+      cta_lede: "After a short diagnostic, we will provide a clear budget range and a list of next steps."
+      cta_button: "Get a precise estimate"
+      cta_href: "https://calendly.com/blagoveshchenskyivan/30min"
+
+ru:
+  pages:
+    tsiny:
+      eyebrow: "Публичные цены"
+      cards_title: "Ставка, минимальный заказ и поддержка"
+      cards_lede: "Это не оферта, а публичные ориентиры для первоначальной оценки."
+      disclaimer: "Итоговая цена зависит от количества систем, глубины интеграций, качества данных, безопасности и инфраструктуры. Серверы, API и подписки оплачиваются отдельно или входят в индивидуальную смету."
+      cards:
+        - title: "Почасовая ставка EasyTarget"
+          price_text: "$20-35/ч"
+          min_price: 20
+          max_price: 35
+          duration: "В зависимости от проекта"
+          includes:
+            - "ставка за прямую работу с клиентом"
+            - "подходит для небольших задач и диагностики"
+          separate:
+            - "все внешние расходы"
+          factors:
+            - "сложность интеграций"
+            - "скорость согласований"
+        - title: "Минимальный заказ"
+          price_text: "от $200"
+          min_price: 200
+          max_price: 200
+          duration: "Для отдельной задачи"
+          includes:
+            - "короткая автоматизация или точечная AI-задача"
+            - "быстрая оценка перед стартом"
+          separate:
+            - "платные сервисы и инфраструктура"
+          factors:
+            - "объём данных"
+            - "количество систем"
+        - title: "Поддержка после запуска"
+          price_text: "$50/мес - 3 ч, $100/мес - 8 ч"
+          min_price: 50
+          max_price: 100
+          duration: "Ежемесячно"
+          includes:
+            - "небольшие правки и мониторинг"
+            - "сопровождение после релиза"
+          separate:
+            - "крупные доработки, новые интеграции и серверы"
+          factors:
+            - "количество инцидентов"
+            - "необходимое время реакции"
+      table_title: "Типовые проекты и ориентиры бюджета"
+      table_lede: "Все суммы ниже — публичные ориентиры без раскрытия внутренней экономики проектов."
+      table_rows:
+        - project: "Автоматизация отчётности: ежедневные отчёты по продажам и рекламе из CRM в Telegram"
+          price: "$440-760"
+        - project: "Синхронизация заказов между двумя CRM с сопоставлением клиентов"
+          price: "$760-1,280"
+        - project: "Автоматическая обработка банковских выписок и счетов"
+          price: "$280-480"
+        - project: "Синхронизация товарных остатков между несколькими складами"
+          price: "$320-600"
+        - project: "Бот для приёма и распределения заявок между менеджерами"
+          price: "$280-480"
+        - project: "Чат-бот для отслеживания лидов в CRM"
+          price: "$360-640"
+        - project: "Бот для проверки задолженности и квитанций и отправки напоминаний"
+          price: "$320-600"
+        - project: "HR RAG-бот с базой знаний и поиском по документам"
+          price: "$1,200-2,160"
+        - project: "Голосовой AI-агент для автоматического обзвона и скрининга"
+          price: "$1,440-3,000"
+      explanation_title: "Как формируется стоимость"
+      explanation_items:
+        - "Количество систем и каналов, которые нужно соединить."
+        - "Глубина интеграций, вебхуков и логики обработки исключений."
+        - "Качество данных, безопасность, хостинг и требования к доступам."
+        - "API, серверы и подписки оплачиваются отдельно или входят в индивидуальную смету."
+      cta_title: "Нужна точная оценка?"
+      cta_lede: "После короткой диагностики мы предоставим понятный диапазон бюджета и список следующих шагов."
+      cta_button: "Получить точную оценку"
+      cta_href: "https://calendly.com/blagoveshchenskyivan/30min"
