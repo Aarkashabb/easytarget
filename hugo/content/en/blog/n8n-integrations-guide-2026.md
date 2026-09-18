@@ -1,8 +1,12 @@
 ---
 title: "How to Integrate N8N with Other Systems: A Practical Guide"
 date: 2026-06-18
-lastmod: 2026-06-18
+lastmod: 2026-09-18
 description: "Four ways to connect any service to N8N: native nodes, HTTP Request, Webhooks, and the Code node — with real examples and a reliable integration checklist."
+image: "/images/blog/n8n-integrations-guide-hero.webp"
+imageAlt: "Automation engineer working with monitors and network equipment"
+imageWidth: 1672
+imageHeight: 941
 tags: ["N8N", "Integrations", "API", "Webhooks", "Automation"]
 keywords: ["n8n integrations guide", "connect api to n8n", "n8n webhooks setup", "n8n http request node", "n8n code node javascript"]
 author: "Ivan Blagoveshchenskyi"
@@ -40,6 +44,8 @@ How to connect via a native node:
 
 > 💡 **Tip:** Store credentials with descriptive names: not «Google API key» but «Google Sheets — Production EasyTarget». When you reach 50+ credentials, you will thank yourself.
 
+<img src="/images/blog/n8n-integrations-native-nodes-tool-wall.webp" alt="Engineering test bench with an automation server, network switch, and connected devices" width="1536" height="1024" loading="lazy" decoding="async">
+
 ## Method 2: HTTP Request Node — Connect Any REST API
 
 When no native node exists for your target service, the HTTP Request node covers 95% of cases. It supports any REST API — GET, POST, PUT, PATCH, DELETE — with full control over headers, query parameters, request body, and authentication method.
@@ -62,6 +68,8 @@ Body (JSON):
 
 Any SaaS tool with a REST API and documentation can be connected via HTTP Request in 30–60 minutes. This opens N8N to thousands of services that do not have native integrations.
 
+<img src="/images/blog/n8n-integrations-rest-api-cutaway.webp" alt="Technician checking network connections in two server racks" width="1536" height="1024" loading="lazy" decoding="async">
+
 ## Method 3: Webhooks — Event-Driven Automation
 
 Webhooks make N8N reactive: instead of polling a system every N minutes asking «is there anything new?», the source service pushes data to N8N the moment a relevant event occurs.
@@ -83,6 +91,8 @@ Common webhook use cases:
 - Typeform/Tally: form submitted → lead qualification workflow
 
 > ⚠️ **Important:** The Webhook URL is only active while the workflow is running. If the workflow is deactivated, incoming webhooks are not processed. Use N8N's «Test webhook» mode for debugging without activating the production workflow.
+
+<img src="/images/blog/n8n-integrations-webhook-event-spark.webp" alt="Warehouse operator scanning a parcel while connected workstations update statuses" width="1536" height="1024" loading="lazy" decoding="async">
 
 ## Method 4: Code Node — JavaScript for Complex Logic
 
@@ -126,6 +136,8 @@ POST https://api.telegram.org/bot{{TOKEN}}/sendMessage
   "text": "❌ Workflow: {{$execution.workflowName}}\nError: {{$execution.error.message}}"
 }
 ```
+
+<img src="/images/blog/n8n-integrations-code-reliability-desk.webp" alt="Engineer reviewing workflow statuses on two monitors beside network equipment" width="1536" height="1024" loading="lazy" decoding="async">
 
 ## Top 10 Business Integrations
 

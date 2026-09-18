@@ -1,8 +1,12 @@
 ---
 title: "Как интегрировать N8N с другими системами: практический гайд"
 date: 2026-06-18
-lastmod: 2026-06-18
+lastmod: 2026-09-18
 description: "Четыре способа подключить любой сервис к N8N: native ноды, HTTP Request, Webhooks и Code нода — с примерами и чек-листом надёжной интеграции."
+image: "/images/blog/n8n-integrations-guide-hero.webp"
+imageAlt: "Инженер по автоматизации работает с мониторами и сетевым оборудованием"
+imageWidth: 1672
+imageHeight: 941
 tags: ["N8N", "Интеграции", "API", "Webhooks", "Автоматизация"]
 keywords: ["n8n интеграции", "подключить api к n8n", "n8n webhooks настройка", "n8n http request нода", "n8n code нода javascript"]
 author: "Ivan Blagoveshchenskyi"
@@ -40,6 +44,8 @@ N8N имеет более 400 готовых нодов для популярн�
 
 > 💡 **Совет:** Сохраняйте credentials с описательными именами: не «Google API key», а «Google Sheets — Production EasyTarget». При 50+ credentials это сэкономит массу времени.
 
+<img src="/images/blog/n8n-integrations-native-nodes-tool-wall.webp" alt="Инженерный тестовый стенд с сервером автоматизации, сетевым коммутатором и подключёнными устройствами" width="1536" height="1024" loading="lazy" decoding="async">
+
 ## Способ 2: HTTP Request — подключение любого REST API
 
 Если для нужного сервиса нет native ноды — HTTP Request нода закроет 95% случаев. Она поддерживает любой REST API: GET, POST, PUT, PATCH, DELETE — с полной настройкой заголовков, параметров, тела запроса и аутентификации.
@@ -62,6 +68,8 @@ Body (JSON):
 
 Любой SaaS с REST API и документацией подключается через HTTP Request за 30–60 минут. Это открывает N8N для тысяч сервисов без готовых интеграций.
 
+<img src="/images/blog/n8n-integrations-rest-api-cutaway.webp" alt="Техник проверяет сетевые соединения в двух серверных стойках" width="1536" height="1024" loading="lazy" decoding="async">
+
 ## Способ 3: Webhooks — реактивная автоматизация
 
 Webhook делает N8N реактивным: вместо опроса системы каждые N минут («есть ли что-то новое?»), сервис сам уведомляет N8N при возникновении события.
@@ -83,6 +91,8 @@ Webhook делает N8N реактивным: вместо опроса сис�
 - Typeform/Tally: новый ответ на форму → квалификация лида
 
 > ⚠️ **Важно:** Webhook URL активен только при запущенном workflow. Если workflow деактивирован — вебхуки не обрабатываются. В N8N есть «Test webhook» режим для дебаггинга без активации продакшн workflow.
+
+<img src="/images/blog/n8n-integrations-webhook-event-spark.webp" alt="Оператор сканирует посылку, пока подключённые рабочие станции обновляют статусы" width="1536" height="1024" loading="lazy" decoding="async">
 
 ## Способ 4: Code нода — JavaScript для сложной логики
 
@@ -125,6 +135,8 @@ POST https://api.telegram.org/bot{{TOKEN}}/sendMessage
   "text": "❌ Workflow: {{$execution.workflowName}}\nError: {{$execution.error.message}}"
 }
 ```
+
+<img src="/images/blog/n8n-integrations-code-reliability-desk.webp" alt="Инженер проверяет статусы workflow на двух мониторах рядом с сетевым оборудованием" width="1536" height="1024" loading="lazy" decoding="async">
 
 ## Топ-10 популярных интеграций для бизнеса
 
