@@ -404,3 +404,8 @@ ru:
       cta_lede: "После короткой диагностики мы предоставим понятный диапазон бюджета и список следующих шагов."
       cta_button: "Получить точную оценку"
       cta_href: "https://calendly.com/blagoveshchenskyivan/30min"
+      related_links:
+        - text: "Интеграция CRM и автоматизация продаж"
+          href: "/ru/integratsiya-crm/"
+        - text: "Автоматизация финансовой отчетности"
+          href: "/ru/avtomatizatsiya-finansovoy-otchetnosti/"
