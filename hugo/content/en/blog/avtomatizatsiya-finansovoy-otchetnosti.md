@@ -9,6 +9,10 @@ tags: ["Financial Reporting", "Automation", "Workflow", "Data Quality"]
 author: "Ivan Blagoveshchenskyi"
 cluster: "business-automation"
 clusterRole: "spoke"
+image: "/images/blog/financial-reporting-automation-hero.png"
+imageAlt: "Two professionals sort stacks of documents at a worktable"
+imageWidth: 1774
+imageHeight: 887
 draft: false
 ---
 
@@ -30,9 +34,13 @@ The initial scope is one process or route: discovery, workflow design, a control
 
 Discovery records the sources and their owners, close period, frequency, cut-off rule, metric definitions, required fields, access and delivery constraints. The map prevents financial rules from being assumed by default.
 
+![A professional sorts folders in a desktop organizer](/images/blog/financial-reporting-folder-sorter.png)
+
 ### Control design
 
 For the agreed route, the team can define normalization, completeness checks, control totals or reconciliations where they fit the process. It also agrees a run and status log, an exception queue and an owner for resolution.
+
+![Hands sort folders into separate stacks on a worktable](/images/blog/financial-reporting-reconciliation-overhead.png)
 
 ### Controlled pilot and acceptance
 
@@ -55,6 +63,8 @@ That use requires defined inputs and data-quality rules. The process owner retai
 A controlled reporting workflow relies on least-privilege access, owners for sources, exception rules and an execution log. Metric methodology and the final reporting decision remain the business's responsibility.
 
 Before launch, define who owns the methodology, how a discrepancy is recorded, who closes an exception and which permissions the agreed route needs. For adjacent context, see this [financial tracking example](/en/portfolio/banking-data-integration/). It does not establish universal applicability or an outcome for another process.
+
+![A professional reviews folders on an archive shelf](/images/blog/financial-reporting-archive-aisle.png)
 
 ## Public budget reference and assessment factors
 

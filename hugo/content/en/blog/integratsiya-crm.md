@@ -9,6 +9,10 @@ tags: ["CRM", "Integrations", "Sales Automation", "Workflow"]
 author: "Ivan Blagoveshchenskyi"
 cluster: "business-automation"
 clusterRole: "spoke"
+image: "/images/blog/crm-sales-workflow-hero.png"
+imageAlt: "A professional organizes cards on a desk in an office"
+imageWidth: 1672
+imageHeight: 941
 draft: false
 ---
 
@@ -34,9 +38,13 @@ Discovery records the source and trigger, required fields, pipeline stages, assi
 
 The team agrees which data is received, matched, transferred and logged. It also sets the points for manual review, what counts as an exception and who resolves it.
 
+![A professional connects colored cables to a desk organizer](/images/blog/crm-integration-operations-workbench.png)
+
 ### Controlled pilot and acceptance
 
 The pilot is tested against agreed normal and error scenarios. Before launch, the team defines what must be received, transferred, logged or placed in an exception queue, then hands the process owner the documented limitations and operating rules.
+
+![Hands place a file folder into a compartmented desk organizer](/images/blog/crm-workflow-handoff-overhead.png)
 
 ## Which CRMs and connection conditions can be assessed
 
@@ -55,6 +63,8 @@ For example, a form or channel inquiry may enter the CRM after required-field ch
 A reliable route depends on data quality, least-privilege access, error-handling rules and an owner for exceptions. The workflow can make an unusual event visible and route it for review; it does not take over the team's commercial judgment.
 
 Before a pilot, agree the required fields and the policy for repeated inquiries, incomplete data and safe reprocessing. For a published context example, see this [CRM and notification webhook process](/en/portfolio/service-account-management/). It is a specific case study, not a promise of the same result for a new process.
+
+![A professional files folders on a shelf in a workspace](/images/blog/crm-customer-success-cubbies.png)
 
 ## Public budget reference and assessment factors
 
