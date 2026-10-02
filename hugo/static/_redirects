@@ -20,3 +20,11 @@
 # Migrated from netlify.toml
 /products/*           /                  301
 /admin                /admin/            301
+
+# Blog migrations - former root-level article URLs
+/intehratsiya-crm/                         /blog/intehratsiya-crm/                         301
+/avtomatyzatsiia-finansovoi-zvitnosti/     /blog/avtomatyzatsiia-finansovoi-zvitnosti/     301
+/ru/integratsiya-crm/                      /ru/blog/integratsiya-crm/                      301
+/ru/avtomatizatsiya-finansovoy-otchetnosti/ /ru/blog/avtomatizatsiya-finansovoy-otchetnosti/ 301
+/en/crm-integration/                       /en/blog/crm-integration/                       301
+/en/financial-reporting-automation/        /en/blog/financial-reporting-automation/        301

@@ -4,6 +4,10 @@ description: "Диагностика одного CRM-маршрута для з
 date: 2026-09-30
 lastmod: 2026-09-30
 keywords: ["интеграция CRM", "автоматизация CRM продаж", "автоматизация лидов в CRM", "CRM workflow"]
+tags: ["CRM", "Интеграции", "Автоматизация продаж", "Workflow"]
+author: "Ivan Blagoveshchenskyi"
+cluster: "business-automation"
+clusterRole: "spoke"
 draft: false
 ---
 

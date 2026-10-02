@@ -5,6 +5,10 @@ date: 2026-09-30
 lastmod: 2026-09-30
 slug: "intehratsiya-crm"
 keywords: ["інтеграція CRM", "автоматизація продажів CRM", "автоматизація лідів у CRM", "CRM workflow"]
+tags: ["CRM", "Інтеграції", "Автоматизація продажів", "Workflow"]
+author: "Ivan Blagoveshchenskyi"
+cluster: "business-automation"
+clusterRole: "spoke"
 draft: false
 ---
 
