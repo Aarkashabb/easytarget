@@ -6,17 +6,24 @@
   {{- $png := replaceRE `(?i)\.webp$` ".png" $src -}}
   {{- $jpg := replaceRE `(?i)\.webp$` ".jpg" $src -}}
   {{- $jpeg := replaceRE `(?i)\.webp$` ".jpeg" $src -}}
-  {{- if fileExists (printf "static%s" $png) -}}
-    {{- $fallback = $png -}}
-  {{- else if fileExists (printf "static%s" $jpg) -}}
+  {{- /* Prefer a light jpg/jpeg fallback over a heavy png (Ahrefs: images over 1 MB). */ -}}
+  {{- if fileExists (printf "static%s" $jpg) -}}
     {{- $fallback = $jpg -}}
   {{- else if fileExists (printf "static%s" $jpeg) -}}
     {{- $fallback = $jpeg -}}
+  {{- else if fileExists (printf "static%s" $png) -}}
+    {{- $fallback = $png -}}
   {{- end -}}
 {{- else -}}
   {{- $candidate := replaceRE `(?i)\.(jpe?g|png)$` ".webp" $src -}}
   {{- if and (ne $candidate $src) (fileExists (printf "static%s" $candidate)) -}}
     {{- $webp = $candidate -}}
+  {{- end -}}
+  {{- if strings.HasSuffix (lower $src) ".png" -}}
+    {{- $lightJpg := replaceRE `(?i)\.png$` ".jpg" $src -}}
+    {{- if fileExists (printf "static%s" $lightJpg) -}}
+      {{- $fallback = $lightJpg -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 
