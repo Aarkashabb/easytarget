@@ -1,5 +1,5 @@
 ---
-title: "AI Integration in Business Processes: Where to Start in 2026"
+title: "AI Integration in Business: Where to Start in 2026"
 date: 2026-06-16
 lastmod: 2026-06-16
 description: "A practical guide to AI integration: where AI delivers maximum ROI and how to connect OpenAI or Claude to existing N8N and Make workflows without complexity."

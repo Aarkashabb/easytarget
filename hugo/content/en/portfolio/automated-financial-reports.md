@@ -1,6 +1,6 @@
 ---
 title: "Automated Financial Report Generation"
-description: "Multi-source monthly reports with Gemini-powered analysis and automatic Google Slides delivery."
+description: "Automated financial report generation: multi-source monthly reports with Gemini-powered analysis and automatic Google Slides delivery."
 date: 2023-11-15
 weight: 7
 industry: "finance"

@@ -28,3 +28,8 @@
 /ru/avtomatizatsiya-finansovoy-otchetnosti/ /ru/blog/avtomatizatsiya-finansovoy-otchetnosti/ 301
 /en/crm-integration/                       /en/blog/crm-integration/                       301
 /en/financial-reporting-automation/        /en/blog/financial-reporting-automation/        301
+
+# Removed tag pages (were noindex) -> blog index of the same language
+/tags/*     /blog/     301
+/en/tags/*  /en/blog/  301
+/ru/tags/*  /ru/blog/  301

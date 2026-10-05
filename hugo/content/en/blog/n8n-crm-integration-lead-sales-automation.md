@@ -1,5 +1,5 @@
 ---
-title: "n8n CRM Integration - Automate Leads, Sales and Follow-Ups"
+title: "n8n CRM Integration - Automate Leads and Sales"
 date: 2026-09-09
 lastmod: 2026-09-09
 description: "Plan an n8n CRM integration that routes leads, keeps sales data actionable and gives managers clear next steps. A practical B2B workflow guide."
