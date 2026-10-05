@@ -1,6 +1,6 @@
 ---
 title: "Автоматична синхронізація даних на основі файлів"
-description: "Двотригерний пайплайн: парсинг Excel-файлів із Google Drive у нормалізовану базу Sheets."
+description: "Синхронізація даних на основі файлів: двотригерний пайплайн парсить Excel-файли з Google Drive у нормалізовану базу Google Sheets."
 date: 2023-12-01
 weight: 8
 industry: "operations"

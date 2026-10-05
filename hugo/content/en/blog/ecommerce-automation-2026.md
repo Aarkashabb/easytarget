@@ -2,7 +2,7 @@
 title: "E-Commerce Automation: From Order to Delivery"
 date: 2026-06-09
 lastmod: 2026-06-09
-description: "Concrete workflow designs for automating your online store: order processing, inventory sync, triggered customer communications, and automated reporting with N8N and Make."
+description: "Workflow designs for automating your online store: order processing, inventory sync, triggered customer messages, and reporting with N8N and Make."
 tags: ["E-commerce", "Automation", "N8N", "Make", "Shopify"]
 keywords: ["e-commerce automation", "order processing workflow", "inventory sync automation", "abandoned cart recovery"]
 author: "Ivan Blagoveshchenskyi"

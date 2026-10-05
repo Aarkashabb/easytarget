@@ -1,5 +1,5 @@
 ---
-title: "Self-Hosted N8N: полный гайд по production развёртыванию (2026)"
+title: "Self-Hosted N8N: гайд по production-развёртыванию (2026)"
 date: 2026-05-26
 lastmod: 2026-05-27
 description: "Пошаговая инструкция по развёртыванию self-hosted N8N: Docker, PostgreSQL, HTTPS, автоматические бэкапы и мониторинг. Security best practices для production."

@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy"
-description: "How EasyTarget processes personal data collected through this website."
+description: "EasyTarget privacy policy: how we process personal data collected through this website and where to direct questions about your data."
 ---
 
 *Effective date: 9 September 2026*

@@ -1,6 +1,6 @@
 ---
 title: "Automated File-Based Data Synchronization"
-description: "Dual-trigger ingest that parses Excel uploads from Google Drive into a normalized Sheets database."
+description: "File-based data synchronization: a dual-trigger workflow that parses Excel uploads from Google Drive into a normalized Google Sheets database."
 date: 2023-12-01
 weight: 8
 industry: "operations"

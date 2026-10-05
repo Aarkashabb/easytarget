@@ -1,6 +1,6 @@
 ---
 title: "Banking Data Integration & Financial Tracking"
-description: "Automated daily multi-account balance tracking and transaction logging with Monobank API."
+description: "Banking data integration: automated daily multi-account balance tracking and transaction logging with the Monobank API."
 date: 2023-10-12
 weight: 1
 industry: "banking"
