@@ -5,8 +5,8 @@ defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
 pluralizeListTitles = false
 
-[taxonomies]
-  tag = "tags"
+# Tag pages were thin noindex pages (90 of ~170 crawled URLs); tags are shown as plain labels
+disableKinds = ["taxonomy", "term"]
 summaryLength = 40
 
 [outputs]
