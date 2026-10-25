@@ -87,6 +87,42 @@
     });
   });
 
+  /* ---- GA4 lead events: clicks on Calendly / Telegram / mailto links ----
+     gtag.js loads lazily (see head.html), so push straight to dataLayer in gtag format. */
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
+
+  const leadMethod = (a) => {
+    if (a.protocol === 'mailto:') return 'email';
+    const host = a.hostname.toLowerCase();
+    if (host === 'calendly.com' || host.endsWith('.calendly.com')) return 'calendly';
+    if (host === 't.me' || host === 'telegram.me') return 'telegram';
+    return '';
+  };
+
+  const leadPlace = (a) => {
+    if (a.closest('.site-header')) return 'header';
+    if (a.closest('.site-footer')) return 'footer';
+    if (a.closest('.post-cta')) return 'post-cta';
+    if (a.closest('.final-cta')) return 'final-cta';
+    if (a.closest('.post-content')) return 'article-text';
+    return 'page';
+  };
+
+  const onLeadClick = (e) => {
+    if (e.type === 'auxclick' && e.button !== 1) return;
+    const a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    const method = leadMethod(a);
+    if (!method) return;
+    const location = (window.location.pathname + ' | ' + leadPlace(a)).slice(0, 100);
+    /* Deferred one tick: the click that first triggers the lazy GA loader (a listener on
+       window, which runs after this one) must queue 'js' and 'config' before our event. */
+    setTimeout(() => gtag('event', 'generate_lead', { method: method, location: location }), 0);
+  };
+  document.addEventListener('click', onLeadClick);
+  document.addEventListener('auxclick', onLeadClick);
+
   /* ---- Scroll reveal via IntersectionObserver ---- */
   const reveals = document.querySelectorAll('.reveal');
   if (reveals.length && 'IntersectionObserver' in window) {

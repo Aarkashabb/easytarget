@@ -1295,6 +1295,71 @@ a { color: inherit; text-decoration: none; }
 .final-cta__email a { color: #fff; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.3); text-underline-offset: 3px; }
 .final-cta__email a:hover { text-decoration-color: var(--c-accent-1); }
 
+/* CTA button pair (service pages + end of article) */
+.btn--ghost-light {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.btn--ghost-light:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.6); }
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.cta-actions .btn {
+  justify-content: center;
+  text-align: center;
+  white-space: normal;
+  text-wrap: balance;
+}
+.cta-actions .btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+/* End-of-article call to action */
+.post-cta {
+  margin-top: 32px;
+  padding: 40px 32px;
+  background: var(--c-ink);
+  color: #fff;
+  border-radius: var(--r-lg);
+  text-align: center;
+}
+.post-cta h2 {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 12px;
+  text-wrap: balance;
+}
+.post-cta p {
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 540px;
+  margin: 0 auto 28px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.post-cta__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
+  margin-top: 24px;
+  font-size: 14px;
+}
+.post-cta__links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.3);
+  text-underline-offset: 3px;
+}
+.post-cta__links a:hover { color: #fff; text-decoration-color: var(--c-accent-1); }
+@media (max-width: 560px) {
+  .post-cta { padding: 32px 20px; }
+  .cta-actions .btn { width: 100%; }
+}
+
 /* ========================================================================
    Footer
    ======================================================================== */
