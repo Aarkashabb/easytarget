@@ -58,7 +58,7 @@ jobs:
       - name: Ping IndexNow (Bing/Yandex/Naver)
         run: |
           python3 <<'EOF'
-          import urllib.request, json, re
+          import urllib.request, json, re, sys
 
           KEY = "40997a1cebfdff82927fc466b2903a05"
           HOST = "easytarget.com.ua"
@@ -68,13 +68,23 @@ jobs:
               f"https://{HOST}/ru/sitemap.xml",
           ]
 
+          # Cloudflare returns 403 for the default Python-urllib User-Agent
+          UA = "Mozilla/5.0 (compatible; EasyTarget-deploy/1.0; +https://easytarget.com.ua)"
+
           urls = set()
+          failed = []
           for sm in SITEMAPS:
               try:
-                  xml = urllib.request.urlopen(sm, timeout=15).read().decode('utf-8', errors='replace')
+                  sm_req = urllib.request.Request(sm, headers={"User-Agent": UA})
+                  xml = urllib.request.urlopen(sm_req, timeout=15).read().decode('utf-8', errors='replace')
                   urls.update(re.findall(r'<loc>([^<]+)</loc>', xml))
               except Exception as e:
-                  print(f"WARN: could not fetch {sm}: {e}")
+                  failed.append(sm)
+                  print(f"ERROR: could not fetch {sm}: {e}")
+
+          if failed or not urls:
+              print(f"ERROR: IndexNow not sent: {len(failed)} of {len(SITEMAPS)} sitemaps failed, {len(urls)} URLs collected")
+              sys.exit(1)
 
           urls = sorted(urls)
           print(f"Submitting {len(urls)} URLs to IndexNow")
