@@ -23,7 +23,7 @@ The website links to and may direct you to third-party services such as Google A
 
 ## Threads and Meta data {#threads}
 
-EasyTarget operates the Threads account @easytarget.com.ua and uses the official Threads API (Meta). Through it we publish our own content, reply to comments under our own posts, and read public posts on topics related to our work (business automation, chatbots, AI, advertising) to understand what is being discussed and, where relevant, to give a short on-topic reply from our own account.
+EasyTarget operates the Threads account @easytarget.com.ua and uses the official Threads API (Meta). Through it we publish our own content, reply to comments under our own posts, and read public posts on topics related to our work (business automation, chatbots, AI, advertising) to understand what is being discussed. We do not reply to other people's posts or contact their authors without a separate decision by a person.
 
 From public posts we store the text, username, link, date and engagement counts, for working purposes only and for no longer than 30 days, after which the data is deleted automatically. We do not sell or share this data, do not build profiles of individuals, do not use it to train AI models and do not contact people outside Threads. Some posts and replies are prepared by an AI assistant under EasyTarget's control.
 
