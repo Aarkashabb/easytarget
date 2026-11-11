@@ -2,7 +2,7 @@
 title: "Financial Reporting Automation"
 description: "A controlled pilot for one management-reporting route: sources, checks, exception handling, acceptance criteria and handover to the process owner."
 date: 2026-09-30
-lastmod: 2026-09-30
+lastmod: 2026-11-11
 slug: "financial-reporting-automation"
 keywords: ["financial reporting automation", "management reporting automation", "automated financial reports", "reporting workflow"]
 tags: ["Financial Reporting", "Automation", "Workflow", "Data Quality"]
@@ -46,6 +46,20 @@ For the agreed route, the team can define normalization, completeness checks, co
 
 The pilot uses test data, agreed error scenarios and acceptance criteria set before launch. The process owner receives the output with documented limitations, exceptions and manual-review points. For context, see the [automated financial report generation case study](/en/portfolio/automated-financial-reports/). It is a specific case, not a transfer of its results, metrics or conditions to a new process.
 
+## Example route: plan-versus-actual and cash flow
+
+The route below is an illustration of a monthly management report with plan-versus-actual and cash flow. It shows a structure, not a ready-made solution: the real sources, rules and checks are agreed during discovery.
+
+| Step | What the workflow does | What it checks | Where an exception goes |
+|---|---|---|---|
+| Collect | Pulls data from agreed sources: a budget sheet, an accounting-system export, CRM or ad accounts | All sources are loaded for the close period and required fields are filled | The report is not built and the owner gets a list of missing sources |
+| Normalize | Maps accounts, currencies and periods to agreed reference lists | Every line matches a reference entry and the cut-off rule holds | Unrecognized lines go to the exception queue |
+| Plan-versus-actual | Calculates variances with agreed formulas | Control totals match the source and variances above the threshold are flagged | Variances above the threshold go to the owner for review |
+| Cash flow | Groups receipts and payments by agreed categories | Totals reconcile to the balance in the source | A discrepancy is logged and waits for a decision |
+| Delivery | Builds the report and sends it to the agreed channel: email, Slides or a sheet | Run status and report version are written to the log | A delivery failure triggers a rerun from the log |
+
+The same route works for budgeting automation: the plan comes from an agreed budget sheet, and variances reach the owner for review before the report is sent.
+
 ## How a workflow helps control data quality
 
 A workflow does not make a financial figure automatically correct, but a configured route can identify incomplete data, discrepancies and exceptions before report delivery. The process owner performs the final review.
@@ -54,7 +68,7 @@ The workflow may check required fields and load completeness, apply agreed contr
 
 ## Where AI fits in a reporting process
 
-AI ensures the accuracy of a financial report within an agreed reporting process by helping identify anomalies, check completeness and prepare explanations.
+Within an agreed reporting process, AI can help identify anomalies, check completeness and prepare explanations. It does not guarantee that the figures are correct.
 
 That use requires defined inputs and data-quality rules. The process owner retains final financial review and responsibility for the reporting decision: AI and the workflow do not replace human review.
 
@@ -100,7 +114,7 @@ First identify the source of the discrepancy, reconciliation rules and exception
 
 ### Can AI check a financial report?
 
-AI ensures the accuracy of a financial report within an agreed process by helping identify anomalies, check completeness and prepare explanations. The process owner retains final financial review and responsibility.
+Within an agreed process, AI can help identify anomalies, check completeness and prepare explanations. It does not guarantee that the figures are correct, and the process owner retains final financial review and responsibility.
 
 ### Which sources fit a first pilot?
 

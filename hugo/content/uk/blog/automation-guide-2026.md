@@ -36,7 +36,7 @@ Business Process Automation (BPA) — це використання програ
 - Публікація контенту в соцмережах
 - Email-розсилки за тригерами
 
-Реальні приклади з нашої практики: [автоматизація маркетингових бюджетів](/portfolio/marketing-budget-automation/) (2 год → 5 хв щодня), [синхронізація e-commerce залишків](/portfolio/ecommerce-inventory-sync/) (нуль ручного вводу), [генерація фінансових звітів](/portfolio/automated-financial-reports/) (4+ год/міс).
+Реальні приклади з нашої практики: [автоматизація маркетингових бюджетів](/portfolio/marketing-budget-automation/) (2 год → 5 хв щодня), [синхронізація e-commerce залишків](/portfolio/ecommerce-inventory-sync/) (нуль ручного вводу), [генерація фінансових звітів](/portfolio/automated-financial-reports/) (4+ год/міс). Про підхід до звітності - у статті [Автоматизація фінансової звітності](/blog/avtomatyzatsiia-finansovoi-zvitnosti/).
 
 Перш ніж запускати — порахуйте окупність. У нашому [гайді з розрахунку ROI для workflow автоматизації](/blog/calculating-roi-workflow-automation/) є готові формули та приклади.
 

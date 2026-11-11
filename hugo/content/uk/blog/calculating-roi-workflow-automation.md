@@ -134,7 +134,7 @@ ROI (%) = ((Чистий прибуток - Початкові вкладенн�
 | Банки / Фінтех | Обробка документів, KYC | 4–8 місяців |
 | SaaS / IT | Підтримка клієнтів, білінг | 2–5 місяців |
 
-Конкретні кейси з нашої практики: [автоматизація маркетингових бюджетів](/portfolio/marketing-budget-automation/) (2 год → 5 хв/день), [генерація фінансових звітів](/portfolio/automated-financial-reports/) (4+ год/міс), [синхронізація e-commerce залишків](/portfolio/ecommerce-inventory-sync/) (нуль ручного вводу).
+Конкретні кейси з нашої практики: [автоматизація маркетингових бюджетів](/portfolio/marketing-budget-automation/) (2 год → 5 хв/день), [генерація фінансових звітів](/portfolio/automated-financial-reports/) (4+ год/міс), [синхронізація e-commerce залишків](/portfolio/ecommerce-inventory-sync/) (нуль ручного вводу). Як підійти до звітності з контролями, дивіться в статті [Автоматизація фінансової звітності](/blog/avtomatyzatsiia-finansovoi-zvitnosti/).
 
 ## Типові помилки при розрахунку ROI
 

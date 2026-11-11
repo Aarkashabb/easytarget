@@ -36,7 +36,7 @@ Start with your most painful bottlenecks. The best candidates for automation are
 - Social media content publishing
 - Trigger-based email campaigns
 
-Real examples from our work: [marketing budget automation](/en/portfolio/marketing-budget-automation/) (2 hours → 5 minutes daily), [e-commerce inventory sync](/en/portfolio/ecommerce-inventory-sync/) (zero manual entry), [automated financial reporting](/en/portfolio/automated-financial-reports/) (4+ hours/month saved).
+Real examples from our work: [marketing budget automation](/en/portfolio/marketing-budget-automation/) (2 hours → 5 minutes daily), [e-commerce inventory sync](/en/portfolio/ecommerce-inventory-sync/) (zero manual entry), [automated financial reporting](/en/portfolio/automated-financial-reports/) (4+ hours/month saved). For the approach to reporting, see [Financial Reporting Automation](/en/blog/financial-reporting-automation/).
 
 Before building anything, calculate the payback. Our [guide on calculating ROI for workflow automation](/en/blog/calculating-roi-workflow-automation/) has ready-to-use formulas and worked examples.
 
