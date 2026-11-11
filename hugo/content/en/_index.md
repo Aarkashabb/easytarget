@@ -15,15 +15,19 @@ services_title: "Core Automation Services"
 services_lede: "Precision engineering for your business processes. I build resilient, scalable systems that handle the heavy lifting."
 services:
   - title: "Workflow Automation"
+    href: "/en/tsiny/"
     body: "Connecting your disjointed apps (CRM, Email, Billing) into seamless, zero-touch operational pipelines."
     icon: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="3" width="6" height="4" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="16" y="3" width="6" height="4" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="9" y="10" width="6" height="4" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="2" y="17" width="6" height="4" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="16" y="17" width="6" height="4" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="M5 7v3h7M19 7v3h-7M5 14v3h7M19 14v3h-7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>'
   - title: "AI Integration"
+    href: "/en/tsiny/"
     body: "Injecting OpenAI and LLMs into your workflows for automated customer support, content generation, and data parsing."
     icon: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z" stroke="currentColor" stroke-width="1.6"/><path d="M8 10.5h2v3H8zM14 10.5h2v3h-2z" fill="currentColor"/><path d="M9 14.5c.8.8 2 1.5 3 1.5s2.2-.7 3-1.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" fill="none"/></svg>'
   - title: "System Architecture"
+    href: "/en/tsiny/"
     body: "Designing reliable data structures and infrastructure to handle high volumes without bottlenecks."
     icon: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="5" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="9.5" width="18" height="5" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="16" width="18" height="5" rx="1.5" stroke="currentColor" stroke-width="1.6"/></svg>'
   - title: "Custom Reporting"
+    href: "/en/tsiny/"
     body: "Automatic data aggregation from multiple sources into clear real-time dashboards for management decisions."
     icon: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 20V8M8 20v-7M13 20V4M18 20v-10M22 20H2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>'
 

@@ -12,7 +12,7 @@
 <meta name="description" content="{{ if eq .Site.Language.Lang "uk" }}Сторінку не знайдено. Поверніться на головну або перейдіть до блогу чи портфоліо EasyTarget.{{ else if eq .Site.Language.Lang "ru" }}Страница не найдена. Вернитесь на главную или перейдите в блог либо портфолио EasyTarget.{{ else }}Page not found. Return home or browse the EasyTarget blog and portfolio.{{ end }}">
 <meta name="robots" content="noindex, follow">
 {{- else }}
-<title>{{ block "title" . }}{{ .Title }} — {{ .Site.Params.siteName }}{{ end }}</title>
+<title>{{ if .IsHome }}{{ i18n "site_tagline" }} — {{ .Site.Params.siteName }}{{ else }}{{ block "title" . }}{{ .Title }} — {{ .Site.Params.siteName }}{{ end }}{{ end }}</title>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
 <link rel="canonical" href="{{ with .Params.canonical }}{{ . }}{{ else }}{{ .Permalink }}{{ end }}">
 

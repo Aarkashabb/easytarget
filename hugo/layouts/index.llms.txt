@@ -25,6 +25,26 @@ EasyTarget is a workflow automation consultancy specializing in no-code and low-
 - [Homepage]({{ .Site.BaseURL }}): Overview of services, process, FAQ, and contact
 - [Portfolio]({{ .Site.BaseURL }}portfolio/): Real-world case studies of automation implementations
 - [Blog]({{ .Site.BaseURL }}blog/): In-depth articles on automation strategy, tool comparisons, and technical guides
+{{- with .Site.GetPage "/tsiny" }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{- end }}
+{{- with .Site.GetPage "/ai-avtomatyzaciya" }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{- end }}
+{{- with .Site.GetPage "/chat-boty" }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{- end }}
+- [Contact and booking]({{ .Site.BaseURL }}#contact): Free consultation of up to 30 minutes via Calendly, email or Telegram
+
+## Public pricing (reference, not an offer; the final price depends on scope)
+{{- with index site.Data.pricing .Lang }}{{ with .pages }}{{ with .tsiny }}
+{{- range .cards }}
+- {{ .title }}: {{ .price_text }}{{ with .duration }} ({{ . }}){{ end }}
+{{- end }}
+{{- range .table_rows }}
+- {{ .project }}: {{ .price }}
+{{- end }}
+{{- end }}{{ end }}{{ end }}
 
 ## Blog Articles
 
