@@ -226,9 +226,9 @@
 {{- $qa := slice -}}
 {{- range $i, $it := $faqItems -}}
   {{- if gt $i 0 -}}
-    {{- $lines := split (strings.TrimSpace $it) "\n" -}}
-    {{- $q := index $lines 0 | markdownify | plainify | strings.TrimSpace -}}
-    {{- $a := delimit (after 1 $lines) " " | markdownify | plainify | strings.TrimSpace -}}
+    {{- $lines := split (replaceRE `^\s+|\s+$` "" $it) "\n" -}}
+    {{- $q := index $lines 0 | markdownify | plainify | replaceRE `^\s+|\s+$` "" -}}
+    {{- $a := delimit (after 1 $lines) " " | markdownify | plainify | replaceRE `^\s+|\s+$` "" -}}
     {{- if and $q $a -}}
       {{- $qa = $qa | append (dict "@type" "Question" "name" $q "acceptedAnswer" (dict "@type" "Answer" "text" $a)) -}}
     {{- end -}}
