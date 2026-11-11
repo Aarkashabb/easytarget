@@ -134,7 +134,7 @@ Based on projects we've delivered:
 | Banking / Fintech | Document processing, KYC | 4–8 months |
 | SaaS / IT | Customer support, billing | 2–5 months |
 
-Case studies from our practice: [marketing budget automation](/en/portfolio/marketing-budget-automation/) (2 hours → 5 min/day), [automated financial reporting](/en/portfolio/automated-financial-reports/) (4+ hours/month saved), [e-commerce inventory sync](/en/portfolio/ecommerce-inventory-sync/) (zero manual entry).
+Case studies from our practice: [marketing budget automation](/en/portfolio/marketing-budget-automation/) (2 hours → 5 min/day), [automated financial reporting](/en/portfolio/automated-financial-reports/) (4+ hours/month saved), [e-commerce inventory sync](/en/portfolio/ecommerce-inventory-sync/) (zero manual entry). For a controlled approach to reporting, see [Financial Reporting Automation](/en/blog/financial-reporting-automation/).
 
 ## Common ROI Calculation Mistakes
 
