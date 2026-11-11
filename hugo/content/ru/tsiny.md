@@ -1,6 +1,7 @@
 ---
 title: "Цены EasyTarget"
 description: "Цены EasyTarget: публичные ориентиры по ставке, минимальному входу, поддержке и типовым проектам автоматизации."
+schema_type: "Service"
 eyebrow: "Публичные цены"
 ---
 

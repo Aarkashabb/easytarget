@@ -22,8 +22,17 @@
       {{- else }}
       <a href="{{ $portfolio.RelPermalink }}">{{ i18n "nav_portfolio" }}</a>
       {{- end }}
+      {{- $pricing := .Site.GetPage "/tsiny" -}}
+      {{- with $pricing }}
+      {{- if eq $p.RelPermalink .RelPermalink }}
+      <a href="{{ .RelPermalink }}" class="is-active" aria-current="page">{{ i18n "nav_pricing" }}</a>
+      {{- else }}
+      <a href="{{ .RelPermalink }}">{{ i18n "nav_pricing" }}</a>
+      {{- end }}
+      {{- end }}
       <a href="{{ $home.RelPermalink }}#process">{{ i18n "nav_process" }}</a>
       <a href="{{ $home.RelPermalink }}#faq">FAQ</a>
+      <a class="btn btn--primary nav-cta" href="{{ .Site.Params.calendly }}" target="_blank" rel="noopener">{{ i18n "nav_cta" }}</a>
     </nav>
 
     <div class="header-right">

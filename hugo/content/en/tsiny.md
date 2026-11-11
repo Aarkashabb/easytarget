@@ -1,6 +1,7 @@
 ---
 title: "EasyTarget Pricing"
 description: "Public rate guidelines for EasyTarget's hourly rate, minimum engagement, support packages, and typical project budget ranges."
+schema_type: "Service"
 eyebrow: "Public pricing"
 ---
 

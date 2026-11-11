@@ -9,6 +9,12 @@
   "url": "{{ .Site.BaseURL }}",
   "logo": "{{ .Site.BaseURL }}images/logo.svg",
   "description": "Workflow automation services for business processes using N8N, Make, Zapier. Custom automation solutions for banking, marketing, e-commerce, and more.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "UA"
+  },
+  "areaServed": "Worldwide",
+  "knowsAbout": ["n8n", "Make", "Zapier", "OpenAI API", "Workflow automation", "CRM integration", "AI agents", "Telegram bots", "E-commerce automation", "Financial reporting automation"],
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
@@ -34,6 +40,11 @@
   },
   "url": "{{ .Site.BaseURL }}#about",
   "jobTitle": "Workflow Automation Specialist",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "{{ .Site.Params.siteName }}"
+  },
+  "knowsAbout": ["n8n", "Make", "Zapier", "OpenAI API", "Workflow automation", "CRM integration", "AI agents"],
   "sameAs": [
     "{{ .Site.Params.linkedin }}",
     "{{ .Site.Params.telegram }}"
@@ -116,11 +127,13 @@
 {{- end -}}
 
 {{- /* Service Schema - for public service pages with visible price cards */ -}}
-{{- if and (eq .Lang "uk") (eq .Params.schema_type "Service") -}}
+{{- if eq .Params.schema_type "Service" -}}
 {{- $servicePricing := dict -}}
-{{- with site.Data.pricing.uk.pages -}}
-  {{- with index . $.File.ContentBaseName -}}
-    {{- $servicePricing = . -}}
+{{- with index site.Data.pricing .Lang -}}
+  {{- with .pages -}}
+    {{- with index . $.File.ContentBaseName -}}
+      {{- $servicePricing = . -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 {{- with $servicePricing.cards -}}
@@ -130,7 +143,8 @@
   "@type": "Service",
   "name": {{ $.Title | jsonify }},
   "description": {{ $.Description | jsonify }},
-  "serviceType": {{ $servicePricing.service_type | jsonify }},
+  "serviceType": {{ $servicePricing.service_type | default "Workflow automation" | jsonify }},
+  "areaServed": "Worldwide",
   "provider": {
     "@type": "Organization",
     "name": {{ $.Site.Params.siteName | jsonify }},
@@ -202,6 +216,31 @@
 </script>
 {{- end -}}
 {{- end -}}
+
+{{- /* FAQPage Schema — for articles with a "## FAQ" section (### question, paragraph answer) */ -}}
+{{- if eq .Type "blog" }}
+{{- $faqParts := split .RawContent "\n## FAQ\n" -}}
+{{- if gt (len $faqParts) 1 }}
+{{- $faqBody := index (split (index $faqParts 1) "\n## ") 0 -}}
+{{- $faqItems := split $faqBody "\n### " -}}
+{{- $qa := slice -}}
+{{- range $i, $it := $faqItems -}}
+  {{- if gt $i 0 -}}
+    {{- $lines := split (replaceRE `^\s+|\s+$` "" $it) "\n" -}}
+    {{- $q := index $lines 0 | markdownify | plainify | replaceRE `^\s+|\s+$` "" -}}
+    {{- $a := delimit (after 1 $lines) " " | markdownify | plainify | replaceRE `^\s+|\s+$` "" -}}
+    {{- if and $q $a -}}
+      {{- $qa = $qa | append (dict "@type" "Question" "name" $q "acceptedAnswer" (dict "@type" "Answer" "text" $a)) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if $qa }}
+<script type="application/ld+json">
+{{ dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $qa | jsonify | safeJS }}
+</script>
+{{- end }}
+{{- end }}
+{{- end }}
 
 {{- /* FAQPage Schema — for homepage FAQ section */ -}}
 {{- if .IsHome }}

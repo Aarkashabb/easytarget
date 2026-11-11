@@ -15,15 +15,19 @@ services_title: "Основные услуги по автоматизации"
 services_lede: "Точная инженерия для ваших бизнес-процессов. Создаю надёжные масштабируемые системы, которые берут на себя тяжёлую работу."
 services:
   - title: "Автоматизация процессов"
+    href: "/ru/tsiny/"
     body: "Объединение разрозненных приложений (CRM, email, биллинг) в бесшовные операционные пайплайны без ручной работы."
     icon: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="3" width="6" height="4" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="16" y="3" width="6" height="4" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="9" y="10" width="6" height="4" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="2" y="17" width="6" height="4" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="16" y="17" width="6" height="4" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="M5 7v3h7M19 7v3h-7M5 14v3h7M19 14v3h-7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>'
   - title: "Интеграция ИИ"
+    href: "/ru/tsiny/"
     body: "Интеграция OpenAI и LLM в ваши рабочие процессы: автоматическая поддержка клиентов, генерация контента и обработка данных."
     icon: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z" stroke="currentColor" stroke-width="1.6"/><path d="M8 10.5h2v3H8zM14 10.5h2v3h-2z" fill="currentColor"/><path d="M9 14.5c.8.8 2 1.5 3 1.5s2.2-.7 3-1.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" fill="none"/></svg>'
   - title: "Системная архитектура"
+    href: "/ru/tsiny/"
     body: "Проектирование надёжных структур данных и инфраструктуры для обработки больших объёмов без узких мест."
     icon: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="5" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="9.5" width="18" height="5" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="16" width="18" height="5" rx="1.5" stroke="currentColor" stroke-width="1.6"/></svg>'
   - title: "Кастомная отчётность"
+    href: "/ru/tsiny/"
     body: "Автоматическая агрегация данных из разных источников в понятные дашборды в реальном времени для управленческих решений."
     icon: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 20V8M8 20v-7M13 20V4M18 20v-10M22 20H2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>'
 

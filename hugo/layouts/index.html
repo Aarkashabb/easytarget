@@ -43,7 +43,7 @@
         <span class="card__icon">{{ .icon | safeHTML }}</span>
         <h3 class="card__title">{{ .title }}</h3>
         <p class="card__body">{{ .body }}</p>
-        <a class="card__link" href="#contact">{{ i18n "learn_more" }} <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h9M8 3.5L11.5 7 8 10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="card__link" href="{{ with .href }}{{ . }}{{ else }}#contact{{ end }}">{{ i18n "learn_more" }} <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h9M8 3.5L11.5 7 8 10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </article>
       {{- end }}
     </div>
