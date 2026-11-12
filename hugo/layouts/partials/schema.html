@@ -171,6 +171,32 @@
 {{- end -}}
 {{- end -}}
 
+{{- /* Service Schema - paid audit page (price in UAH from front matter) */ -}}
+{{- if and (eq .Params.schema_type "AuditService") .Params.offer_price -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": {{ .Params.offer_name | default .Title | jsonify | safeJS }},
+  "description": {{ .Description | jsonify | safeJS }},
+  "serviceType": {{ .Params.service_type | jsonify | safeJS }},
+  "areaServed": "Worldwide",
+  "provider": {
+    "@type": "Organization",
+    "name": {{ .Site.Params.siteName | jsonify | safeJS }},
+    "url": "{{ .Site.BaseURL }}"
+  },
+  "offers": {
+    "@type": "Offer",
+    "name": {{ .Params.offer_name | default .Title | jsonify | safeJS }},
+    "url": "{{ .Permalink }}",
+    "price": "{{ .Params.offer_price }}",
+    "priceCurrency": "UAH"
+  }
+}
+</script>
+{{- end -}}
+
 {{- /* WebPage Schema - for all pages */ -}}
 <script type="application/ld+json">
 {
@@ -218,7 +244,7 @@
 {{- end -}}
 
 {{- /* FAQPage Schema — for articles with a "## FAQ" section (### question, paragraph answer) */ -}}
-{{- if eq .Type "blog" }}
+{{- if or (eq .Type "blog") .Params.faq_markdown }}
 {{- $faqParts := split .RawContent "\n## FAQ\n" -}}
 {{- if gt (len $faqParts) 1 }}
 {{- $faqBody := index (split (index $faqParts 1) "\n## ") 0 -}}

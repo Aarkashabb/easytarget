@@ -51,6 +51,24 @@
 </section>
 
 {{- if .IsHome }}
+{{- with .Params.audit_teaser }}
+<!-- ============ Audit Teaser ============ -->
+<section class="section audit-teaser" id="audit">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>{{ .title }}</h2>
+      <p>{{ .lede }}</p>
+    </div>
+    <div class="pricing-teaser__foot reveal">
+      <p>{{ .facts }}</p>
+      <a class="btn btn--ghost" href="{{ .href }}">{{ .button }}</a>
+    </div>
+  </div>
+</section>
+{{- end }}
+{{- end }}
+
+{{- if .IsHome }}
 {{- with .Params.pricing_teaser_items }}
 <!-- ============ Pricing Teaser ============ -->
 <section class="section pricing-teaser" id="pricing">

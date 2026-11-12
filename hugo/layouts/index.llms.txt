@@ -31,6 +31,9 @@ EasyTarget is a workflow automation consultancy specializing in no-code and low-
 {{- with .Site.GetPage "/ai-avtomatyzaciya" }}
 - [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
 {{- end }}
+{{- range where .Site.RegularPages "Params.translationKey" "automation-audit" }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{- end }}
 {{- with .Site.GetPage "/chat-boty" }}
 - [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
 {{- end }}
