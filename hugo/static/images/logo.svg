@@ -1,0 +1,10 @@
+<svg viewBox="0 0 24 24" width="512" height="512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EasyTarget">
+  <title>EasyTarget</title>
+  <defs>
+    <linearGradient id="lg" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00D2FF"/>
+      <stop offset="1" stop-color="#00B4DB"/>
+    </linearGradient>
+  </defs>
+  <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="url(#lg)"/>
+</svg>
