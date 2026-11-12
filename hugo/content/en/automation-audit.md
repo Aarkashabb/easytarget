@@ -34,9 +34,10 @@ Small and mid-size businesses where the team moves data by hand every day betwee
 ## How it works
 
 1. **A call of up to 30 minutes.** We go through your task and decide whether an audit is needed.
-2. **Materials from you.** You send a description of the process and examples (screenshots, spreadsheets). If access to systems is needed, it is read-only.
-3. **Analysis.** I analyse the process, about 3 hours of work.
-4. **Report within 3 working days** after I receive the materials. We then briefly discuss it together.
+2. **50% prepayment.** I will send the bank account details once we agree on the audit.
+3. **Materials from you.** You send a description of the process and examples (screenshots, spreadsheets). If access to systems is needed, it is read-only.
+4. **Analysis.** I analyse the process, about 3 hours of work.
+5. **Report within 3 working days** after I receive the materials. We then briefly discuss it together.
 
 ## What you get
 
@@ -53,8 +54,13 @@ For reference on typical project costs, see the [pricing page](/en/tsiny/).
 - Price: UAH 2,000.
 - Turnaround: 3 working days after I receive the materials.
 - I review one process or one area (sales, requests, reporting).
+- Payment by bank transfer: 50% before the analysis, 50% after it.
 - The report is yours in any case.
 - If you order a project, the UAH 2,000 is credited to its cost.
+
+## How to pay
+
+Payment is by bank transfer to a business account in two parts: 50% before the analysis and 50% after it. I will send the account details once we agree on the audit.
 
 ## What I need from you
 
