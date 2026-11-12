@@ -29,3 +29,4 @@ The public prices below are guidelines, not a quote. I estimate an AI project af
 
 - [View the public pricing](/en/tsiny/)
 - [See the chatbots](/en/chat-boty/)
+- [Express automation audit: where to start](/en/automation-audit/)

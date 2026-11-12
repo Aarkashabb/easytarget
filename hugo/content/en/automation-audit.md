@@ -91,4 +91,6 @@ A description of the process and screenshots are often enough. If access to syst
 ## What to explore next
 
 - [Automation pricing](/en/tsiny/)
+- [AI automation and AI agents](/en/ai-avtomatyzaciya/)
+- [Chatbots for leads, CRM, and AI/RAG](/en/chat-boty/)
 - [Portfolio cases](/en/portfolio/)

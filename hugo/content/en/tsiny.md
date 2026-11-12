@@ -24,6 +24,8 @@ If it is unclear what to automate first and what it would cost, start with the [
 
 ## What to explore next
 
+- [AI automation and AI agents](/en/ai-avtomatyzaciya/)
+- [Chatbots for leads, CRM, and AI/RAG](/en/chat-boty/)
 - [Automation services](/en/#services)
 - [Automation insights and guides](/en/blog/)
 - [Portfolio cases](/en/portfolio/)

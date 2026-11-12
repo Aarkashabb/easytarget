@@ -29,3 +29,4 @@ schema_type: "Service"
 
 - [Подивитися AI-агенти](/ai-avtomatyzaciya/)
 - [Переглянути публічний прайс](/tsiny/)
+- [Експрес-аудит автоматизації: з чого почати](/audyt-avtomatyzaciyi/)

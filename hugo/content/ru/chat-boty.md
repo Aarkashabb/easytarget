@@ -29,3 +29,4 @@ schema_type: "Service"
 
 - [Посмотреть AI-агентов](/ru/ai-avtomatyzaciya/)
 - [Посмотреть публичные цены](/ru/tsiny/)
+- [Экспресс-аудит автоматизации: с чего начать](/ru/audit-avtomatizacii/)

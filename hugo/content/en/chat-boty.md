@@ -29,3 +29,4 @@ Public price guidelines help you gauge the order of the budget quickly. The fina
 
 - [Explore AI agents](/en/ai-avtomatyzaciya/)
 - [View public pricing](/en/tsiny/)
+- [Express automation audit: where to start](/en/automation-audit/)
