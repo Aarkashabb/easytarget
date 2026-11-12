@@ -92,4 +92,5 @@ cta_telegram_button: "Написати в Telegram"
 
 - [Ціни на автоматизацію](/tsiny/)
 - [AI-автоматизація та AI-агенти](/ai-avtomatyzaciya/)
+- [Чат-боти для заявок, CRM та AI/RAG](/chat-boty/)
 - [Кейси з портфоліо](/portfolio/)
