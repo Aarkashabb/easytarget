@@ -125,7 +125,7 @@ cta_button: "Book Free Consultation"
 audit_teaser:
   title: "Express automation audit"
   lede: "Not sure where to start? In 3 working days you get a written report: top 3 automation candidates, hours saved and a launch price range."
-  facts: "UAH 2,000, credited to your project if you order one."
+  facts: "UAH 2,000, credited to your project if you order one within 30 days after the audit."
   button: "About the audit"
   href: "/en/automation-audit/"
 ---

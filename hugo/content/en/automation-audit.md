@@ -14,7 +14,7 @@ faq_markdown: true
 facts:
   - label: "Price"
     value: "UAH 2,000"
-    note: "About $50. If you order a project, the amount is credited to its cost."
+    note: "About $50. If you order a project within 30 days after the audit, the amount is credited to its cost."
   - label: "Turnaround"
     value: "3 working days"
     note: "After you send the materials."
@@ -56,7 +56,7 @@ For reference on typical project costs, see the [pricing page](/en/tsiny/).
 - I review one process or one area (sales, requests, reporting).
 - Payment by bank transfer: 50% before the analysis, 50% after it.
 - The report is yours in any case.
-- If you order a project, the UAH 2,000 is credited to its cost.
+- If you order a project within 30 days after the audit, the UAH 2,000 is credited to its cost.
 
 ## How to pay
 
@@ -82,7 +82,7 @@ The report stays with you. You can take it to any contractor or automate on your
 
 ### How is the audit fee credited?
 
-If you order a project, the UAH 2,000 is credited to its cost.
+If you order a project within 30 days after the audit, the UAH 2,000 is credited to its cost.
 
 ### What access is needed?
 

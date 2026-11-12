@@ -20,7 +20,7 @@ If the project is already live, support packages are available - minor fixes, mo
 
 ## Not sure where to start?
 
-If it is unclear what to automate first and what it would cost, start with the [express automation audit](/en/automation-audit/): UAH 2,000, 3 working days, a written report. If you order a project, the amount is credited to its cost.
+If it is unclear what to automate first and what it would cost, start with the [express automation audit](/en/automation-audit/): UAH 2,000, 3 working days, a written report. If you order a project within 30 days after the audit, the amount is credited to its cost.
 
 ## What to explore next
 
