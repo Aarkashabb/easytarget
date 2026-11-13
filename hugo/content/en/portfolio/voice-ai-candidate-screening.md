@@ -33,6 +33,32 @@ result_value: "42"
 result_unit: "invitations"
 result_label: "from the agent in three weeks"
 complexity_summary: "4 workflows · ElevenLabs + KeyCRM + SIP"
+screenshots:
+  - file: "01-dispatcher"
+    w: 2000
+    h: 708
+    theme: "light"
+    caption: "Workflow 1, the dispatcher: three entry points (a schedule and two webhooks) start a call for each candidate in batches with pauses."
+  - file: "02-call-launch"
+    w: 1900
+    h: 843
+    theme: "light"
+    caption: "Workflow 2, call launch: card and buyer from KeyCRM, conversation variables, phone and config checks, the outbound ElevenLabs call."
+  - file: "03-call-result"
+    w: 1960
+    h: 788
+    theme: "light"
+    caption: "Workflow 3, call result: outcome decision, card update, call recording and transcript, a Discord notification."
+  - file: "04-vacancy-sync"
+    w: 2000
+    h: 949
+    theme: "light"
+    caption: "Workflow 4, vacancy sync: a schedule or manual webhook, loading the CSV table, updating vacancy settings."
+  - file: "05-vacancy-sheet"
+    w: 2000
+    h: 760
+    theme: "light"
+    caption: "The vacancy sheet in Google Sheets that the agent reads its settings from (salary ranges hidden)."
 ---
 
 When a candidate reaches the right funnel stage in KeyCRM, a voice AI agent calls them itself, runs a short first-round screening and moves the result into the card. This is a solution for an education company that hires staff. Below are the numbers for the first three weeks, an honest breakdown of what was hard and an explanation of why such agents cost more than the rest of our work.

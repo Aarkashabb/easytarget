@@ -31,6 +31,37 @@ result_value: "14/14"
 result_unit: ""
 result_label: "successful runs in two weeks"
 complexity_summary: "5 versions · SadiControl → KeyCRM, daily"
+screenshots:
+  - file: "01-full-canvas"
+    w: 1905
+    h: 165
+    theme: "dark"
+    caption: "The whole workflow: 52 nodes in one flow."
+  - file: "02-start-and-visits"
+    w: 2000
+    h: 624
+    theme: "dark"
+    caption: "Start: a 22:00 Kyiv run, login to the accounting system, sites and the day's visits, grouping by site."
+  - file: "03-order-versions"
+    w: 2000
+    h: 535
+    theme: "dark"
+    caption: "Middle: order versions in the n8n table and migration of legacy orders."
+  - file: "04-order-and-buyer"
+    w: 2000
+    h: 797
+    theme: "dark"
+    caption: "End: finding or creating the buyer, creating the order in KeyCRM, status, saving the new version."
+  - file: "05-versions-table"
+    w: 2000
+    h: 440
+    theme: "dark"
+    caption: "The order-versions table in n8n (keys and order IDs hidden)."
+  - file: "06-executions"
+    w: 440
+    h: 735
+    theme: "dark"
+    caption: "Run log for 6–12 November 2026: every night at 23:00 n8n time (22:00 Kyiv), all successful, 1–1.5 minutes."
 ---
 
 Every evening the automation pulls all of the day's site visits from the SadiControl system and writes them into orders in KeyCRM. It runs for the landscaping company [Sadi](https://sadi.com.ua/) (Kyiv and region): garden care, landscape design, irrigation. Before the automation, everything from SadiControl was copied into KeyCRM by hand, with over 500 visits per month. Over two weeks, 29.10–12.11.2026, the workflow ran 14 times out of 14 without errors.

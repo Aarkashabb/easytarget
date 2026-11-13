@@ -34,6 +34,27 @@ result_value: "60"
 result_unit: "users"
 result_label: "use the bot"
 complexity_summary: "3 workflows · RAG: Postgres + Cohere"
+screenshots:
+  - file: "01-access"
+    w: 1992
+    h: 900
+    theme: "light"
+    caption: "The “Access” workflow: a Telegram message, an access-table check, user confirmation or a reply that there is no invitation."
+  - file: "02-search-and-answer"
+    w: 2000
+    h: 578
+    theme: "light"
+    caption: "The “Search and answer” workflow: question embedding (OpenAI), Postgres vector search, Cohere rerank, the model's answer, a log row."
+  - file: "03-document-sync"
+    w: 2000
+    h: 563
+    theme: "light"
+    caption: "The “Document sync” workflow: every 2 hours it compares Google Drive files with the index, removes stale chunks, extracts text and stores embeddings."
+  - file: "04-executions"
+    w: 470
+    h: 624
+    theme: "light"
+    caption: "Sync run log for 13 November 2026: every 2 hours, all successful."
 ---
 
 An employee asks the bot in Telegram about a regulation or instruction and gets an answer found inside the company's documents, together with a link to the full document. 60 people use it. Before, you had to remember which exact document held the instruction. Now you just ask a question.

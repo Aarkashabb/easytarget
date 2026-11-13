@@ -2096,3 +2096,20 @@ a { color: inherit; text-decoration: none; }
   opacity: 1;
   transform: none;
 }
+
+/* Case screenshots (real n8n canvases) */
+.case-shots { background: var(--c-bg); padding: 8px 0 64px; }
+.case-shots h2 { margin: 0 0 8px; }
+.case-shots__lede { color: var(--c-text-2); max-width: 760px; margin: 0 0 28px; }
+.case-shots__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px 24px; align-items: start; }
+.case-shot { margin: 0; min-width: 0; }
+.case-shot--wide { grid-column: 1 / -1; }
+.case-shot__link { display: block; border-radius: 14px; overflow: hidden; border: 1px solid var(--c-line); background: #fff; }
+.case-shot--dark .case-shot__link { background: #1a1a1a; border-color: rgba(13, 28, 50, 0.4); }
+.case-shot--narrow .case-shot__link { display: inline-block; max-width: 100%; }
+.case-shot img { display: block; width: 100%; height: auto; }
+.case-shot--narrow img { width: auto; max-width: 100%; }
+.case-shot figcaption { margin-top: 10px; font-size: 14px; line-height: 1.5; color: var(--c-text-2); }
+@media (max-width: 640px) {
+  .case-shots__grid { grid-template-columns: 1fr; }
+}
