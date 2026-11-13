@@ -14,6 +14,12 @@
     <span class="case-eyebrow">{{ i18n "case_eyebrow" }} · {{ .Params.industry_label }}</span>
     <h1>{{ .Title }}</h1>
     <p class="case-hero__sub">{{ .Params.subtitle }}</p>
+    {{- /* Месяц и год запуска показываем только если они заданы в front matter (launched: "YYYY-MM").
+           Поле `date` не выводится: в старых кейсах оно проставлено вручную и не подтверждено. */ -}}
+    {{- with .Params.launched }}
+    {{- $launched := time.AsTime (printf "%s-01" .) }}
+    <p class="case-hero__launched"><time datetime="{{ $launched.Format "2006-01" }}">{{ i18n "case_launched" }}: {{ i18n (printf "month_%d" $launched.Month) }} {{ $launched.Year }}</time></p>
+    {{- end }}
   </div>
 </section>
 
@@ -57,6 +63,18 @@
     </div>
   </div>
 </section>
+
+{{- /* Тело кейса (.Content) выводится только для кейсов с `long_form: true`.
+       Без флага тело не показывается: в старых кейсах там короткие шаблонные абзацы. */ -}}
+{{- if .Params.long_form }}
+<section class="case-body">
+  <div class="container" style="max-width: 780px;">
+    <div class="card post-content case-body__content">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{- end }}
 
 <section class="case-arch">
   <div class="container">
