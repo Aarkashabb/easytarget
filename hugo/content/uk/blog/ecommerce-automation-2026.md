@@ -5,7 +5,7 @@ lastmod: 2026-06-09
 description: "Конкретні workflow-схеми для автоматизації інтернет-магазину: обробка замовлень, синхронізація залишків, тригерні комунікації та автозвіти на N8N і Make."
 tags: ["E-commerce", "Автоматизація", "N8N", "Make", "Shopify"]
 keywords: ["автоматизація e-commerce", "обробка замовлень автоматично", "синхронізація залишків інтернет-магазин", "abandoned cart workflow"]
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 image: "/images/blog/ecommerce-automation-order-lifecycle-2.webp"
 imageAlt: "Автоматизований цикл замовлення з'єднує вітрину магазину, залишки, CRM, повідомлення клієнту та доставку"
 cluster: "business-automation"

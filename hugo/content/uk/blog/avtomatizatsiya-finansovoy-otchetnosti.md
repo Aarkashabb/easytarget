@@ -6,7 +6,7 @@ lastmod: 2026-11-11
 slug: "avtomatyzatsiia-finansovoi-zvitnosti"
 keywords: ["автоматизація фінансової звітності", "автоматизація управлінської звітності", "автоматизація звітності", "фінансові звіти"]
 tags: ["Фінансова звітність", "Автоматизація", "Workflow", "Контроль даних"]
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 cluster: "business-automation"
 clusterRole: "spoke"
 image: "/images/blog/financial-reporting-automation-hero.png"

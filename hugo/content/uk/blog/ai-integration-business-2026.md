@@ -5,7 +5,7 @@ lastmod: 2026-06-16
 description: "Практичний гайд: де AI дає максимальний ROI в бізнесі та як підключити OpenAI або Claude до існуючих N8N і Make воркфлоу без зайвих витрат."
 tags: ["AI", "OpenAI", "N8N", "Make", "Автоматизація"]
 keywords: ["AI інтеграція бізнес", "підключити openai до n8n", "автоматизація підтримки ai", "кваліфікація лідів ai", "обробка документів ai"]
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 image: "/images/blog/ai-integration-business-hero-2.webp"
 imageAlt: "AI workflow з'єднує вхідні бізнес-дані з валідацією, мовною моделлю та рішенням людини"
 cluster: "ai-integration"

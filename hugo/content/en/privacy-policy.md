@@ -39,6 +39,6 @@ You can ask about, correct, or request deletion of personal data that you have p
 
 ## Contact
 
-For privacy questions or requests, contact **Ivan Blagoveshchensky** at [blagoveshchenskyivan@gmail.com](mailto:blagoveshchenskyivan@gmail.com).
+For privacy questions or requests, contact **Ivan Blagoveshchenskiy** at [blagoveshchenskyivan@gmail.com](mailto:blagoveshchenskyivan@gmail.com).
 
 We may update this policy when website practices or applicable requirements change. The effective date above shows the latest version.

@@ -6,7 +6,7 @@ lastmod: 2026-11-11
 slug: "financial-reporting-automation"
 keywords: ["financial reporting automation", "management reporting automation", "automated financial reports", "reporting workflow"]
 tags: ["Financial Reporting", "Automation", "Workflow", "Data Quality"]
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 cluster: "business-automation"
 clusterRole: "spoke"
 image: "/images/blog/financial-reporting-automation-hero.png"

@@ -5,7 +5,7 @@ date: 2026-09-30
 lastmod: 2026-09-30
 keywords: ["интеграция CRM", "автоматизация CRM продаж", "автоматизация лидов в CRM", "CRM workflow"]
 tags: ["CRM", "Интеграции", "Автоматизация продаж", "Workflow"]
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 cluster: "business-automation"
 clusterRole: "spoke"
 image: "/images/blog/crm-sales-workflow-hero.png"

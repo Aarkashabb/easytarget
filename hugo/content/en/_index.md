@@ -54,7 +54,7 @@ steps:
     body: "Go live, monitor, and provide ongoing technical support."
 
 about_title: "About Me"
-about_name: "Ivan Blagoveshchensky"
+about_name: "Ivan Blagoveshchenskiy"
 about_role: "Lead Automation Engineer"
 about_photo: "/images/profile/ivan-profile.webp"
 about_bio: "Since 2021 (over five years) I have been working on business process automation. I turn complex manual processes into elegant automated systems. My approach is precision engineering: every workflow is reliable, scalable, and precisely tuned to your business."

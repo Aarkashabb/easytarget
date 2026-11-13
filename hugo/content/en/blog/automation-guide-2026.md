@@ -7,7 +7,7 @@ image: "/images/blog/automation-guide-2026-hero.jpg"
 imageAlt: "Advanced digital workflow ecosystem with cloud analytics, AI integration, and business intelligence nodes"
 tags: ["Guide", "Automation", "Business Process", "BPA", "Workflow"]
 keywords: ["business process automation", "workflow automation", "automation guide", "BPA"]
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 cluster: "business-automation"
 clusterRole: "pillar"
 draft: false

@@ -7,7 +7,7 @@ image: "/images/blog/make-vs-zapier-vs-n8n-hero.jpg"
 imageAlt: "Столбчатая диаграмма сравнения месячных расходов Zapier, Make и N8N на малом, среднем и большом масштабах"
 tags: ["Сравнение", "Make", "Zapier", "N8N", "No-code"]
 keywords: ["make vs zapier", "n8n vs zapier", "make vs n8n", "сравнение платформ автоматизации", "no-code платформы"]
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 cluster: "business-automation"
 clusterRole: "spoke"
 draft: false

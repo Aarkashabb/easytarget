@@ -6,7 +6,7 @@ description: "Практический гайд по расчету эконом
 image: "/images/blog/roi-workflow-automation-hero.jpg"
 imageAlt: "Растущая гистограмма с отметкой 340% ROI — расчёт окупаемости workflow автоматизации"
 tags: ["ROI", "Business Case", "Automation Strategy"]
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 cluster: "business-automation"
 clusterRole: "spoke"
 draft: false

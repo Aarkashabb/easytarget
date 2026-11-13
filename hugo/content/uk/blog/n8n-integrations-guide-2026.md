@@ -9,7 +9,7 @@ imageWidth: 1672
 imageHeight: 941
 tags: ["N8N", "Інтеграції", "API", "Webhooks", "Автоматизація"]
 keywords: ["n8n інтеграції", "підключити api до n8n", "n8n webhooks налаштування", "n8n http request", "n8n code нода"]
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 cluster: "ai-integration"
 clusterRole: "spoke"
 draft: false

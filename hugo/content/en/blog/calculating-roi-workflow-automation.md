@@ -6,7 +6,7 @@ description: "Practical guide to calculating time and cost savings from automati
 image: "/images/blog/roi-workflow-automation-hero.jpg"
 imageAlt: "Bar chart showing 340% ROI growth — workflow automation payback calculation"
 tags: ["ROI", "Business Case", "Automation Strategy"]
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 cluster: "business-automation"
 clusterRole: "spoke"
 draft: false
