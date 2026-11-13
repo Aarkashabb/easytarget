@@ -95,7 +95,10 @@ In June 2026 I passed the Make Basics and Make Intermediate certifications (Make
 
 ## Selected work
 
-- [Marketing campaign budget automation](/en/portfolio/marketing-budget-automation/): daily budget allocation across 10+ Facebook and Instagram ad accounts.
+- [Ads to sales by product](/en/portfolio/marketing-budget-automation/): a daily report for an ad agency combining Facebook and Instagram ad spend with store sales.
+- [SadiControl → KeyCRM](/en/portfolio/sadicontrol-keycrm-sync/): daily sync of a landscaping company's site visits into CRM orders.
+- [Voice AI agent for candidate screening](/en/portfolio/voice-ai-candidate-screening/): candidate calls on ElevenLabs and KeyCRM.
+- [AI assistant for company documents in Telegram](/en/portfolio/telegram-rag-document-assistant/): answers from company documents for 60 employees.
 - [Banking data integration](/en/portfolio/banking-data-integration/): daily balance tracking through the Monobank API.
 - [Automated financial report generation](/en/portfolio/automated-financial-reports/): monthly reports with Gemini analysis and a Google Slides presentation.
 - [Online store inventory synchronization](/en/portfolio/ecommerce-inventory-sync/).
