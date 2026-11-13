@@ -95,7 +95,10 @@ cta_telegram_button: "Написати в Telegram"
 
 ## Приклади робіт
 
-- [Автоматизація бюджетів маркетингових кампаній](/portfolio/marketing-budget-automation/): щоденний розподіл бюджету між 10+ рекламними кабінетами Facebook та Instagram.
+- [Реклама → продажі по товарах](/portfolio/marketing-budget-automation/): щоденний звіт для рекламного агентства, що зводить витрати на оголошення Facebook та Instagram із продажами магазинів.
+- [SadiControl → KeyCRM](/portfolio/sadicontrol-keycrm-sync/): щоденна синхронізація виїздів ландшафтної компанії в замовлення CRM.
+- [Голосовий AI-агент для скринінгу кандидатів](/portfolio/voice-ai-candidate-screening/): дзвінки кандидатам на ElevenLabs та KeyCRM.
+- [AI-асистент по регламентах у Telegram](/portfolio/telegram-rag-document-assistant/): відповіді за документами компанії для 60 співробітників.
 - [Інтеграція банківських даних](/portfolio/banking-data-integration/): щоденний трекінг балансів через Monobank API.
 - [Автоматична генерація фінансових звітів](/portfolio/automated-financial-reports/): місячні звіти з аналізом від Gemini та презентацією в Google Slides.
 - [Синхронізація товарних залишків інтернет-магазину](/portfolio/ecommerce-inventory-sync/).

@@ -134,7 +134,7 @@ ROI (%) = ((Чистий прибуток - Початкові вкладенн�
 | Банки / Фінтех | Обробка документів, KYC | 4–8 місяців |
 | SaaS / IT | Підтримка клієнтів, білінг | 2–5 місяців |
 
-Конкретні кейси з нашої практики: [автоматизація маркетингових бюджетів](/portfolio/marketing-budget-automation/) (2 год → 5 хв/день), [генерація фінансових звітів](/portfolio/automated-financial-reports/) (4+ год/міс), [синхронізація e-commerce залишків](/portfolio/ecommerce-inventory-sync/) (нуль ручного вводу). Як підійти до звітності з контролями, дивіться в статті [Автоматизація фінансової звітності](/blog/avtomatyzatsiia-finansovoi-zvitnosti/).
+Конкретні кейси з нашої практики: [звіт «реклама → продажі по товарах»](/portfolio/marketing-budget-automation/) (від 30 хв/день, за оцінкою), [генерація фінансових звітів](/portfolio/automated-financial-reports/) (4+ год/міс), [синхронізація e-commerce залишків](/portfolio/ecommerce-inventory-sync/) (нуль ручного вводу). Як підійти до звітності з контролями, дивіться в статті [Автоматизація фінансової звітності](/blog/avtomatyzatsiia-finansovoi-zvitnosti/).
 
 ## Типові помилки при розрахунку ROI
 
@@ -212,4 +212,4 @@ ROI від автоматизації часто перевищує початк
 
 **Чи потрібна вам безпека при розрахунку ROI?** Витрати на безпечну автоматизацію можуть вплинути на окупність. Читайте [Best Practices безпеки в No-Code автоматизації](/blog/security-best-practices-no-code-automation/) щоб включити ці витрати у розрахунки.
 
-**Реальні результати:** Подивіться кейси з реальними цифрами: [маркетинг — 2 год → 5 хв/день](/portfolio/marketing-budget-automation/), [фінансові звіти — 4+ год/міс](/portfolio/automated-financial-reports/), [e-commerce — нуль ручного вводу](/portfolio/ecommerce-inventory-sync/).
+**Реальні результати:** Подивіться кейси з реальними цифрами: [маркетинг — від 30 хв/день, за оцінкою](/portfolio/marketing-budget-automation/), [фінансові звіти — 4+ год/міс](/portfolio/automated-financial-reports/), [e-commerce — нуль ручного вводу](/portfolio/ecommerce-inventory-sync/).
