@@ -188,7 +188,7 @@ lastmod: 2026-05-27
 tags: ["N8N", "Self-Hosting", "DevOps", "Docker", "Automation"]
 keywords: ["self-hosted n8n", "n8n docker", "n8n setup", "n8n production", "n8n vps"]
 image: "/images/blog/n8n-self-hosted-hero.svg"
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 canonical: "https://easytarget.com.ua/en/blog/start-with-self-hosted-n8n/"
 draft: false
 ```
@@ -203,7 +203,7 @@ lastmod: 2026-05-27
 tags: ["N8N", "Self-Hosting", "DevOps", "Docker", "Автоматизація"]
 keywords: ["self-hosted n8n", "n8n docker", "n8n налаштування", "n8n на своему сервері"]
 image: "/images/blog/n8n-self-hosted-hero.svg"
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 canonical: "https://easytarget.com.ua/blog/start-with-self-hosted-n8n/"
 draft: false
 ```
@@ -218,7 +218,7 @@ lastmod: 2026-05-27
 tags: ["N8N", "Self-Hosting", "DevOps", "Docker", "Автоматизация"]
 keywords: ["self-hosted n8n", "n8n docker", "n8n на своем сервере", "n8n настройка"]
 image: "/images/blog/n8n-self-hosted-hero.svg"
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 canonical: "https://easytarget.com.ua/ru/blog/start-with-self-hosted-n8n/"
 draft: false
 ```

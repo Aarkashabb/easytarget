@@ -3,14 +3,14 @@ title: "Обо мне: Иван Благовещенский, автоматиз
 linkTitle: "Обо мне"
 h1: "Иван Благовещенский: автоматизация бизнес-процессов на n8n, Make и Zapier"
 description: "Иван Благовещенский, EasyTarget (Украина): с 2021 года автоматизирую процессы на n8n, Make и Zapier, чат-боты и AI-агенты для малого и среднего бизнеса."
-lede: "Я Иван Благовещенский, ведущий инженер по автоматизации из Харькова. Веду EasyTarget: строю рабочие процессы на n8n, Make и Zapier, чат-ботов и AI-агентов для малого и среднего бизнеса."
+lede: "Я Иван Благовещенский, AI Automation & Integration Architect из Харькова. Веду EasyTarget: строю рабочие процессы на n8n, Make и Zapier, чат-ботов и AI-агентов для малого и среднего бизнеса."
 eyebrow: "Обо мне"
 layout: "about"
 translationKey: "about-ivan"
 schema_type: "AboutPage"
 person:
   name: "Иван Благовещенский"
-  role: "Ведущий инженер по автоматизации, EasyTarget"
+  role: "AI Automation & Integration Architect, EasyTarget"
   location: "Харьков, Украина"
   photo: "/images/profile/ivan-profile.webp"
   tags: ["n8n", "Make", "Zapier", "OpenAI API", "Чат-боты", "AI-агенты"]
