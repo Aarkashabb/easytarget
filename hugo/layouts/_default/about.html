@@ -36,6 +36,9 @@
           {{- with $.Site.Params.github }}
           <a class="btn btn--ghost" href="{{ . }}" target="_blank" rel="me noopener">GitHub</a>
           {{- end }}
+          {{- with $.Site.Params.upwork }}
+          <a class="btn btn--ghost" href="{{ . }}" target="_blank" rel="me noopener">Upwork</a>
+          {{- end }}
           <a class="btn btn--ghost" href="mailto:{{ $.Site.Params.email }}">Email</a>
         </div>
       </div>

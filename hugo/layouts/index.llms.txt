@@ -8,7 +8,7 @@ EasyTarget is a workflow automation consultancy specializing in no-code and low-
 **Founder:** Ivan Blagoveshchenskiy · Lead Automation Engineer
 **Languages:** Ukrainian (default), English, Russian
 **Contact:** {{ .Site.Params.email }} · [Book consultation]({{ .Site.Params.calendly }})
-**Social:** [LinkedIn]({{ .Site.Params.linkedin }}) · [Telegram]({{ .Site.Params.telegram }}){{ with .Site.Params.github }} · [GitHub]({{ . }}){{ end }}
+**Social:** [LinkedIn]({{ .Site.Params.linkedin }}) · [Telegram]({{ .Site.Params.telegram }}){{ with .Site.Params.github }} · [GitHub]({{ . }}){{ end }}{{ with .Site.Params.upwork }} · [Upwork]({{ . }}){{ end }}
 
 {{- range where .Site.RegularPages "Params.translationKey" "about-ivan" }}
 
@@ -22,7 +22,7 @@ EasyTarget is a workflow automation consultancy specializing in no-code and low-
 - **Clients:** small and mid-sized businesses, mostly in Ukraine
 - **Stack:** n8n, Make, Zapier, OpenAI API, Claude, Gemini, JavaScript (Node.js), Python, Docker, PostgreSQL
 - **Certificates (verifiable):** Make Basics and Make Intermediate (Make Academy, June 2026); Claude 101 (Anthropic, June 2026); Claude Code 101 (Anthropic, November 2026); AI for Business 2.0 (Google, November 2026)
-- **Profiles:** [LinkedIn]({{ $.Site.Params.linkedin }}) · [Telegram]({{ $.Site.Params.telegram }}){{ with $.Site.Params.github }} · [GitHub]({{ . }}){{ end }}
+- **Profiles:** [LinkedIn]({{ $.Site.Params.linkedin }}) · [Telegram]({{ $.Site.Params.telegram }}){{ with $.Site.Params.github }} · [GitHub]({{ . }}){{ end }}{{ with $.Site.Params.upwork }} · [Upwork]({{ . }}){{ end }}
 - **Full page:** [{{ .Title }}]({{ .Permalink }})
 - **Start:** call of up to 30 minutes, [book via Calendly]({{ $.Site.Params.calendly }})
 {{- end }}
