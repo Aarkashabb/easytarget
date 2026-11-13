@@ -14,7 +14,7 @@ EasyTarget is a workflow automation consultancy specializing in no-code and low-
 
 ## About the author
 
-- **Name:** Ivan Blagoveshchenskiy, runs EasyTarget · based in Kharkiv, Ukraine
+- **Name:** Ivan Blagoveshchenskiy, runs EasyTarget · based in Kyiv, Ukraine
 - **Role:** AI Automation & Integration Architect
 - **Business:** EasyTarget, registered as a sole proprietorship (FOP) in 2023
 - **Experience:** automating business processes since 2021 (over five years); Make since 2021, n8n for about a year
