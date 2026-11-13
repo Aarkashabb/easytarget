@@ -94,6 +94,31 @@
 </section>
 {{- end }}
 
+{{- /* Реальные снимки экрана n8n: список `screenshots` в front matter (file, w, h, theme, caption).
+       Блок выводится только у кейсов, где список задан; картинки лежат в static/img/case-screens/<slug>/. */ -}}
+{{- with .Params.screenshots }}
+{{- $slug := $.File.ContentBaseName }}
+<section class="case-shots">
+  <div class="container">
+    <h2>{{ i18n "screens_title" }}</h2>
+    <p class="case-shots__lede">{{ i18n "screens_lede" }}</p>
+    <div class="case-shots__grid">
+      {{- range . }}
+      <figure class="case-shot case-shot--{{ .theme }}{{ if ge .w 1000 }} case-shot--wide{{ else }} case-shot--narrow{{ end }}">
+        <a class="case-shot__link" href="/img/case-screens/{{ $slug }}/{{ .file }}.png" target="_blank" rel="noopener">
+          <picture>
+            <source type="image/webp" srcset="/img/case-screens/{{ $slug }}/{{ .file }}.webp">
+            <img src="/img/case-screens/{{ $slug }}/{{ .file }}.png" alt="{{ .caption }}" width="{{ .w }}" height="{{ .h }}" loading="lazy" decoding="async">
+          </picture>
+        </a>
+        <figcaption>{{ .caption }}</figcaption>
+      </figure>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}
+
 <section class="case-stack-section">
   <div class="container">
     <h2>{{ i18n "stack_title" }}</h2>

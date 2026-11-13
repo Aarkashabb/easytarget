@@ -33,6 +33,22 @@ result_value: "30+"
 result_unit: "min/day"
 result_label: "estimated saving for the agency"
 complexity_summary: "27 brand workflows · ads + sales"
+screenshots:
+  - file: "01-ad-stats"
+    w: 2000
+    h: 334
+    theme: "dark"
+    caption: "Ad statistics collection: schedule, sheet read, a Facebook Graph API request, processing and a row written to the sheet."
+  - file: "02-sales-webhook"
+    w: 2000
+    h: 512
+    theme: "dark"
+    caption: "Sales by product: an order webhook, duplicate check, order and items from the CRM, a sheet update; plus a daily cleanup of old records."
+  - file: "03-sales-to-sheet"
+    w: 2000
+    h: 311
+    theme: "dark"
+    caption: "A sales-sync variant: orders pulled from Sitniks, matched against the product sheet, rows appended to the sheet."
 ---
 
 For the ad agency [VashTargetolog](https://www.instagram.com/vash.targetolog/) we built a report that brings daily ad spend per ad on Facebook and Instagram and sales by product from the agency's online-store clients into one table. Before, a media buyer calculated spend by hand and the stores typed in units sold per day themselves. Now everything lands in the table automatically, and the agency decides which ads to scale and which to switch off using fresh data.
