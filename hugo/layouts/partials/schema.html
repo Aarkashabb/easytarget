@@ -9,8 +9,10 @@
   "url": "{{ .Site.BaseURL }}",
   "logo": "{{ .Site.BaseURL }}images/logo.svg",
   "description": "Workflow automation services for business processes using N8N, Make, Zapier. Custom automation solutions for banking, marketing, e-commerce, and more.",
+  "foundingDate": "2023",
   "address": {
     "@type": "PostalAddress",
+    "addressLocality": "Kharkiv",
     "addressCountry": "UA"
   },
   "areaServed": "Worldwide",
@@ -22,24 +24,28 @@
   },
   "sameAs": [
     "{{ .Site.Params.linkedin }}",
-    "{{ .Site.Params.telegram }}"
+    "{{ .Site.Params.telegram }}"{{ with .Site.Params.github }},
+    "{{ . }}"{{ end }}{{ with .Site.Params.upwork }},
+    "{{ . }}"{{ end }}{{ with .Site.Params.fiverr }},
+    "{{ . }}"{{ end }}
   ]
 }
 </script>
 
-{{- /* Person Schema - for author */ -}}
+{{- /* Person Schema - for author (the about page emits its own ProfilePage + Person below) */ -}}
+{{- if ne .Params.schema_type "AboutPage" -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Ivan Blagoveshchenskyi",
+  "name": "Ivan Blagoveshchenskiy",
   "email": "{{ .Site.Params.email }}",
   "affiliation": {
     "@type": "Organization",
     "name": "{{ .Site.Params.siteName }}"
   },
   "url": "{{ .Site.BaseURL }}#about",
-  "jobTitle": "Workflow Automation Specialist",
+  "jobTitle": "Lead Automation Engineer",
   "worksFor": {
     "@type": "Organization",
     "name": "{{ .Site.Params.siteName }}"
@@ -47,10 +53,14 @@
   "knowsAbout": ["n8n", "Make", "Zapier", "OpenAI API", "Workflow automation", "CRM integration", "AI agents"],
   "sameAs": [
     "{{ .Site.Params.linkedin }}",
-    "{{ .Site.Params.telegram }}"
+    "{{ .Site.Params.telegram }}"{{ with .Site.Params.github }},
+    "{{ . }}"{{ end }}{{ with .Site.Params.upwork }},
+    "{{ . }}"{{ end }}{{ with .Site.Params.fiverr }},
+    "{{ . }}"{{ end }}
   ]
 }
 </script>
+{{- end -}}
 
 {{- /* BlogPosting Schema - for blog posts */ -}}
 {{- if eq .Type "blog" -}}
@@ -68,8 +78,13 @@
   "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
   "author": {
     "@type": "Person",
-    "name": "Ivan Blagoveshchenskyi",
-    "url": "{{ .Site.BaseURL }}"
+    "name": "Ivan Blagoveshchenskiy",
+    {{- with where .Site.RegularPages "Params.translationKey" "about-ivan" }}
+    "url": "{{ (index . 0).Permalink }}",
+    {{- else }}
+    "url": "{{ .Site.BaseURL }}",
+    {{- end }}
+    "sameAs": ["{{ .Site.Params.linkedin }}", "{{ .Site.Params.telegram }}"{{ with .Site.Params.github }}, "{{ . }}"{{ end }}{{ with .Site.Params.upwork }}, "{{ . }}"{{ end }}{{ with .Site.Params.fiverr }}, "{{ . }}"{{ end }}]
   },
   "publisher": {
     "@type": "Organization",
@@ -197,7 +212,50 @@
 </script>
 {{- end -}}
 
-{{- /* WebPage Schema - for all pages */ -}}
+{{- /* ProfilePage + Person - author page. sameAs only lists profiles that really exist (site params).
+       hasCredential is emitted only for items in front matter `badges:` (empty until Ivan sends the files). */ -}}
+{{- if eq .Params.schema_type "AboutPage" -}}
+{{- $pp := .Params.person | default dict -}}
+{{- $person := dict
+  "@type" "Person"
+  "name" $pp.name
+  "jobTitle" $pp.role
+  "description" .Description
+  "url" .Permalink
+  "image" ($pp.photo | default "/images/profile/ivan-profile.webp" | absURL)
+  "email" .Site.Params.email
+  "address" (dict "@type" "PostalAddress" "addressLocality" "Kharkiv" "addressCountry" "UA")
+  "worksFor" (dict "@type" "Organization" "name" .Site.Params.siteName "url" .Site.BaseURL)
+  "knowsAbout" (slice "n8n" "Make" "Zapier" "OpenAI API" "Workflow automation" "Business process automation" "CRM integration" "AI agents" "Chatbots" "Telegram bots" "E-commerce automation" "Automated reporting")
+  "sameAs" (slice .Site.Params.linkedin .Site.Params.telegram .Site.Params.github .Site.Params.upwork .Site.Params.fiverr)
+-}}
+{{- with .Params.badges -}}
+{{- $creds := slice -}}
+{{- range . -}}
+  {{- $c := dict "@type" "EducationalOccupationalCredential" "name" .title "credentialCategory" "certificate" -}}
+  {{- with .issuer -}}{{- $c = merge $c (dict "recognizedBy" (dict "@type" "Organization" "name" .)) -}}{{- end -}}
+  {{- with .url -}}{{- $c = merge $c (dict "url" .) -}}{{- end -}}
+  {{- $creds = $creds | append $c -}}
+{{- end -}}
+{{- $person = merge $person (dict "hasCredential" $creds) -}}
+{{- end -}}
+{{- $profile := dict
+  "@context" "https://schema.org"
+  "@type" "ProfilePage"
+  "name" .Title
+  "description" .Description
+  "url" .Permalink
+  "inLanguage" .Lang
+  "isPartOf" (dict "@type" "WebSite" "name" .Site.Params.siteName "url" .Site.BaseURL)
+  "mainEntity" $person
+-}}
+<script type="application/ld+json">
+{{ $profile | jsonify | safeJS }}
+</script>
+{{- end -}}
+
+{{- /* WebPage Schema - for all pages except the about page (ProfilePage above) */ -}}
+{{- if ne .Params.schema_type "AboutPage" -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -212,6 +270,7 @@
   }
 }
 </script>
+{{- end -}}
 
 {{- /* BreadcrumbList Schema — built from .Ancestors (skip homepage per Google spec) */ -}}
 {{- if not .IsHome -}}

@@ -5,7 +5,7 @@ date: 2026-09-30
 lastmod: 2026-11-11
 keywords: ["автоматизация финансовой отчетности", "автоматизация управленческой отчетности", "автоматизация отчетности", "автоматизация финансовых отчетов"]
 tags: ["Финансовая отчетность", "Автоматизация", "Workflow", "Контроль данных"]
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 cluster: "business-automation"
 clusterRole: "spoke"
 image: "/images/blog/financial-reporting-automation-hero.png"

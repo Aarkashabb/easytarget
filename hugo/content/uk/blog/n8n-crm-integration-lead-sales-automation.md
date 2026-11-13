@@ -5,7 +5,7 @@ lastmod: 2026-09-09
 description: "Як поєднати n8n і CRM для обробки лідів, розподілу угод та роботи менеджерів. Практичний підхід до надійного CRM workflow для B2B."
 tags: ["n8n", "CRM", "автоматизація продажів", "автоматизація лідів"]
 keywords: ["інтеграція n8n з CRM", "автоматизація лідів у CRM", "автоматизація продажів n8n", "маршрутизація лідів"]
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 image: "/images/blog/n8n-crm-integration-lead-routing.webp"
 imageAlt: "Вхідний лід проходить через контрольовану маршрутизацію до запису в CRM та менеджера з продажів"
 draft: false

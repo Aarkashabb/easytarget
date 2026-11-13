@@ -7,7 +7,7 @@ image: "/images/blog/start-with-self-hosted-n8n-hero.jpg"
 imageAlt: "Логотип N8N со стойками серверов и соединениями потоков данных — расширяемая платформа автоматизации workflow"
 tags: ["N8N", "Self-Hosting", "DevOps", "Docker", "Автоматизация"]
 keywords: ["self-hosted n8n", "n8n docker", "n8n на своём сервере", "n8n настройка"]
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 cluster: "business-automation"
 clusterRole: "spoke"
 draft: false

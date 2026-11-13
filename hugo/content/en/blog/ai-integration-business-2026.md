@@ -5,7 +5,7 @@ lastmod: 2026-06-16
 description: "A practical guide to AI integration: where AI delivers maximum ROI and how to connect OpenAI or Claude to existing N8N and Make workflows without complexity."
 tags: ["AI", "OpenAI", "N8N", "Make", "Automation"]
 keywords: ["AI integration business", "connect openai to n8n", "AI customer support automation", "AI lead qualification", "AI document processing"]
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 image: "/images/blog/ai-integration-business-hero-2.webp"
 imageAlt: "AI workflow connects incoming business data to validation, a language model and a human decision point"
 cluster: "ai-integration"

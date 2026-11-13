@@ -5,7 +5,7 @@ lastmod: 2026-06-09
 description: "Конкретные workflow-схемы для автоматизации интернет-магазина: обработка заказов, синхронизация остатков, триггерные коммуникации и автоотчёты на N8N и Make."
 tags: ["E-commerce", "Автоматизация", "N8N", "Make", "Shopify"]
 keywords: ["автоматизация e-commerce", "обработка заказов автоматически", "синхронизация остатков интернет-магазин", "abandoned cart workflow"]
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 image: "/images/blog/ecommerce-automation-order-lifecycle-2.webp"
 imageAlt: "Автоматизированный цикл заказа связывает витрину магазина, остатки, CRM, сообщения клиенту и доставку"
 cluster: "business-automation"

@@ -1,0 +1,70 @@
+/* About / author page (layout "about"). Loaded only by layouts/_default/about.html */
+.about-profile { background: var(--c-bg); padding: 40px 0 0; }
+.about-profile__card {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+  background: var(--c-surface);
+  border: 1px solid var(--c-line-soft);
+  border-radius: var(--r);
+  box-shadow: var(--shadow-sm);
+  padding: 28px;
+}
+.about-profile__photo {
+  width: 220px;
+  height: 220px;
+  border-radius: var(--r);
+  overflow: hidden;
+  background: var(--c-bg);
+}
+.about-profile__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.about-profile__name { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; }
+.about-profile__role { margin-top: 6px; font-size: 15px; font-weight: 600; color: var(--c-accent-deep); }
+.about-profile__meta { margin-top: 4px; font-size: 14px; color: var(--c-text-3); }
+.about-profile__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.about-profile__links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+
+.about-facts-section { background: var(--c-bg); padding: 16px 0 40px; }
+.about-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.about-badges-section { background: var(--c-bg); padding: 0 0 88px; }
+.about-badges {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+.about-badge {
+  background: var(--c-surface);
+  border: 1px solid var(--c-line-soft);
+  border-radius: var(--r);
+  box-shadow: var(--shadow-sm);
+}
+.about-badge__inner {
+  height: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 16px;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+}
+.about-badge__img { max-width: 100%; height: auto; max-height: 160px; width: auto; object-fit: contain; }
+.about-badge__title { font-size: 14px; font-weight: 700; line-height: 1.3; }
+.about-badge__meta { font-size: 13px; color: var(--c-text-3); }
+
+@media (max-width: 720px) {
+  .about-profile__card { grid-template-columns: 1fr; gap: 20px; padding: 22px; }
+  .about-profile__photo { width: 160px; height: 160px; }
+}

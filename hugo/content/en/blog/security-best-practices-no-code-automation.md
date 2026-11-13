@@ -6,7 +6,7 @@ description: "Comprehensive guide to securing N8N, Make, and Zapier workflows. H
 image: "/images/blog/security-no-code-hero.jpg"
 imageAlt: "Security shield with checkmark and security checklist — protecting N8N, Make, Zapier workflows 2026"
 tags: ["Security", "Best Practices", "N8N", "Make", "Zapier"]
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 cluster: "business-automation"
 clusterRole: "spoke"
 draft: false

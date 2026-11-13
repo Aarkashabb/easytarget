@@ -5,7 +5,7 @@ lastmod: 2026-06-09
 description: "Workflow designs for automating your online store: order processing, inventory sync, triggered customer messages, and reporting with N8N and Make."
 tags: ["E-commerce", "Automation", "N8N", "Make", "Shopify"]
 keywords: ["e-commerce automation", "order processing workflow", "inventory sync automation", "abandoned cart recovery"]
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 image: "/images/blog/ecommerce-automation-order-lifecycle-2.webp"
 imageAlt: "Automated order lifecycle connects storefront, inventory, CRM, customer notifications and fulfillment"
 cluster: "business-automation"

@@ -5,7 +5,7 @@ lastmod: 2026-09-09
 description: "Plan an n8n CRM integration that routes leads, keeps sales data actionable and gives managers clear next steps. A practical B2B workflow guide."
 tags: ["n8n", "CRM", "sales automation", "lead routing"]
 keywords: ["n8n CRM integration", "CRM lead automation", "n8n sales automation", "CRM workflow"]
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 image: "/images/blog/n8n-crm-integration-lead-routing.webp"
 imageAlt: "An inbound lead moves through a controlled routing system to a CRM record and sales manager"
 draft: false

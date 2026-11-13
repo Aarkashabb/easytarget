@@ -6,7 +6,7 @@ lastmod: 2026-09-30
 slug: "intehratsiya-crm"
 keywords: ["інтеграція CRM", "автоматизація продажів CRM", "автоматизація лідів у CRM", "CRM workflow"]
 tags: ["CRM", "Інтеграції", "Автоматизація продажів", "Workflow"]
-author: "Ivan Blagoveshchenskyi"
+author: "Ivan Blagoveshchenskiy"
 cluster: "business-automation"
 clusterRole: "spoke"
 image: "/images/blog/crm-sales-workflow-hero.png"
