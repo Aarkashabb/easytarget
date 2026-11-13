@@ -108,5 +108,6 @@ cta_telegram_button: "Написать в Telegram"
 - [Telegram](https://t.me/Aarkashabb): быстрый способ связаться.
 - [GitHub](https://github.com/Aarkashabb): репозитории и проекты.
 - [Upwork](https://www.upwork.com/freelancers/~0169130e937a8894d3): профиль фрилансера.
+- [Fiverr](https://www.fiverr.com/aarkashabb): профиль фрилансера.
 - Почта: [blagoveshchenskyivan@gmail.com](mailto:blagoveshchenskyivan@gmail.com).
 - [Запись на разговор до 30 мин](https://calendly.com/blagoveshchenskyivan/30min).

@@ -26,6 +26,7 @@
     "{{ .Site.Params.linkedin }}",
     "{{ .Site.Params.telegram }}"{{ with .Site.Params.github }},
     "{{ . }}"{{ end }}{{ with .Site.Params.upwork }},
+    "{{ . }}"{{ end }}{{ with .Site.Params.fiverr }},
     "{{ . }}"{{ end }}
   ]
 }
@@ -54,6 +55,7 @@
     "{{ .Site.Params.linkedin }}",
     "{{ .Site.Params.telegram }}"{{ with .Site.Params.github }},
     "{{ . }}"{{ end }}{{ with .Site.Params.upwork }},
+    "{{ . }}"{{ end }}{{ with .Site.Params.fiverr }},
     "{{ . }}"{{ end }}
   ]
 }
@@ -82,7 +84,7 @@
     {{- else }}
     "url": "{{ .Site.BaseURL }}",
     {{- end }}
-    "sameAs": ["{{ .Site.Params.linkedin }}", "{{ .Site.Params.telegram }}"{{ with .Site.Params.github }}, "{{ . }}"{{ end }}{{ with .Site.Params.upwork }}, "{{ . }}"{{ end }}]
+    "sameAs": ["{{ .Site.Params.linkedin }}", "{{ .Site.Params.telegram }}"{{ with .Site.Params.github }}, "{{ . }}"{{ end }}{{ with .Site.Params.upwork }}, "{{ . }}"{{ end }}{{ with .Site.Params.fiverr }}, "{{ . }}"{{ end }}]
   },
   "publisher": {
     "@type": "Organization",
@@ -225,7 +227,7 @@
   "address" (dict "@type" "PostalAddress" "addressLocality" "Kharkiv" "addressCountry" "UA")
   "worksFor" (dict "@type" "Organization" "name" .Site.Params.siteName "url" .Site.BaseURL)
   "knowsAbout" (slice "n8n" "Make" "Zapier" "OpenAI API" "Workflow automation" "Business process automation" "CRM integration" "AI agents" "Chatbots" "Telegram bots" "E-commerce automation" "Automated reporting")
-  "sameAs" (slice .Site.Params.linkedin .Site.Params.telegram .Site.Params.github .Site.Params.upwork)
+  "sameAs" (slice .Site.Params.linkedin .Site.Params.telegram .Site.Params.github .Site.Params.upwork .Site.Params.fiverr)
 -}}
 {{- with .Params.badges -}}
 {{- $creds := slice -}}

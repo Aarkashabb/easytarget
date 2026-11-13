@@ -108,5 +108,6 @@ All projects: [portfolio](/en/portfolio/). Practical material on automation: [bl
 - [Telegram](https://t.me/Aarkashabb): the faster way to reach me.
 - [GitHub](https://github.com/Aarkashabb): repositories and projects.
 - [Upwork](https://www.upwork.com/freelancers/~0169130e937a8894d3): freelancer profile.
+- [Fiverr](https://www.fiverr.com/aarkashabb): freelancer profile.
 - Email: [blagoveshchenskyivan@gmail.com](mailto:blagoveshchenskyivan@gmail.com).
 - [Book a call of up to 30 minutes](https://calendly.com/blagoveshchenskyivan/30min).
