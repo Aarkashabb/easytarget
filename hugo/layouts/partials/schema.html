@@ -45,7 +45,7 @@
     "name": "{{ .Site.Params.siteName }}"
   },
   "url": "{{ .Site.BaseURL }}#about",
-  "jobTitle": "Lead Automation Engineer",
+  "jobTitle": "AI Automation & Integration Architect",
   "worksFor": {
     "@type": "Organization",
     "name": "{{ .Site.Params.siteName }}"
@@ -224,7 +224,7 @@
   "url" .Permalink
   "image" ($pp.photo | default "/images/profile/ivan-profile.webp" | absURL)
   "email" .Site.Params.email
-  "address" (dict "@type" "PostalAddress" "addressLocality" "Kharkiv" "addressCountry" "UA")
+  "address" (dict "@type" "PostalAddress" "addressLocality" "Kyiv" "addressCountry" "UA")
   "worksFor" (dict "@type" "Organization" "name" .Site.Params.siteName "url" .Site.BaseURL)
   "knowsAbout" (slice "n8n" "Make" "Zapier" "OpenAI API" "Workflow automation" "Business process automation" "CRM integration" "AI agents" "Chatbots" "Telegram bots" "E-commerce automation" "Automated reporting")
   "sameAs" (slice .Site.Params.linkedin .Site.Params.telegram .Site.Params.github .Site.Params.upwork .Site.Params.fiverr)

@@ -144,7 +144,7 @@ Edit: `hugo/layouts/partials/head.html`
    imageAlt: "..."            # describes the IMAGE, not the article (best practice)
    tags: ["...", "..."]
    keywords: ["..."]
-   author: "Ivan Blagoveshchenskyi"
+   author: "Ivan Blagoveshchenskiy"
    cluster: "business-automation"   # if part of topic cluster
    clusterRole: "spoke"             # or "pillar"
    draft: false

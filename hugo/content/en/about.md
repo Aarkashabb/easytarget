@@ -3,15 +3,15 @@ title: "About Ivan Blagoveshchenskiy: n8n and Make Automation"
 linkTitle: "About"
 h1: "Ivan Blagoveshchenskiy: business process automation on n8n, Make and Zapier"
 description: "Ivan Blagoveshchenskiy, EasyTarget (Ukraine): n8n, Make and Zapier automation since 2021, chatbots and AI agents for small and mid-sized businesses."
-lede: "I'm Ivan Blagoveshchenskiy, a lead automation engineer based in Kharkiv, Ukraine. I run EasyTarget: I build workflows on n8n, Make and Zapier, chatbots and AI agents for small and mid-sized businesses."
+lede: "I'm Ivan Blagoveshchenskiy, an AI Automation & Integration Architect based in Kyiv, Ukraine. I run EasyTarget: I build workflows on n8n, Make and Zapier, chatbots and AI agents for small and mid-sized businesses."
 eyebrow: "About"
 layout: "about"
 translationKey: "about-ivan"
 schema_type: "AboutPage"
 person:
   name: "Ivan Blagoveshchenskiy"
-  role: "Lead Automation Engineer, EasyTarget"
-  location: "Kharkiv, Ukraine"
+  role: "AI Automation & Integration Architect, EasyTarget"
+  location: "Kyiv, Ukraine"
   photo: "/images/profile/ivan-profile.webp"
   tags: ["n8n", "Make", "Zapier", "OpenAI API", "Chatbots", "AI agents"]
 facts:
@@ -64,7 +64,7 @@ cta_telegram_button: "Message on Telegram"
 
 ## Who I am and what I do
 
-My name is Ivan Blagoveshchenskiy, and I am based in Kharkiv. I have been automating business processes since 2021: I have used Make since 2021 and n8n for about a year. EasyTarget is my automation service for small and mid-sized businesses; it has operated as a sole proprietorship (FOP) since 2023. I replace manual, repetitive work with automated workflows: I connect CRM, messengers, spreadsheets, ad accounts and online stores so data no longer has to be moved by hand.
+My name is Ivan Blagoveshchenskiy, and I am based in Kyiv. I have been automating business processes since 2021: I have used Make since 2021 and n8n for about a year. EasyTarget is my automation service for small and mid-sized businesses; it has operated as a sole proprietorship (FOP) since 2023. I replace manual, repetitive work with automated workflows: I connect CRM, messengers, spreadsheets, ad accounts and online stores so data no longer has to be moved by hand.
 
 By my own estimate, the automations I have built have saved clients more than 5,000 hours of work in total.
 

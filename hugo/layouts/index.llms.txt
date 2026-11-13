@@ -5,7 +5,7 @@
 
 EasyTarget is a workflow automation consultancy specializing in no-code and low-code platforms. We build production-ready automation systems that save 10-40 hours per week per team, integrate disparate business tools, and scale operations without adding headcount.
 
-**Founder:** Ivan Blagoveshchenskiy · Lead Automation Engineer
+**Founder:** Ivan Blagoveshchenskiy · AI Automation & Integration Architect
 **Languages:** Ukrainian (default), English, Russian
 **Contact:** {{ .Site.Params.email }} · [Book consultation]({{ .Site.Params.calendly }})
 **Social:** [LinkedIn]({{ .Site.Params.linkedin }}) · [Telegram]({{ .Site.Params.telegram }}){{ with .Site.Params.github }} · [GitHub]({{ . }}){{ end }}{{ with .Site.Params.upwork }} · [Upwork]({{ . }}){{ end }}{{ with .Site.Params.fiverr }} · [Fiverr]({{ . }}){{ end }}
@@ -14,8 +14,8 @@ EasyTarget is a workflow automation consultancy specializing in no-code and low-
 
 ## About the author
 
-- **Name:** Ivan Blagoveshchenskiy, runs EasyTarget · based in Kharkiv, Ukraine
-- **Role:** Lead Automation Engineer
+- **Name:** Ivan Blagoveshchenskiy, runs EasyTarget · based in Kyiv, Ukraine
+- **Role:** AI Automation & Integration Architect
 - **Business:** EasyTarget, registered as a sole proprietorship (FOP) in 2023
 - **Experience:** automating business processes since 2021 (over five years); Make since 2021, n8n for about a year
 - **Result for clients:** 5,000+ hours saved in total (the author's own estimate)
