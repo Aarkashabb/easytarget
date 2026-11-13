@@ -8,7 +8,7 @@
 **Site:** {{ .Site.BaseURL }}
 **Language of this dump:** {{ .Language.Lang }}
 **Generated:** {{ now.Format "2006-01-02 15:04 UTC" }}
-**Founder:** Ivan Blagoveshchenskyi ({{ .Site.Params.email }})
+**Founder:** Ivan Blagoveshchenskiy ({{ .Site.Params.email }})
 **Booking:** {{ .Site.Params.calendly }}
 {{- range where .Site.RegularPages "Params.translationKey" "about-ivan" }}
 **About the author:** {{ .Permalink }}
@@ -40,7 +40,7 @@ For the lightweight index (titles + descriptions only), see {{ .Site.BaseURL }}l
 
 **URL:** {{ .Permalink }}
 **Published:** {{ .Date.Format "2006-01-02" }}{{ if ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02") }} (updated {{ .Lastmod.Format "2006-01-02" }}){{ end }}
-**Author:** {{ with .Params.author }}{{ . }}{{ else }}Ivan Blagoveshchenskyi{{ end }}
+**Author:** {{ with .Params.author }}{{ . }}{{ else }}Ivan Blagoveshchenskiy{{ end }}
 {{- with .Params.tags }}
 **Tags:** {{ delimit . ", " }}
 {{- end }}

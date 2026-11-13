@@ -9,8 +9,10 @@
   "url": "{{ .Site.BaseURL }}",
   "logo": "{{ .Site.BaseURL }}images/logo.svg",
   "description": "Workflow automation services for business processes using N8N, Make, Zapier. Custom automation solutions for banking, marketing, e-commerce, and more.",
+  "foundingDate": "2023",
   "address": {
     "@type": "PostalAddress",
+    "addressLocality": "Kharkiv",
     "addressCountry": "UA"
   },
   "areaServed": "Worldwide",
@@ -22,7 +24,8 @@
   },
   "sameAs": [
     "{{ .Site.Params.linkedin }}",
-    "{{ .Site.Params.telegram }}"
+    "{{ .Site.Params.telegram }}"{{ with .Site.Params.github }},
+    "{{ . }}"{{ end }}
   ]
 }
 </script>
@@ -33,14 +36,14 @@
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Ivan Blagoveshchenskyi",
+  "name": "Ivan Blagoveshchenskiy",
   "email": "{{ .Site.Params.email }}",
   "affiliation": {
     "@type": "Organization",
     "name": "{{ .Site.Params.siteName }}"
   },
   "url": "{{ .Site.BaseURL }}#about",
-  "jobTitle": "Workflow Automation Specialist",
+  "jobTitle": "Lead Automation Engineer",
   "worksFor": {
     "@type": "Organization",
     "name": "{{ .Site.Params.siteName }}"
@@ -48,7 +51,8 @@
   "knowsAbout": ["n8n", "Make", "Zapier", "OpenAI API", "Workflow automation", "CRM integration", "AI agents"],
   "sameAs": [
     "{{ .Site.Params.linkedin }}",
-    "{{ .Site.Params.telegram }}"
+    "{{ .Site.Params.telegram }}"{{ with .Site.Params.github }},
+    "{{ . }}"{{ end }}
   ]
 }
 </script>
@@ -70,13 +74,13 @@
   "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
   "author": {
     "@type": "Person",
-    "name": "Ivan Blagoveshchenskyi",
+    "name": "Ivan Blagoveshchenskiy",
     {{- with where .Site.RegularPages "Params.translationKey" "about-ivan" }}
     "url": "{{ (index . 0).Permalink }}",
     {{- else }}
     "url": "{{ .Site.BaseURL }}",
     {{- end }}
-    "sameAs": ["{{ .Site.Params.linkedin }}", "{{ .Site.Params.telegram }}"]
+    "sameAs": ["{{ .Site.Params.linkedin }}", "{{ .Site.Params.telegram }}"{{ with .Site.Params.github }}, "{{ . }}"{{ end }}]
   },
   "publisher": {
     "@type": "Organization",
@@ -216,10 +220,10 @@
   "url" .Permalink
   "image" ($pp.photo | default "/images/profile/ivan-profile.webp" | absURL)
   "email" .Site.Params.email
-  "address" (dict "@type" "PostalAddress" "addressCountry" "UA")
+  "address" (dict "@type" "PostalAddress" "addressLocality" "Kharkiv" "addressCountry" "UA")
   "worksFor" (dict "@type" "Organization" "name" .Site.Params.siteName "url" .Site.BaseURL)
   "knowsAbout" (slice "n8n" "Make" "Zapier" "OpenAI API" "Workflow automation" "Business process automation" "CRM integration" "AI agents" "Chatbots" "Telegram bots" "E-commerce automation" "Automated reporting")
-  "sameAs" (slice .Site.Params.linkedin .Site.Params.telegram)
+  "sameAs" (slice .Site.Params.linkedin .Site.Params.telegram .Site.Params.github)
 -}}
 {{- with .Params.badges -}}
 {{- $creds := slice -}}

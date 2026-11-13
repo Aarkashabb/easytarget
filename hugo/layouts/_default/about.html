@@ -33,6 +33,9 @@
         <div class="about-profile__links">
           <a class="btn btn--ghost" href="{{ $.Site.Params.linkedin }}" target="_blank" rel="me noopener">LinkedIn</a>
           <a class="btn btn--ghost" href="{{ $.Site.Params.telegram }}" target="_blank" rel="me noopener">Telegram</a>
+          {{- with $.Site.Params.github }}
+          <a class="btn btn--ghost" href="{{ . }}" target="_blank" rel="me noopener">GitHub</a>
+          {{- end }}
           <a class="btn btn--ghost" href="mailto:{{ $.Site.Params.email }}">Email</a>
         </div>
       </div>
@@ -75,11 +78,11 @@
   hugo/static/images/badges/ and add an item to `badges:` in each language file:
     - title: "Name of the certificate"
       issuer: "n8n"                          # who issued it
-      image: "/images/badges/n8n-cert.png"   # path under static/
+      image: "/images/badges/n8n-cert.png"   # optional, path under static/ (text-only card if omitted)
       width: 240                             # optional, real pixel size (avoids layout shift)
       height: 240
       url: "https://..."                     # optional, public verification link
-      year: 2026                             # optional
+      date: "June 2026"                      # optional, shown as text
   The same items are emitted as hasCredential in the Person JSON-LD (see partials/schema.html).
 */ -}}
 {{- with .Params.badges }}
@@ -93,9 +96,12 @@
       {{- range . }}
       <li class="about-badge">
         {{- if .url }}<a class="about-badge__inner" href="{{ .url }}" target="_blank" rel="noopener">{{ else }}<div class="about-badge__inner">{{ end }}
+        {{- if .image }}
         <img class="about-badge__img" src="{{ .image }}" alt="{{ .title }}{{ with .issuer }} — {{ . }}{{ end }}" loading="lazy" decoding="async"{{ with .width }} width="{{ . }}"{{ end }}{{ with .height }} height="{{ . }}"{{ end }}>
+        {{- end }}
         <span class="about-badge__title">{{ .title }}</span>
         {{- with .issuer }}<span class="about-badge__meta">{{ . }}</span>{{ end }}
+        {{- with .date }}<span class="about-badge__meta">{{ . }}</span>{{ end }}
         {{- if .url }}</a>{{ else }}</div>{{ end }}
       </li>
       {{- end }}

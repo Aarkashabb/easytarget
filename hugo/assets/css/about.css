@@ -48,6 +48,9 @@
   box-shadow: var(--shadow-sm);
 }
 .about-badge__inner {
+  height: 100%;
+  justify-content: center;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
