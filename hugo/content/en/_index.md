@@ -64,6 +64,8 @@ about_tags:
   - "API Integration"
   - "System Design"
 
+about_link_text: "More about me"
+
 partners_title: "Partner Team"
 partners_lede: "I lead the core automation engineering, and when a project needs more, I bring in specialized partners for full-stack digital solutions."
 partners:

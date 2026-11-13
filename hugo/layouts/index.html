@@ -163,6 +163,9 @@
           <div class="architect__tags">
             {{- range .Params.about_tags }}<span class="tag">{{ . }}</span>{{ end }}
           </div>
+          {{- range where .Site.RegularPages "Params.translationKey" "about-ivan" }}
+          <a class="card__link" href="{{ .RelPermalink }}" style="margin-top:18px;">{{ $.Params.about_link_text | default .LinkTitle }}</a>
+          {{- end }}
         </div>
       </div>
     </div>

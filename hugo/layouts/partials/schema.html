@@ -27,7 +27,8 @@
 }
 </script>
 
-{{- /* Person Schema - for author */ -}}
+{{- /* Person Schema - for author (the about page emits its own ProfilePage + Person below) */ -}}
+{{- if ne .Params.schema_type "AboutPage" -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -51,6 +52,7 @@
   ]
 }
 </script>
+{{- end -}}
 
 {{- /* BlogPosting Schema - for blog posts */ -}}
 {{- if eq .Type "blog" -}}
@@ -69,7 +71,12 @@
   "author": {
     "@type": "Person",
     "name": "Ivan Blagoveshchenskyi",
-    "url": "{{ .Site.BaseURL }}"
+    {{- with where .Site.RegularPages "Params.translationKey" "about-ivan" }}
+    "url": "{{ (index . 0).Permalink }}",
+    {{- else }}
+    "url": "{{ .Site.BaseURL }}",
+    {{- end }}
+    "sameAs": ["{{ .Site.Params.linkedin }}", "{{ .Site.Params.telegram }}"]
   },
   "publisher": {
     "@type": "Organization",
@@ -197,7 +204,50 @@
 </script>
 {{- end -}}
 
-{{- /* WebPage Schema - for all pages */ -}}
+{{- /* ProfilePage + Person - author page. sameAs only lists profiles that really exist (site params).
+       hasCredential is emitted only for items in front matter `badges:` (empty until Ivan sends the files). */ -}}
+{{- if eq .Params.schema_type "AboutPage" -}}
+{{- $pp := .Params.person | default dict -}}
+{{- $person := dict
+  "@type" "Person"
+  "name" $pp.name
+  "jobTitle" $pp.role
+  "description" .Description
+  "url" .Permalink
+  "image" ($pp.photo | default "/images/profile/ivan-profile.webp" | absURL)
+  "email" .Site.Params.email
+  "address" (dict "@type" "PostalAddress" "addressCountry" "UA")
+  "worksFor" (dict "@type" "Organization" "name" .Site.Params.siteName "url" .Site.BaseURL)
+  "knowsAbout" (slice "n8n" "Make" "Zapier" "OpenAI API" "Workflow automation" "Business process automation" "CRM integration" "AI agents" "Chatbots" "Telegram bots" "E-commerce automation" "Automated reporting")
+  "sameAs" (slice .Site.Params.linkedin .Site.Params.telegram)
+-}}
+{{- with .Params.badges -}}
+{{- $creds := slice -}}
+{{- range . -}}
+  {{- $c := dict "@type" "EducationalOccupationalCredential" "name" .title "credentialCategory" "certificate" -}}
+  {{- with .issuer -}}{{- $c = merge $c (dict "recognizedBy" (dict "@type" "Organization" "name" .)) -}}{{- end -}}
+  {{- with .url -}}{{- $c = merge $c (dict "url" .) -}}{{- end -}}
+  {{- $creds = $creds | append $c -}}
+{{- end -}}
+{{- $person = merge $person (dict "hasCredential" $creds) -}}
+{{- end -}}
+{{- $profile := dict
+  "@context" "https://schema.org"
+  "@type" "ProfilePage"
+  "name" .Title
+  "description" .Description
+  "url" .Permalink
+  "inLanguage" .Lang
+  "isPartOf" (dict "@type" "WebSite" "name" .Site.Params.siteName "url" .Site.BaseURL)
+  "mainEntity" $person
+-}}
+<script type="application/ld+json">
+{{ $profile | jsonify | safeJS }}
+</script>
+{{- end -}}
+
+{{- /* WebPage Schema - for all pages except the about page (ProfilePage above) */ -}}
+{{- if ne .Params.schema_type "AboutPage" -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -212,6 +262,7 @@
   }
 }
 </script>
+{{- end -}}
 
 {{- /* BreadcrumbList Schema — built from .Ancestors (skip homepage per Google spec) */ -}}
 {{- if not .IsHome -}}

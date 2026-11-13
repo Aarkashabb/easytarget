@@ -10,6 +10,9 @@
 **Generated:** {{ now.Format "2006-01-02 15:04 UTC" }}
 **Founder:** Ivan Blagoveshchenskyi ({{ .Site.Params.email }})
 **Booking:** {{ .Site.Params.calendly }}
+{{- range where .Site.RegularPages "Params.translationKey" "about-ivan" }}
+**About the author:** {{ .Permalink }}
+{{- end }}
 
 For the lightweight index (titles + descriptions only), see {{ .Site.BaseURL }}llms.txt
 

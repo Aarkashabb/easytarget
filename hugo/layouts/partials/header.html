@@ -30,6 +30,13 @@
       <a href="{{ .RelPermalink }}">{{ i18n "nav_pricing" }}</a>
       {{- end }}
       {{- end }}
+      {{- range where .Site.RegularPages "Params.translationKey" "about-ivan" }}
+      {{- if eq $p.RelPermalink .RelPermalink }}
+      <a href="{{ .RelPermalink }}" class="is-active" aria-current="page">{{ .LinkTitle }}</a>
+      {{- else }}
+      <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      {{- end }}
+      {{- end }}
       <a href="{{ $home.RelPermalink }}#process">{{ i18n "nav_process" }}</a>
       <a href="{{ $home.RelPermalink }}#faq">FAQ</a>
       <a class="btn btn--primary nav-cta" href="{{ .Site.Params.calendly }}" target="_blank" rel="noopener">{{ i18n "nav_cta" }}</a>

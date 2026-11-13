@@ -10,6 +10,21 @@ EasyTarget is a workflow automation consultancy specializing in no-code and low-
 **Contact:** {{ .Site.Params.email }} · [Book consultation]({{ .Site.Params.calendly }})
 **Social:** [LinkedIn]({{ .Site.Params.linkedin }}) · [Telegram]({{ .Site.Params.telegram }})
 
+{{- range where .Site.RegularPages "Params.translationKey" "about-ivan" }}
+
+## About the author
+
+- **Name:** Ivan Blagoveshchenskyi, runs EasyTarget · based in Ukraine
+- **Role:** Business process automation specialist
+- **Experience:** automating business processes since 2021 (over five years); Make since 2021, n8n for about a year
+- **Result for clients:** 5,000+ hours saved in total (the author's own estimate)
+- **Clients:** small and mid-sized businesses
+- **Stack:** n8n, Make, Zapier, OpenAI API, Claude, Gemini, JavaScript (Node.js), Python, Docker, PostgreSQL
+- **Profiles:** [LinkedIn]({{ $.Site.Params.linkedin }}) · [Telegram]({{ $.Site.Params.telegram }})
+- **Full page:** [{{ .Title }}]({{ .Permalink }})
+- **Start:** call of up to 30 minutes, [book via Calendly]({{ $.Site.Params.calendly }})
+{{- end }}
+
 ## Core Services
 
 - **Workflow Automation Development** — Custom N8N, Make, and Zapier workflows for any business process
@@ -23,6 +38,9 @@ EasyTarget is a workflow automation consultancy specializing in no-code and low-
 ## Main Pages
 
 - [Homepage]({{ .Site.BaseURL }}): Overview of services, process, FAQ, and contact
+{{- range where .Site.RegularPages "Params.translationKey" "about-ivan" }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{- end }}
 - [Portfolio]({{ .Site.BaseURL }}portfolio/): Real-world case studies of automation implementations
 - [Blog]({{ .Site.BaseURL }}blog/): In-depth articles on automation strategy, tool comparisons, and technical guides
 {{- with .Site.GetPage "/tsiny" }}
