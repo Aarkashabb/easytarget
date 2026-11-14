@@ -80,6 +80,11 @@
 
 {{- $css := resources.Get "css/styles.css" | resources.Fingerprint "sha256" }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- if .IsHome }}
+<link rel="preload" as="font" href="/fonts/unbounded-{{ if eq .Lang "en" }}latin{{ else }}cyrillic{{ end }}.woff2" type="font/woff2" crossorigin>
+{{- $night := resources.Get "css/home-night.css" | resources.Fingerprint "sha256" }}
+<link rel="stylesheet" href="{{ $night.RelPermalink }}" integrity="{{ $night.Data.Integrity }}">
+{{- end }}
 
 {{- /* Google Analytics 4 — deferred to first interaction OR 3s idle to free up LCP/TBT */ -}}
 <script>
