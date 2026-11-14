@@ -10,6 +10,19 @@ hero_cta_primary: "Book Free Consultation"
 hero_cta_secondary: "See My Work"
 hero_proof_strong: "5,000+ hours"
 hero_proof_text: "saved for clients"
+hero_scenarios:
+  - label: "Leads"
+    nodes: ["Website form", "AI classification", "CRM", "Telegram", "Google Sheets"]
+    caption: "A form submission is classified, lands in the CRM, the manager gets a Telegram alert, and a row is saved to the sheet."
+  - label: "Reports"
+    nodes: ["Monobank API", "Data checks", "Google Sheets", "Dashboard", "Telegram"]
+    caption: "Balances and spend are collected on a schedule, checked, and merged into one sheet and dashboard."
+  - label: "Inventory"
+    nodes: ["Orders", "Sync", "Shopify", "Sheets", "Alerts"]
+    caption: "Stock levels sync between the store and the central base: only changed rows are written."
+  - label: "AI agent"
+    nodes: ["Telegram", "Gemini / LLM", "Google Tasks", "Knowledge base", "Sheets"]
+    caption: "A Telegram message becomes a structured task: the model detects intent and the sheet keeps the audit trail."
 
 services_title: "Core Automation Services"
 services_lede: "Precision engineering for your business processes. I build resilient, scalable systems that handle the heavy lifting."

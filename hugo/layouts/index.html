@@ -3,223 +3,180 @@
 {{- $p := . -}}
 
 <!-- ============ Hero ============ -->
-<section class="hero">
-  <div class="container hero__grid">
-    <div class="hero__copy reveal">
-      <span class="hero__badge"><span class="dot"></span>{{ .Params.hero_badge }}</span>
-      <h1 class="hero__title">{{ .Params.hero_title_before | safeHTML }} <span class="accent">{{ .Params.hero_title_accent }}</span></h1>
-      <p class="hero__lede">{{ .Params.hero_lede }}</p>
-      <div class="hero__ctas">
+<section class="n-hero">
+  <div class="container n-hero__grid">
+    <div class="n-hero__copy">
+      <span class="n-badge"><i aria-hidden="true">●</i>{{ .Params.hero_badge }}</span>
+      <h1>{{ .Params.hero_title_before | safeHTML }} <span class="accent">{{ .Params.hero_title_accent }}</span></h1>
+      <p class="n-hero__lede">{{ .Params.hero_lede }}</p>
+      <div class="n-hero__ctas">
         <a class="btn btn--primary btn--lg" href="#contact">{{ .Params.hero_cta_primary }} <svg class="icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <a class="btn btn--ghost btn--lg" href="{{ with .Site.GetPage "/portfolio" }}{{ .RelPermalink }}{{ end }}">{{ .Params.hero_cta_secondary }}</a>
       </div>
-      <div class="hero__proof">
-        <span class="avatars" aria-hidden="true"><span>U</span><span>U</span><span class="badge-count">5k+</span></span>
-        <span class="hero__proof-text"><strong>{{ .Params.hero_proof_strong }}</strong> {{ .Params.hero_proof_text }}</span>
-      </div>
+      <p class="n-proof"><strong>{{ .Params.hero_proof_strong }}</strong> {{ .Params.hero_proof_text }}</p>
     </div>
-    <div class="hero__panel reveal" aria-hidden="true">
-      <div class="trigger-card">
-        <div class="trigger-card__head">
-          <span class="trigger-card__label"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5L9.2 6h4.3l-3.5 2.6 1.4 4.2L8 10.5l-3.4 2.3 1.4-4.2L2.5 6h4.3L8 1.5z" fill="#00D2FF"/></svg>{{ i18n "hero_trigger_label" }}</span>
-          <span class="trigger-card__dot"></span>
+    {{- with .Params.hero_scenarios }}
+    {{- $first := index . 0 }}
+    <div class="n-stage">
+      <div class="n-scene" role="img" aria-label="{{ i18n "scene_aria" }}">
+        <div class="n-board">
+          <div class="n-grid"></div>
+          <div class="n-wire" style="left:160px;top:299px;width:280px;height:2px"></div>
+          <div class="n-wire" style="left:408px;top:109px;width:2px;height:382px"></div>
+          <div class="n-wire" style="left:409px;top:109px;width:31px;height:2px"></div>
+          <div class="n-wire" style="left:409px;top:489px;width:31px;height:2px"></div>
+          <div class="n-pulse n-pulse--1"></div>
+          <div class="n-pulse n-pulse--2"></div>
+          <div class="n-pulse n-pulse--3"></div>
+          <div class="n-node" style="left:10px;top:260px"><i>{{ i18n "node_trigger" }}</i><b>{{ index $first.nodes 0 }}</b></div>
+          <div class="n-node n-node--sig" style="left:225px;top:260px;animation-delay:-1s"><i>{{ i18n "node_logic" }}</i><b>{{ index $first.nodes 1 }}</b></div>
+          <div class="n-node" style="left:440px;top:70px;animation-delay:-2s"><i>{{ i18n "node_action" }}</i><b>{{ index $first.nodes 2 }}</b></div>
+          <div class="n-node" style="left:440px;top:260px;animation-delay:-3s"><i>{{ i18n "node_action" }}</i><b>{{ index $first.nodes 3 }}</b></div>
+          <div class="n-node" style="left:440px;top:450px;animation-delay:-4s"><i>{{ i18n "node_action" }}</i><b>{{ index $first.nodes 4 }}</b></div>
         </div>
-        <div class="bars"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
       </div>
+      <div class="n-tabs" role="group" aria-label="{{ i18n "scenarios_label" }}">
+        {{- range $i, $sc := . }}
+        <button type="button" class="n-tab{{ if eq $i 0 }} is-on{{ end }}" aria-pressed="{{ if eq $i 0 }}true{{ else }}false{{ end }}" data-nodes="{{ $sc.nodes | jsonify }}" data-caption="{{ $sc.caption }}">{{ $sc.label }}</button>
+        {{- end }}
+      </div>
+      <p class="n-caption" aria-live="polite">{{ $first.caption }}</p>
     </div>
+    {{- end }}
   </div>
 </section>
 
 <!-- ============ Services ============ -->
-<section class="section services" id="services">
+<section class="section" id="services">
   <div class="container">
-    <div class="section-head reveal">
+    <div class="n-head reveal">
+      <span class="n-idx">01</span>
       <h2>{{ .Params.services_title }}</h2>
       <p>{{ .Params.services_lede }}</p>
     </div>
-    <div class="card-grid reveal">
-      {{- range .Params.services }}
-      <article class="card">
-        <span class="card__icon">{{ .icon | safeHTML }}</span>
-        <h3 class="card__title">{{ .title }}</h3>
-        <p class="card__body">{{ .body }}</p>
-        <a class="card__link" href="{{ with .href }}{{ . }}{{ else }}#contact{{ end }}">{{ i18n "learn_more" }} <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h9M8 3.5L11.5 7 8 10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </article>
+    <div class="n-rows reveal">
+      {{- range $i, $s := .Params.services }}
+      <a class="n-row" href="{{ with $s.href }}{{ . }}{{ else }}#contact{{ end }}">
+        <span class="n-row__num">{{ printf "%02d" (add $i 1) }}</span>
+        <h3>{{ $s.title }}</h3>
+        <p>{{ $s.body }}</p>
+        <span class="n-row__arrow"><svg viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h9M8 3.5L11.5 7 8 10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
       {{- end }}
     </div>
   </div>
 </section>
-
-{{- if .IsHome }}
-{{- with .Params.audit_teaser }}
-<!-- ============ Audit Teaser ============ -->
-<section class="section audit-teaser" id="audit">
-  <div class="container">
-    <div class="section-head reveal">
-      <h2>{{ .title }}</h2>
-      <p>{{ .lede }}</p>
-    </div>
-    <div class="pricing-teaser__foot reveal">
-      <p>{{ .facts }}</p>
-      <a class="btn btn--ghost" href="{{ .href }}">{{ .button }}</a>
-    </div>
-  </div>
-</section>
-{{- end }}
-{{- end }}
-
-{{- if .IsHome }}
-{{- with .Params.pricing_teaser_items }}
-<!-- ============ Pricing Teaser ============ -->
-<section class="section pricing-teaser" id="pricing">
-  <div class="container">
-    <div class="section-head reveal">
-      <h2>{{ $.Params.pricing_teaser_title }}</h2>
-      <p>{{ $.Params.pricing_teaser_lede }}</p>
-    </div>
-    <div class="pricing-grid pricing-grid--home reveal">
-      {{- range . }}
-      <article class="pricing-card pricing-card--compact">
-        <h3>{{ .title }}</h3>
-        <div class="pricing-card__price">
-          <span class="pricing-card__price-value">{{ .price }}</span>
-        </div>
-        <p class="pricing-card__text">{{ .note }}</p>
-      </article>
-      {{- end }}
-    </div>
-    <div class="pricing-teaser__foot reveal">
-      <p>{{ $.Params.pricing_teaser_disclaimer }}</p>
-      <a class="btn btn--ghost" href="{{ $.Params.pricing_teaser_cta_href }}">{{ $.Params.pricing_teaser_cta_text }}</a>
-    </div>
-  </div>
-</section>
-{{- end }}
-{{- end }}
 
 <!-- ============ Recent Projects ============ -->
-<section class="section projects" id="projects">
+<section class="section" id="projects">
   <div class="container">
-    <div class="section-head reveal">
+    <div class="n-head reveal">
+      <span class="n-idx">02</span>
       <h2>{{ .Params.projects_title }}</h2>
       <p>{{ .Params.projects_lede }}</p>
     </div>
-    <div class="projects__grid reveal">
-      {{- $portfolio := .Site.GetPage "/portfolio" -}}
-      {{- range first 6 $portfolio.Pages }}
-      <article class="project-card">
-        <div class="project-card__tags">
-          <span class="tag">{{ .Params.industry_label }}</span>
-          <span class="tag tag--platform">{{ .Params.platform | default "N8N" }}</span>
-        </div>
-        <h3 class="project-card__title">{{ .Title }}</h3>
-        <p class="project-card__body">{{ .Params.short_body }}</p>
-        <a class="project-card__link" href="{{ .RelPermalink }}">{{ i18n "view_case" }} <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h9M8 3.5L11.5 7 8 10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </article>
-      {{- end }}
-    </div>
-    <div class="projects__cta reveal">
-      <a class="btn btn--ghost" href="{{ $portfolio.RelPermalink }}">{{ i18n "all_projects" }}</a>
-    </div>
+  </div>
+  {{- $portfolio := .Site.GetPage "/portfolio" }}
+  <div class="n-cases">
+    {{- range first 6 $portfolio.Pages }}
+    {{- $slug := .File.ContentBaseName }}
+    <article class="n-case">
+      <a class="n-case__shot" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
+        {{- if fileExists (printf "static/img/workflows/%s.webp" $slug) }}
+        <img src="/img/workflows/{{ $slug }}.webp" alt="" loading="lazy" decoding="async" width="880" height="495">
+        {{- else if fileExists (printf "static/img/workflows/%s.png" $slug) }}
+        <img src="/img/workflows/{{ $slug }}.png" alt="" loading="lazy" decoding="async" width="880" height="495">
+        {{- end }}
+      </a>
+      <div class="n-case__body">
+        <div class="n-case__meta"><span>{{ .Params.industry_label }}</span><span>{{ .Params.platform | default "N8N" }}{{ with .Params.nodes }} · {{ . }} {{ i18n "nodes_label" }}{{ end }}</span></div>
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Params.short_body }}</p>
+        <a class="n-case__link" href="{{ .RelPermalink }}">{{ i18n "view_case" }} →</a>
+      </div>
+    </article>
+    {{- end }}
+  </div>
+  <div class="container n-cases__cta">
+    <a class="btn btn--ghost" href="{{ $portfolio.RelPermalink }}">{{ i18n "all_projects" }}</a>
   </div>
 </section>
 
-<!-- ============ How We Work ============ -->
-<section class="section process" id="process">
+<!-- ============ How We Work (audit = step 00) ============ -->
+<section class="section n-process" id="process">
   <div class="container">
-    <div class="section-head reveal">
+    <div class="n-head reveal">
+      <span class="n-idx">03</span>
       <h2>{{ .Params.process_title }}</h2>
       <p>{{ .Params.process_lede }}</p>
     </div>
-    <div class="process__steps reveal">
+    <div class="n-steps reveal">
+      {{- with .Params.audit_teaser }}
+      <div class="n-step n-step--audit" id="audit">
+        <span class="n-step__num">00</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .facts }}</p>
+        <a href="{{ .href }}">{{ .button }} →</a>
+      </div>
+      {{- end }}
       {{- range .Params.steps }}
-      <div class="step">
-        <div class="step__num">{{ .num }}</div>
-        <h3 class="step__title">{{ .title }}</h3>
-        <p class="step__body">{{ .body }}</p>
+      <div class="n-step">
+        <span class="n-step__num">{{ printf "%02d" (int .num) }}</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .body }}</p>
       </div>
       {{- end }}
     </div>
   </div>
 </section>
+
+{{- with .Params.pricing_teaser_items }}
+<!-- ============ Pricing ============ -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="n-head reveal">
+      <span class="n-idx">04</span>
+      <h2>{{ $.Params.pricing_teaser_title }}</h2>
+      <p>{{ $.Params.pricing_teaser_lede }}</p>
+    </div>
+    <div class="n-prices reveal">
+      {{- range . }}
+      <div class="n-price">
+        <h3>{{ .title }}</h3>
+        <p>{{ .note }}</p>
+        <b>{{ .price }}</b>
+      </div>
+      {{- end }}
+      <div class="n-prices__foot">
+        <p>{{ $.Params.pricing_teaser_disclaimer }}</p>
+        <a class="btn btn--ghost" href="{{ $.Params.pricing_teaser_cta_href }}">{{ $.Params.pricing_teaser_cta_text }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{{- end }}
 
 <!-- ============ About ============ -->
-<section id="about" class="section architect">
-  <div class="container architect__grid">
-    <div class="architect__col reveal">
-      <h2>{{ .Params.about_title }}</h2>
-      <div class="architect__person">
-        <div class="architect__photo">
-          {{- if .Params.about_photo }}
-          <img src="{{ .Params.about_photo }}" alt="{{ .Params.about_name }}" loading="lazy" decoding="async" width="240" height="240" />
-          {{- else }}
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          {{- end }}
-        </div>
-        <div>
-          <div class="architect__name">{{ .Params.about_name }}</div>
-          <div class="architect__title">{{ .Params.about_role }}</div>
-          <p class="architect__bio">{{ .Params.about_bio }}</p>
-          <div class="architect__tags">
-            {{- range .Params.about_tags }}<span class="tag">{{ . }}</span>{{ end }}
-          </div>
-          {{- range where .Site.RegularPages "Params.translationKey" "about-ivan" }}
-          <a class="card__link" href="{{ .RelPermalink }}" style="margin-top:18px;">{{ $.Params.about_link_text | default .LinkTitle }}</a>
-          {{- end }}
-        </div>
-      </div>
-    </div>
-    <div class="architect__col reveal">
-      <h2>{{ .Params.partners_title }}</h2>
-      <p style="color:var(--c-text-2); margin-bottom: 24px;">{{ .Params.partners_lede }}</p>
-      <div class="partner-list">
-        {{- range .Params.partners }}
-        <div class="partner">
-          <span class="partner__icon">{{ .icon | safeHTML }}</span>
-          <div>
-            <div class="partner__name">{{ .name }}</div>
-            <p class="partner__body">{{ .body }}</p>
-          </div>
-        </div>
-        {{- end }}
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ Digital Marketing ============ -->
-<section class="section marketing">
-  <div class="container">
-    <div class="section-head reveal">
-      <h2>{{ .Params.marketing_title }}</h2>
-      <p>{{ .Params.marketing_lede }}</p>
-    </div>
-    <div class="card-grid card-grid--3 reveal">
-      {{- range .Params.marketing_services }}
-      <article class="card">
-        <h3 class="card__title">{{ .title }}</h3>
-        <p class="card__body">{{ .body }}</p>
-      </article>
+<section class="section" id="about">
+  <div class="container n-about">
+    <div class="n-about__photo reveal">
+      {{- with .Params.about_photo }}
+      <img src="{{ . }}" alt="{{ $.Params.about_name }}" loading="lazy" decoding="async" width="840" height="1050">
       {{- end }}
     </div>
-  </div>
-</section>
-
-<!-- ============ Testimonials ============ -->
-<section class="section testimonials">
-  <div class="container">
-    <div class="section-head reveal">
-      <h2>{{ .Params.testimonials_title }}</h2>
-      <p>{{ .Params.testimonials_lede }}</p>
-    </div>
-    <div class="testimonials__grid reveal">
-      {{- range .Params.testimonials }}
-      <article class="tcard">
-        <div class="tcard__stars" aria-label="5 stars">★★★★★</div>
-        <p class="tcard__quote">"{{ .quote }}"</p>
-        <div class="tcard__name">{{ .name }}</div>
-        <div class="tcard__meta">{{ .meta }}</div>
-      </article>
+    <div class="n-about__body reveal">
+      <span class="n-idx">05 · {{ .Params.about_title }}</span>
+      <h2>{{ .Params.about_name }}</h2>
+      <p class="n-about__role">{{ .Params.about_role }}</p>
+      <p class="n-about__bio">{{ .Params.about_bio }}</p>
+      <div class="n-about__tags">
+        {{- range .Params.about_tags }}<span class="tag">{{ . }}</span>{{ end }}
+      </div>
+      {{- with .Params.partners }}
+      <p class="n-about__partners">{{ $.Params.partners_lede }} <b>{{ range $i, $e := . }}{{ if $i }} · {{ end }}{{ $e.name }}{{ end }}</b></p>
+      {{- end }}
+      {{- range where .Site.RegularPages "Params.translationKey" "about-ivan" }}
+      <a class="btn btn--ghost" href="{{ .RelPermalink }}">{{ $.Params.about_link_text | default .LinkTitle }}</a>
       {{- end }}
     </div>
   </div>
@@ -304,9 +261,13 @@
     </div>
   </div>
 </section>
+
+<div class="n-sticky"><a class="btn btn--primary" href="#contact">{{ i18n "nav_cta" }}</a></div>
 {{ end }}
 
 {{ define "scripts" }}
 {{- $js := resources.Get "js/site.js" | resources.Fingerprint "sha256" }}
 <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{- $home := resources.Get "js/home.js" | resources.Fingerprint "sha256" }}
+<script src="{{ $home.RelPermalink }}" integrity="{{ $home.Data.Integrity }}" defer></script>
 {{ end }}
