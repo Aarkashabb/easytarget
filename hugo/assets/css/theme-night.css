@@ -379,3 +379,20 @@ body.night {
 .night .about-badge { background: var(--n-panel); border-color: var(--n-line); border-radius: 0; box-shadow: none; }
 .night .about-badge__meta { color: var(--n-dim); }
 .night .about-badge__inner:hover .about-badge__title { color: var(--n-sig); }
+
+/* ========================================================================
+   404 and service lists
+   ======================================================================== */
+.night .not-found { background: var(--n-bg); }
+.night .not-found__inner { text-align: left; margin: 0; max-width: 720px; }
+.night .not-found__code { font-family: var(--n-mono); font-weight: 500; background: none; -webkit-background-clip: border-box; background-clip: border-box; -webkit-text-fill-color: currentColor; color: var(--n-sig); letter-spacing: -0.04em; }
+.night .not-found__title { font-family: var(--n-disp); color: var(--n-text); font-size: clamp(24px, 3vw, 40px); line-height: 1.1; }
+.night .not-found__lede { margin-left: 0; color: var(--n-mut); }
+.night .not-found__actions { justify-content: flex-start; }
+.night .not-found__suggestions { background: var(--n-panel); border-color: var(--n-line); border-radius: 0; margin-left: 0; max-width: 640px; }
+.night .not-found__suggestions-title { font-family: var(--n-mono); font-weight: 500; color: var(--n-dim); }
+.night .not-found__list a, .night .not-found__contact a { color: var(--n-text); text-decoration-color: var(--n-sig); text-decoration-thickness: 1.5px; }
+.night .not-found__list a:hover, .night .not-found__contact a:hover { color: var(--n-sig); }
+.night .not-found__contact { color: var(--n-mut); }
+a.n-row--item:hover p { color: var(--n-sig); }
+a.n-row--item p { color: var(--n-text); }
