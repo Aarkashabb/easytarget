@@ -4,16 +4,16 @@
   'use strict';
 
   const pills = document.querySelectorAll('.filter-pill');
-  const cards = document.querySelectorAll('.pcard');
+  const cards = document.querySelectorAll('.n-case');
   const empty = document.getElementById('portfolio-empty');
   if (!cards.length) return;
 
   /* Make entire card clickable without breaking inner links */
   cards.forEach(function (card) {
-    const link = card.querySelector('.pcard__link, .pcard__thumb');
+    const link = card.querySelector('.n-case__link, .n-case__shot');
     if (!link || !link.getAttribute('href')) return;
     const href = link.getAttribute('href');
-    card.classList.add('pcard--clickable');
+    card.classList.add('n-case--clickable');
     card.addEventListener('click', function (e) {
       if (e.target.closest('a, button')) return;
       if (window.getSelection && String(window.getSelection())) return;

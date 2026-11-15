@@ -1,0 +1,100 @@
+/* ========================================================================
+   Home «Night shift» — first screen and about block (homepage only).
+   Shared tokens and components live in theme-night.css.
+   ======================================================================== */
+/* ---- hero ---- */
+.n-hero { position: relative; overflow: hidden; padding: 72px 0 88px; }
+.n-hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: center; }
+.n-hero__copy { display: flex; flex-direction: column; gap: 26px; align-items: flex-start; position: relative; z-index: 2; }
+.n-badge { font: 500 12px var(--n-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--n-dim); border: 1px solid var(--n-line); padding: 8px 12px; }
+.n-badge i { color: var(--n-sig); font-style: normal; margin-right: 6px; }
+.n-hero h1 { font-size: clamp(31px, 4.5vw, 62px); line-height: 1.08; }
+.n-hero h1 .accent { color: var(--n-sig); }
+.n-hero__lede { font-size: 18px; color: var(--n-mut); max-width: 520px; }
+.n-hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.n-proof { font: 500 12px var(--n-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--n-dim); }
+.n-proof strong { color: var(--n-text); font-size: 14px; font-weight: 500; }
+
+.n-stage { min-width: 0; }
+.n-scene { perspective: 1500px; height: 480px; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+.n-board {
+  position: relative; width: 600px; height: 600px; flex: none;
+  transform-style: preserve-3d;
+  transform: scale(var(--s, 1)) rotateX(var(--rx, 56deg)) rotateZ(var(--rz, -34deg));
+  transition: transform 0.25s ease-out;
+}
+.n-grid {
+  position: absolute; inset: -80px;
+  background-image: linear-gradient(rgba(63, 217, 255, 0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(63, 217, 255, 0.12) 1px, transparent 1px);
+  background-size: 40px 40px;
+  -webkit-mask-image: radial-gradient(closest-side, #000 55%, transparent);
+  mask-image: radial-gradient(closest-side, #000 55%, transparent);
+}
+.n-wire { position: absolute; background: var(--n-data); box-shadow: 0 0 10px var(--n-data); opacity: 0.7; }
+.n-pulse { position: absolute; width: 12px; height: 12px; border-radius: 50%; background: var(--n-sig); box-shadow: 0 0 16px var(--n-sig); opacity: 0; }
+.n-pulse--1 { animation: nq1 2.4s linear infinite; }
+.n-pulse--2 { animation: nq2 2.4s linear 1.2s infinite; }
+.n-pulse--3 { animation: nq3 2.4s linear 1.8s infinite; }
+.n-node {
+  position: absolute; width: 150px; height: 80px; padding: 13px 15px;
+  background: var(--n-panel); border: 1.5px solid var(--n-data); color: var(--n-text);
+  box-shadow: 0 0 24px rgba(63, 217, 255, 0.35);
+  transform: translateZ(34px);
+  animation: nbob 5s ease-in-out infinite;
+}
+.n-node i { display: block; font: 500 10px var(--n-mono); letter-spacing: 0.08em; font-style: normal; text-transform: uppercase; color: var(--n-dim); }
+.n-node b { display: block; font-size: 16px; line-height: 1.15; margin-top: 5px; }
+.n-node--sig { background: var(--n-sig); color: var(--n-sig-ink); border-color: var(--n-sig); box-shadow: 0 0 36px rgba(200, 240, 60, 0.5); }
+.n-node--sig i { color: #33400A; }
+.n-hero.is-paused .n-node, .n-hero.is-paused .n-pulse { animation-play-state: paused; }
+@keyframes nbob { 0%, 100% { transform: translateZ(34px); } 50% { transform: translateZ(52px); } }
+@keyframes nq1 { 0% { left: 160px; top: 294px; opacity: 0; } 10%, 90% { opacity: 1; } 100% { left: 440px; top: 294px; opacity: 0; } }
+@keyframes nq2 { 0% { left: 375px; top: 294px; opacity: 0; } 10% { opacity: 1; } 30% { left: 403px; top: 294px; } 75% { left: 403px; top: 104px; } 90% { opacity: 1; } 100% { left: 440px; top: 104px; opacity: 0; } }
+@keyframes nq3 { 0% { left: 375px; top: 294px; opacity: 0; } 10% { opacity: 1; } 30% { left: 403px; top: 294px; } 75% { left: 403px; top: 484px; } 90% { opacity: 1; } 100% { left: 440px; top: 484px; opacity: 0; } }
+
+.n-tabs { display: flex; flex-wrap: wrap; gap: 8px; position: relative; z-index: 2; }
+.n-tab { min-height: 44px; padding: 0 18px; font: 500 13px var(--n-mono); letter-spacing: 0.04em; background: rgba(7, 13, 24, 0.6); color: var(--n-text); border: 1.5px solid rgba(233, 238, 245, 0.45); border-radius: 0; }
+.n-tab:hover { border-color: var(--n-text); }
+.n-tab.is-on { background: var(--n-sig); color: var(--n-sig-ink); border-color: var(--n-sig); }
+.n-caption { margin-top: 14px; font-size: 15px; color: var(--n-mut); min-height: 48px; max-width: 560px; position: relative; z-index: 2; }
+
+/* ---- about ---- */
+.n-about { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 56px; align-items: center; }
+.n-about__photo { position: relative; max-width: 420px; }
+.n-about__photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border: 1px solid var(--n-data); box-shadow: 0 0 40px rgba(63, 217, 255, 0.2); }
+.n-about__body { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
+.n-about__body h2 { font-size: clamp(24px, 3vw, 40px); }
+.n-about__role { font: 500 13px var(--n-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--n-sig); }
+.n-about__bio { font-size: 18px; max-width: 620px; }
+.n-about__partners { font-size: 14px; color: var(--n-dim); max-width: 620px; }
+.n-about__partners b { color: var(--n-mut); font-weight: 500; }
+.n-about__tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* ---- responsive ---- */
+@media (max-width: 1100px) {
+  .n-board { --s: 0.82; }
+  .n-scene { height: 420px; }
+}
+@media (max-width: 860px) {
+  .n-hero { padding: 36px 0 56px; }
+  .n-hero__grid { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .n-hero__copy { gap: 20px; }
+  .n-hero__lede { font-size: 16px; }
+  .n-board { --s: 0.6; }
+  .n-node { padding: 10px 12px; }
+  .n-node i { font-size: 12px; }
+  .n-node b { font-size: 19px; line-height: 1.1; margin-top: 3px; }
+  .n-scene { height: 300px; }
+  .n-tabs { flex-wrap: nowrap; overflow-x: auto; margin: 0 -20px; padding: 0 20px 4px; scrollbar-width: none; }
+  .n-tabs::-webkit-scrollbar { display: none; }
+  .n-tab { flex: none; }
+  .n-caption { font-size: 14px; min-height: 64px; }
+  .n-about { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .n-about__photo { max-width: 280px; }
+  .n-about__bio { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .n-node, .n-pulse { animation: none !important; }
+  .n-pulse { display: none; }
+  .n-board { transition: none; }
+}

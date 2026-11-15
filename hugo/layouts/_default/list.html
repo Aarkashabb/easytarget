@@ -6,9 +6,11 @@
 </section>
 <section class="section" style="background: var(--c-bg);">
   <div class="container">
-    {{ range .Pages }}
-    <p><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
-    {{ end }}
+    <div class="n-rows">
+    {{- range $i, $p := .Pages }}
+    <a class="n-row n-row--item" href="{{ $p.RelPermalink }}"><span class="n-row__num">{{ printf "%02d" (add $i 1) }}</span><p>{{ $p.Title }}</p></a>
+    {{- end }}
+    </div>
   </div>
 </section>
 {{ end }}

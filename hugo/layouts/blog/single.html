@@ -1,7 +1,7 @@
 {{ define "title" }}{{ .Title }} — {{ .Site.Params.siteName }}{{ end }}
 {{ define "main" }}
 
-<section class="case-hero" style="padding-bottom: 48px;">
+<section class="case-hero post-hero" style="padding-bottom: 48px;">
   <div class="container">
     <div class="case-eyebrow">
       {{- range .Params.tags }}<span class="tag" style="margin-right:6px">{{ . }}</span>{{ end }}
@@ -19,7 +19,7 @@
       {{- if ne $formats.webp $formats.fallback }}
       <source srcset="{{ $formats.webp | relURL }}" type="image/webp">
       {{- end }}
-      <img src="{{ $formats.fallback | relURL }}" alt="{{ with $.Params.imageAlt }}{{ . }}{{ else }}{{ $.Title }}{{ end }}" width="{{ with $.Params.imageWidth }}{{ . }}{{ else }}1200{{ end }}" height="{{ with $.Params.imageHeight }}{{ . }}{{ else }}655{{ end }}" loading="eager" decoding="async" fetchpriority="high" style="width: 100%; height: auto; border-radius: 12px; display: block;">
+      <img src="{{ $formats.fallback | relURL }}" alt="{{ with $.Params.imageAlt }}{{ . }}{{ else }}{{ $.Title }}{{ end }}" width="{{ with $.Params.imageWidth }}{{ . }}{{ else }}1200{{ end }}" height="{{ with $.Params.imageHeight }}{{ . }}{{ else }}655{{ end }}" loading="eager" decoding="async" fetchpriority="high" class="post-hero__img" style="width: 100%; height: auto; display: block;">
     </picture>
   </div>
 </section>
@@ -30,7 +30,7 @@
     {{- if eq .Params.clusterRole "spoke" }}
     {{ partial "cluster-nav.html" . }}
     {{- end }}
-    <div class="card post-content" style="padding: 48px; font-size: 16px; line-height: 1.75;">
+    <div class="card post-content post-content--article">
       {{ .Content }}
     </div>
     {{- if eq .Params.clusterRole "pillar" }}
