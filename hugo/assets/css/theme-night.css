@@ -294,3 +294,31 @@ body.night {
 .night .page-links__item { background: var(--n-panel); border-color: var(--n-line); border-radius: 0; box-shadow: none; color: var(--n-text); transition: border-color 0.2s ease; }
 .night .page-links__item:hover { border-color: var(--n-sig); }
 .night .page-links__item::after { color: var(--n-sig); }
+
+/* ========================================================================
+   Case list (portfolio list): filters + .n-case grid
+   ======================================================================== */
+.night .filter-bar { justify-content: flex-start; gap: 8px; margin: 40px 0 40px; max-width: none; padding: 0; background: none; border: 0; border-radius: 0; box-shadow: none; }
+.night .filter-pill { min-height: 44px; padding: 0 18px; border-radius: 0; font: 500 13px var(--n-mono); letter-spacing: 0.04em; color: var(--n-text); background: transparent; border: 1.5px solid rgba(233, 238, 245, 0.45); }
+.night .filter-pill:hover { border-color: var(--n-text); color: var(--n-text); }
+.night .filter-pill.is-active { background: var(--n-sig); color: var(--n-sig-ink); border-color: var(--n-sig); box-shadow: none; }
+.night .portfolio-section { background: var(--n-bg); }
+.night .portfolio-grid .n-case { width: auto; }
+.night .portfolio-grid .n-case.is-hidden { display: none; }
+.night .n-case--clickable { cursor: pointer; }
+.night .n-case__shot { display: block; position: relative; }
+.night .n-case__shot-id { position: absolute; inset: 0; display: grid; place-items: center; font: 500 13px var(--n-mono); letter-spacing: 0.08em; color: var(--n-dim); }
+.night .n-case .pcard__title { font-family: inherit; font-size: 19px; font-weight: 700; letter-spacing: 0; line-height: 1.25; margin: 0; }
+.night .n-case__body > p { font-size: 14px; color: var(--n-mut); line-height: 1.55; margin: 0; }
+.night .n-case .pcard__price { margin: 0; padding: 10px 12px; background: transparent; border: 1px solid var(--n-line); border-radius: 0; }
+.night .n-case .pcard__price-label { font: 500 11px var(--n-mono); letter-spacing: 0.08em; color: var(--n-dim); }
+.night .n-case .pcard__price-value { font: 500 18px var(--n-mono); letter-spacing: 0; color: var(--n-sig); }
+.night .n-case .pcard__price-note { color: var(--n-mut); }
+.night .n-case .pcard__stack { margin: 0; }
+.night .n-case .pcard__stack .tag { background: rgba(63, 217, 255, 0.12); color: var(--n-data); }
+.night .portfolio-empty { color: var(--n-dim); text-align: left; }
+@media (max-width: 860px) {
+  .night .filter-bar { flex-wrap: nowrap; overflow-x: auto; margin: 28px -20px 28px; padding: 0 20px 4px; scrollbar-width: none; }
+  .night .filter-bar::-webkit-scrollbar { display: none; }
+  .night .filter-pill { flex: none; }
+}
