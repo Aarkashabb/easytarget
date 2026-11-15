@@ -27,35 +27,33 @@
       <h2>{{ $pricing.cards_title }}</h2>
       {{- with $pricing.cards_lede }}<p>{{ . }}</p>{{ end }}
     </div>
-    <div class="pricing-grid reveal">
+    <div class="pricing-stack reveal">
       {{- range . }}
-      <article class="pricing-card">
-        <div class="pricing-card__header">
+      <article class="pricing-block">
+        <div class="n-price">
           <h3>{{ .title }}</h3>
-          <div class="pricing-card__price">
-            <span class="pricing-card__price-value">{{ .price_text }}</span>
-            {{- with .duration }}<span class="pricing-card__duration">{{ . }}</span>{{ end }}
-          </div>
+          <p>{{ with .duration }}{{ . }}{{ end }}</p>
+          <b>{{ .price_text }}</b>
         </div>
         {{- with .includes }}
-        <div class="pricing-card__block">
-          <div class="pricing-card__label">{{ i18n "pricing_includes" }}</div>
-          <ul class="pricing-card__list">
-            {{- range . }}<li>{{ . }}</li>{{ end }}
-          </ul>
+        <div class="pricing-block__group">
+          <span class="n-idx">{{ i18n "pricing_includes" }}</span>
+          {{- range $i, $e := . }}
+          <div class="n-row n-row--item"><span class="n-row__num">{{ printf "%02d" (add $i 1) }}</span><p>{{ $e }}</p></div>
+          {{- end }}
         </div>
         {{- end }}
         {{- with .separate }}
-        <div class="pricing-card__block">
-          <div class="pricing-card__label">{{ i18n "pricing_separate" }}</div>
-          <ul class="pricing-card__list pricing-card__list--separate">
-            {{- range . }}<li>{{ . }}</li>{{ end }}
-          </ul>
+        <div class="pricing-block__group">
+          <span class="n-idx">{{ i18n "pricing_separate" }}</span>
+          {{- range $i, $e := . }}
+          <div class="n-row n-row--item"><span class="n-row__num">{{ printf "%02d" (add $i 1) }}</span><p>{{ $e }}</p></div>
+          {{- end }}
         </div>
         {{- end }}
         {{- with .factors }}
-        <div class="pricing-card__block pricing-card__block--factors">
-          <div class="pricing-card__label">{{ i18n "pricing_factors" }}</div>
+        <div class="pricing-block__group pricing-card__block--factors">
+          <span class="n-idx">{{ i18n "pricing_factors" }}</span>
           <ul class="pricing-card__chips">
             {{- range . }}<li>{{ . }}</li>{{ end }}
           </ul>
@@ -88,23 +86,11 @@
       <h2>{{ $pricing.table_title }}</h2>
       {{- with $pricing.table_lede }}<p>{{ . }}</p>{{ end }}
     </div>
-    <div class="pricing-table-wrap reveal">
-      <table class="pricing-table">
-        <thead>
-          <tr>
-            <th>{{ i18n "pricing_project" }}</th>
-            <th>{{ i18n "pricing_estimated_price" }}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {{- range . }}
-          <tr>
-            <td>{{ .project }}</td>
-            <td>{{ .price }}</td>
-          </tr>
-          {{- end }}
-        </tbody>
-      </table>
+    <div class="pricing-rows reveal" role="table" aria-label="{{ $pricing.table_title }}">
+      <div class="n-price n-price--2 n-price--head" role="row"><span role="columnheader">{{ i18n "pricing_project" }}</span><span role="columnheader">{{ i18n "pricing_estimated_price" }}</span></div>
+      {{- range . }}
+      <div class="n-price n-price--2" role="row"><h3 role="cell">{{ .project }}</h3><b role="cell">{{ .price }}</b></div>
+      {{- end }}
     </div>
     {{- with $pricing.explanation_title }}
     <div class="pricing-explain reveal">
