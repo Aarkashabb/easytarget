@@ -360,3 +360,22 @@ body.night {
   .night .n-price--2 { grid-template-columns: minmax(0, 1fr) auto; }
   .night .pricing-section, .night .pricing-table-section { padding: 48px 0; }
 }
+
+/* ========================================================================
+   Audit and About pages
+   ======================================================================== */
+.night .n-prices { border-bottom: 1px solid var(--n-line); }
+.night .pricing-card { background: var(--n-panel); border: 1px solid var(--n-line); border-radius: 0; box-shadow: none; }
+.night .pricing-card__price-value { font-family: var(--n-mono); font-weight: 500; letter-spacing: 0; color: var(--n-sig); }
+.night .pricing-card__label, .night .pricing-card__duration { font-family: var(--n-mono); font-weight: 500; letter-spacing: 0.08em; color: var(--n-dim); }
+.night .pricing-card__text { color: var(--n-mut); }
+.night .about-profile { background: var(--n-bg); }
+.night .about-profile__card { background: none; border: 0; border-top: 1px solid var(--n-line); border-radius: 0; box-shadow: none; padding: 40px 0 0; }
+.night .about-profile__photo { border-radius: 0; border: 1px solid var(--n-data); box-shadow: 0 0 40px rgba(63, 217, 255, 0.2); background: var(--n-panel); }
+.night .about-profile__name { font-family: var(--n-disp); font-weight: 700; font-size: clamp(22px, 2.6vw, 30px); }
+.night .about-profile__role { font: 500 13px var(--n-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--n-sig); }
+.night .about-profile__meta { color: var(--n-dim); }
+.night .about-facts-section, .night .about-badges-section { background: var(--n-bg); }
+.night .about-badge { background: var(--n-panel); border-color: var(--n-line); border-radius: 0; box-shadow: none; }
+.night .about-badge__meta { color: var(--n-dim); }
+.night .about-badge__inner:hover .about-badge__title { color: var(--n-sig); }

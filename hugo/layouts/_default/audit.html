@@ -13,15 +13,13 @@
 {{- with .Params.facts }}
 <section class="pricing-section">
   <div class="container">
-    <div class="pricing-grid reveal">
+    <div class="n-prices reveal">
       {{- range . }}
-      <article class="pricing-card">
-        <div class="pricing-card__label">{{ .label }}</div>
-        <div class="pricing-card__price">
-          <span class="pricing-card__price-value">{{ .value }}</span>
-        </div>
-        {{- with .note }}<p class="pricing-card__text">{{ . }}</p>{{ end }}
-      </article>
+      <div class="n-price">
+        <h3>{{ .label }}</h3>
+        <p>{{ with .note }}{{ . }}{{ end }}</p>
+        <b>{{ .value }}</b>
+      </div>
       {{- end }}
     </div>
   </div>
