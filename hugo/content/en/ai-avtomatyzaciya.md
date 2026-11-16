@@ -27,6 +27,7 @@ The public prices below are guidelines, not a quote. I estimate an AI project af
 
 ## Related pages
 
+- [AI integration for business: scenarios, pricing, cases](/en/ai-integration-business/)
 - [View the public pricing](/en/tsiny/)
 - [See the chatbots](/en/chat-boty/)
 - [Express automation audit: where to start](/en/automation-audit/)

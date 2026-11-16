@@ -130,4 +130,6 @@ Before sending customer data to external LLM APIs, clarify your privacy requirem
 - Log all AI responses for quality monitoring
 - Configure a fallback — if AI confidence is low, the task routes to a human
 
+For an overview of scenarios, pricing and cases, see [AI integration for business](/en/ai-integration-business/).
+
 Need help implementing AI in your business processes? We build AI automations tailored to specific use cases. [Book a free consultation →](https://calendly.com/blagoveshchenskyivan/30min)

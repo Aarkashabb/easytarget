@@ -107,7 +107,7 @@ Telegram → access check → question → vector → search in Postgres → Coh
 
 ## Who it is for
 
-For companies with a lot of documents where finding the right one is hard: regulations, instructions, onboarding of new employees. According to our [public pricing](/en/tsiny/), an HR RAG bot with a knowledge base and document search costs roughly $1,200–2,160 and takes 1–3 weeks; the vector database, servers and third-party APIs are paid separately. These are guidelines, not an offer. More about our [AI solutions](/en/ai-avtomatyzaciya/).
+For companies with a lot of documents where finding the right one is hard: regulations, instructions, onboarding of new employees. According to our [public pricing](/en/tsiny/), an HR RAG bot with a knowledge base and document search costs roughly $1,200–2,160 and takes 1–3 weeks; the vector database, servers and third-party APIs are paid separately. These are guidelines, not an offer. More about our [AI solutions](/en/ai-avtomatyzaciya/). Overview: [AI integration for business](/en/ai-integration-business/).
 
 ## FAQ
 

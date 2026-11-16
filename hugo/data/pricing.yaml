@@ -82,6 +82,19 @@ uk:
       cta_button: "Безкоштовна консультація (до 30 хв)"
       cta_telegram_button: "Написати в Telegram"
 
+    ai-integraciya-v-biznes:
+      related_links:
+        - text: "Переглянути публічний прайс"
+          href: "/tsiny/"
+        - text: "AI-автоматизація та AI-агенти"
+          href: "/ai-avtomatyzaciya/"
+        - text: "Експрес-аудит автоматизації"
+          href: "/audyt-avtomatyzaciyi/"
+      cta_title: "Розкажіть про свою задачу"
+      cta_lede: "На безкоштовній консультації разом подивимося, де AI справді допоможе вашому процесу, і з чого почати. Якщо зручніше текстом, напишіть у Telegram."
+      cta_button: "Безкоштовна консультація (до 30 хв)"
+      cta_telegram_button: "Написати в Telegram"
+
     chat-boty:
       eyebrow: "Послуга"
       service_type: "Чат-боти для заявок, CRM та AI/RAG"
@@ -319,6 +332,19 @@ en:
       cta_button: "Free consultation (up to 30 min)"
       cta_telegram_button: "Message on Telegram"
 
+    ai-integration-business:
+      related_links:
+        - text: "View the public pricing"
+          href: "/en/tsiny/"
+        - text: "AI automation and AI agents"
+          href: "/en/ai-avtomatyzaciya/"
+        - text: "Express automation audit"
+          href: "/en/automation-audit/"
+      cta_title: "Tell us about your task"
+      cta_lede: "On a free consultation, we will look together at where AI can really help your process and where to start. If you prefer text, message us on Telegram."
+      cta_button: "Free consultation (up to 30 min)"
+      cta_telegram_button: "Message on Telegram"
+
     chat-boty:
       eyebrow: "Service"
       service_type: "Chatbots for leads, CRM, and AI/RAG"
@@ -519,6 +545,19 @@ ru:
           href: "/ru/chat-boty/"
       cta_title: "Расскажите о своей задаче"
       cta_lede: "На бесплатной консультации вместе посмотрим, что можно автоматизировать и с чего начать. Если удобнее текстом, напишите в Telegram."
+      cta_button: "Бесплатная консультация (до 30 мин)"
+      cta_telegram_button: "Написать в Telegram"
+
+    integraciya-ai-v-biznes:
+      related_links:
+        - text: "Посмотреть публичные цены"
+          href: "/ru/tsiny/"
+        - text: "AI-автоматизация и AI-агенты"
+          href: "/ru/ai-avtomatyzaciya/"
+        - text: "Экспресс-аудит автоматизации"
+          href: "/ru/audit-avtomatizacii/"
+      cta_title: "Расскажите о своей задаче"
+      cta_lede: "На бесплатной консультации вместе посмотрим, где AI действительно поможет вашему процессу, и с чего начать. Если удобнее текстом, напишите в Telegram."
       cta_button: "Бесплатная консультация (до 30 мин)"
       cta_telegram_button: "Написать в Telegram"
 

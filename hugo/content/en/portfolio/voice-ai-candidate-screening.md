@@ -117,7 +117,7 @@ Nothing in principle: two weeks of testing on safe calls had already been done. 
 
 ## An honest word on price
 
-The automation around the call and fine-tuning the agent itself (script, conversational behaviour) are different kinds of work. The first can be planned precisely. The second needs live conversations, listening and many iterations, and its scope is hard to estimate in advance. That is why a voice AI agent is the most expensive service we offer. According to our [public pricing](/en/tsiny/) it costs roughly $1,440–3,000 and takes 2–4 weeks; telephony, STT/TTS and provider fees are paid separately. These are guidelines, not an offer. More about our [AI solutions](/en/ai-avtomatyzaciya/).
+The automation around the call and fine-tuning the agent itself (script, conversational behaviour) are different kinds of work. The first can be planned precisely. The second needs live conversations, listening and many iterations, and its scope is hard to estimate in advance. That is why a voice AI agent is the most expensive service we offer. According to our [public pricing](/en/tsiny/) it costs roughly $1,440–3,000 and takes 2–4 weeks; telephony, STT/TTS and provider fees are paid separately. These are guidelines, not an offer. More about our [AI solutions](/en/ai-avtomatyzaciya/). Overview: [AI integration for business](/en/ai-integration-business/).
 
 ## Workflow diagram
 
