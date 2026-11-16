@@ -61,7 +61,7 @@
 /* ---- about ---- */
 .n-about { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 56px; align-items: center; }
 .n-about__photo { position: relative; max-width: 420px; }
-.n-about__photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border: 1px solid var(--n-data); box-shadow: 0 0 40px rgba(63, 217, 255, 0.2); }
+.n-about__photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border: 1px solid var(--n-data); box-shadow: 0 0 40px rgba(63, 217, 255, 0.2); }
 .n-about__body { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
 .n-about__body h2 { font-size: clamp(24px, 3vw, 40px); }
 .n-about__role { font: 500 13px var(--n-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--n-sig); }
