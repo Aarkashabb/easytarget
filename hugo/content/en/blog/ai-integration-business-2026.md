@@ -1,7 +1,7 @@
 ---
 title: "AI Integration in Business: Where to Start in 2026"
 date: 2026-06-16
-lastmod: 2026-06-16
+lastmod: 2026-11-16
 description: "A practical guide to AI integration: where AI delivers maximum ROI and how to connect OpenAI or Claude to existing N8N and Make workflows without complexity."
 tags: ["AI", "OpenAI", "N8N", "Make", "Automation"]
 keywords: ["AI integration business", "connect openai to n8n", "AI customer support automation", "AI lead qualification", "AI document processing"]
@@ -52,7 +52,7 @@ Connecting OpenAI in N8N uses a native node with API key authentication. For Mak
 
 ## Case 1: AI-Powered Customer Support Automation
 
-The most common and fastest-to-implement use case. A real-world setup for a SaaS company handling 300+ support tickets per month:
+The most common and fastest-to-implement use case. A typical setup for a support team with a steady flow of requests:
 
 - New ticket in Zendesk/Intercom/email → N8N trigger fires
 - AI analyzes the ticket text and classifies it: general question / technical issue / billing / complaint
@@ -60,7 +60,7 @@ The most common and fastest-to-implement use case. A real-world setup for a SaaS
 - If technical / billing / complaint — escalates to the right team with an AI-generated context summary
 - All tickets logged with category and response time for quality analysis
 
-Real results from an EasyTarget client: AI handles 58% of tickets automatically, average response time dropped from 4 hours to 4 minutes, NPS increased by 31 points.
+What share of tickets AI closes without a person, and how much response time drops, depends on the type of requests and the quality of the knowledge base, so there are no universal figures here. Fix the metrics (share of automatic replies, first-response time, customer rating) before launch and compare them after a test period. Real figures from our projects: [an AI assistant for company regulations](/en/portfolio/telegram-rag-document-assistant/) is used by 60 people, and [a voice agent](/en/portfolio/voice-ai-candidate-screening/) made 209 call attempts and 42 invitations in its first three weeks.
 
 > ⚠️ **Important:** AI responses must go through A/B testing for the first 2–4 weeks. Log all responses and monitor customer satisfaction closely so you can refine prompts before scaling.
 
@@ -104,14 +104,17 @@ Tooling: OpenAI Vision API for image and scan processing, standard Chat API for 
 
 ## Cost and Model Selection
 
-| Model | Cost (input/output) | Best for |
-|-------|---------------------|----------|
-| GPT-4o mini | $0.15 / $0.60 per 1M tokens | Classification, simple responses, lead scoring |
-| GPT-4o | $2.50 / $10.00 per 1M tokens | Complex analysis, legal documents |
-| Claude 3.5 Haiku | $0.25 / $1.25 per 1M tokens | Document processing, summarization |
-| Claude 3.5 Sonnet | $3.00 / $15.00 per 1M tokens | Complex reasoning, code generation |
+The cost of AI requests depends on the model and the volume of text: input and output tokens are billed separately. Providers change their model lineups and prices several times a year, so check current rates on the official pages: [OpenAI](https://developers.openai.com/api/docs/pricing), [Anthropic](https://platform.claude.com/docs/en/about-claude/pricing), [Google](https://ai.google.dev/gemini-api/docs/pricing).
 
-Practical approach: always start with the cheapest model and step up only when quality is insufficient. For 90% of standard business tasks, GPT-4o mini or Claude Haiku deliver excellent results at a fraction of the cost.
+The logic of the lineups is similar across providers, and choosing a model for a task comes down to three classes:
+
+| Model class | Best for |
+|-------------|----------|
+| Small and fast (mini, Haiku, Flash) | Classification, simple responses, lead scoring |
+| Mid-range general models | Document processing, summarization, answers from a knowledge base |
+| Most capable | Complex analysis, legal and financial documents, non-trivial decisions |
+
+Practical approach: start with the smallest model that passes your test on 20–50 real examples and step up only when quality is insufficient. The cost gap between classes can be many-fold, so model choice is one of the main budget levers.
 
 ## Security and Privacy Considerations
 
