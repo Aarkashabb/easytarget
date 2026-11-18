@@ -8,7 +8,7 @@ EasyTarget is a workflow automation consultancy specializing in no-code and low-
 **Founder:** Ivan Blagoveshchenskiy · AI Automation & Integration Architect
 **Languages:** Ukrainian (default), English, Russian
 **Contact:** {{ .Site.Params.email }} · [Book consultation]({{ .Site.Params.calendly }})
-**Social:** [LinkedIn]({{ .Site.Params.linkedin }}) · [Telegram]({{ .Site.Params.telegram }}){{ with .Site.Params.github }} · [GitHub]({{ . }}){{ end }}{{ with .Site.Params.upwork }} · [Upwork]({{ . }}){{ end }}{{ with .Site.Params.fiverr }} · [Fiverr]({{ . }}){{ end }}
+**Social:** [LinkedIn]({{ .Site.Params.linkedin }}){{ with .Site.Params.linkedinCompany }} · [LinkedIn (company page)]({{ . }}){{ end }} · [Telegram]({{ .Site.Params.telegram }}){{ with .Site.Params.github }} · [GitHub]({{ . }}){{ end }}{{ with .Site.Params.upwork }} · [Upwork]({{ . }}){{ end }}{{ with .Site.Params.fiverr }} · [Fiverr]({{ . }}){{ end }}
 
 {{- range where .Site.RegularPages "Params.translationKey" "about-ivan" }}
 
