@@ -23,7 +23,8 @@
     "email": "{{ .Site.Params.email }}"
   },
   "sameAs": [
-    "{{ .Site.Params.linkedin }}",
+    "{{ .Site.Params.linkedin }}"{{ with .Site.Params.linkedinCompany }},
+    "{{ . }}"{{ end }},
     "{{ .Site.Params.telegram }}"{{ with .Site.Params.github }},
     "{{ . }}"{{ end }}{{ with .Site.Params.upwork }},
     "{{ . }}"{{ end }}{{ with .Site.Params.fiverr }},
