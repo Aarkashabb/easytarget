@@ -10,9 +10,13 @@
 <section class="page-hero">
   <div class="container page-hero__inner">
     <span class="page-hero__eyebrow">{{ .Params.eyebrow | default (i18n "nav_services") }}</span>
-    <h1>{{ .Title }}</h1>
+    <h1>{{ .Params.h1 | default .Title }}</h1>
     {{- with .Description }}
     <p class="page-hero__lead">{{ . }}</p>
+    {{- end }}
+    {{- with .Params.updated }}
+    {{- $updated := time.AsTime . }}
+    <p class="page-hero__updated">{{ i18n "updated_label" }}: <time datetime="{{ $updated.Format "2006-01-02" }}">{{ $updated.Format (i18n "updated_date_layout") }}</time></p>
     {{- end }}
     {{- with $pricing.disclaimer }}
     <p class="page-hero__note">{{ . }}</p>
@@ -100,6 +104,24 @@
       </ul>
     </div>
     {{- end }}
+  </div>
+</section>
+{{- end }}
+
+{{- with .Params.faq }}
+<section class="section faq faq--page" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>{{ $.Params.faq_title | default (i18n "faq_heading") }}</h2>
+    </div>
+    <div class="faq__list reveal">
+      {{- range . }}
+      <details class="faq__item">
+        <summary>{{ .q }}</summary>
+        <div class="faq__answer">{{ .a | markdownify }}</div>
+      </details>
+      {{- end }}
+    </div>
   </div>
 </section>
 {{- end }}
