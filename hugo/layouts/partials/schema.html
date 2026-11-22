@@ -142,7 +142,9 @@
 </script>
 {{- end -}}
 
-{{- /* Service Schema - for public service pages with visible price cards */ -}}
+{{- /* Service Schema - for public service pages with visible price cards.
+       NB: every `jsonify` inside <script> needs `| safeJS`, otherwise html/template escapes the JSON string a second time
+       and the output gets stray quotes ("\"Title\""). */ -}}
 {{- if eq .Params.schema_type "Service" -}}
 {{- $servicePricing := dict -}}
 {{- with index site.Data.pricing .Lang -}}
@@ -157,13 +159,13 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": {{ $.Title | jsonify }},
-  "description": {{ $.Description | jsonify }},
-  "serviceType": {{ $servicePricing.service_type | default "Workflow automation" | jsonify }},
+  "name": {{ $.Title | jsonify | safeJS }},
+  "description": {{ $.Description | jsonify | safeJS }},
+  "serviceType": {{ $servicePricing.service_type | default "Workflow automation" | jsonify | safeJS }},
   "areaServed": "Worldwide",
   "provider": {
     "@type": "Organization",
-    "name": {{ $.Site.Params.siteName | jsonify }},
+    "name": {{ $.Site.Params.siteName | jsonify | safeJS }},
     "url": "{{ $.Site.BaseURL }}"
   },
   "offers": [
@@ -171,7 +173,7 @@
     {{- if $i }},{{ end }}
     {
       "@type": "Offer",
-      "name": {{ $card.title | jsonify }},
+      "name": {{ $card.title | jsonify | safeJS }},
       "priceCurrency": "USD",
       "priceSpecification": {
         "@type": "PriceSpecification",
@@ -264,6 +266,9 @@
   "name": "{{ .Title }}",
   "description": "{{ .Description | default .Summary }}",
   "url": "{{ .Permalink }}",
+  {{- with .Params.updated }}
+  "dateModified": "{{ (time.AsTime .).Format "2006-01-02" }}",
+  {{- end }}
   "isPartOf": {
     "@type": "WebSite",
     "name": "{{ .Site.Params.siteName }}",
@@ -328,8 +333,9 @@
 {{- end }}
 {{- end }}
 
-{{- /* FAQPage Schema — for homepage FAQ section */ -}}
-{{- if .IsHome }}
+{{- /* FAQPage Schema — for the homepage and service pages (single.html) with a `faq:` list in front matter.
+       The same list is rendered as the visible FAQ block, so markup and page text always match. */ -}}
+{{- if or .IsHome (eq .Params.schema_type "Service") }}
 {{- with .Params.faq }}
 <script type="application/ld+json">
 {
@@ -340,10 +346,10 @@
     {{- if $i }},{{ end }}
     {
       "@type": "Question",
-      "name": {{ $item.q | jsonify }},
+      "name": {{ $item.q | jsonify | safeJS }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": {{ $item.a | jsonify }}
+        "text": {{ $item.a | markdownify | plainify | htmlUnescape | jsonify | safeJS }}
       }
     }
     {{- end }}
