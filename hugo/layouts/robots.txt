@@ -15,6 +15,10 @@ Sitemap: {{ .Site.BaseURL }}sitemap.xml
 User-agent: GPTBot
 Allow: /
 
+# OpenAI OAI-SearchBot - ChatGPT Search index (shows the site in ChatGPT answers)
+User-agent: OAI-SearchBot
+Allow: /
+
 # ChatGPT browsing - allow for real-time citations
 User-agent: ChatGPT-User
 Allow: /
