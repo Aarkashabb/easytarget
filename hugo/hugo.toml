@@ -60,6 +60,8 @@ summaryLength = 40
   telegram  = "https://t.me/Aarkashabb"
   # Ссылка кнопки «надиктуйте голосове» на странице аудита. Пока бот не создан, ведёт в личный Telegram; потом заменить ссылкой на бота.
   telegramVoice = "https://t.me/Aarkashabb"
+  # Показывать блок «голосовое» на странице аудита. Включить (true), когда бот будет готов.
+  voiceEnabled = false
   linkedin  = "https://www.linkedin.com/in/aarkashabb"
   linkedinCompany = "https://www.linkedin.com/company/easytargetua"
   github    = "https://github.com/Aarkashabb"
