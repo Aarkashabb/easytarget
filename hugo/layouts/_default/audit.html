@@ -20,19 +20,22 @@
       <ol class="voice-card__steps">
         {{- range .steps }}<li>{{ . }}</li>{{ end }}
       </ol>
-      <div class="voice-card__actions">
-        <a class="btn btn--primary btn--lg" href="{{ $.Site.Params.telegramVoice | default $.Site.Params.telegram }}" target="_blank" rel="noopener">{{ .button }}</a>
-      </div>
-      {{- with .note }}<p class="voice-card__note">{{ . }}</p>{{ end }}
-      {{- with .questions }}
-      <details class="voice-card__text">
-        <summary>{{ $.Params.voice.text_summary }}</summary>
+      {{- with .hints }}
+      <div class="voice-card__hints">
+        <h3>{{ $.Params.voice.hints_title }}</h3>
         <ol>
           {{- range . }}<li>{{ . }}</li>{{ end }}
         </ol>
-        <a class="btn btn--ghost" href="{{ $.Site.Params.telegram }}" target="_blank" rel="noopener">{{ $.Params.voice.text_button }}</a>
-      </details>
+        {{- with $.Params.voice.hints_note }}<p>{{ . }}</p>{{ end }}
+      </div>
       {{- end }}
+      <div class="voice-card__actions">
+        <a class="btn btn--primary btn--lg" href="{{ $.Site.Params.telegramVoice | default $.Site.Params.telegram }}" target="_blank" rel="noopener">{{ .button }}</a>
+        {{- with .text_button }}
+        <a class="btn btn--ghost btn--lg" href="{{ $.Site.Params.telegram }}" target="_blank" rel="noopener">{{ . }}</a>
+        {{- end }}
+      </div>
+      {{- with .note }}<p class="voice-card__note">{{ . }}</p>{{ end }}
     </div>
   </div>
 </section>

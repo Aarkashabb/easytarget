@@ -35,14 +35,17 @@ voice:
     - "I reply in Telegram: what to automate first and the next step."
   button: "Record a voice message in Telegram"
   note: "It is free and commits you to nothing. The paid express audit below is only needed if you want a written report."
-  text_summary: "Not comfortable speaking? Answer in text"
-  text_button: "Send answers in Telegram"
-  questions:
-    - "What is your name and how is it best to reach you (Telegram, phone, email)?"
+  text_button: "Not comfortable speaking? Send your answers as text"
+  hints_title: "Not sure where to start? Answer these questions, or just tell it freely"
+  hints_note: "Rough answers are fine, exact numbers are not needed. A few points are enough."
+  hints:
     - "What does your business do (one or two sentences)?"
     - "Which process takes the most time? Describe it step by step, as best you can."
     - "How many times a week does it repeat and how many people are involved?"
-    - "Which tools do you use now (CRM, spreadsheets, messengers, other)?"
+    - "Which CRM or spreadsheets do you use now (name)?"
+    - "How many people are on the team?"
+    - "How many orders or leads do you get per month?"
+    - "Roughly how many records are in your CRM (customers, deals)?"
     - "What would a good result look like in a month?"
 ---
 
