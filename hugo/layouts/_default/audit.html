@@ -10,6 +10,34 @@
   </div>
 </section>
 
+{{- with .Params.voice }}
+<section class="voice-section" id="voice">
+  <div class="container">
+    <div class="card voice-card reveal">
+      {{- with .eyebrow }}<span class="voice-card__eyebrow">{{ . }}</span>{{ end }}
+      <h2>{{ .title }}</h2>
+      <p class="voice-card__lede">{{ .lede }}</p>
+      <ol class="voice-card__steps">
+        {{- range .steps }}<li>{{ . }}</li>{{ end }}
+      </ol>
+      <div class="voice-card__actions">
+        <a class="btn btn--primary btn--lg" href="{{ $.Site.Params.telegramVoice | default $.Site.Params.telegram }}" target="_blank" rel="noopener">{{ .button }}</a>
+      </div>
+      {{- with .note }}<p class="voice-card__note">{{ . }}</p>{{ end }}
+      {{- with .questions }}
+      <details class="voice-card__text">
+        <summary>{{ $.Params.voice.text_summary }}</summary>
+        <ol>
+          {{- range . }}<li>{{ . }}</li>{{ end }}
+        </ol>
+        <a class="btn btn--ghost" href="{{ $.Site.Params.telegram }}" target="_blank" rel="noopener">{{ $.Params.voice.text_button }}</a>
+      </details>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}
+
 {{- with .Params.facts }}
 <section class="pricing-section">
   <div class="container">
