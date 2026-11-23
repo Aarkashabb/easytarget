@@ -10,7 +10,7 @@
   </div>
 </section>
 
-{{- with .Params.voice }}
+{{- if $.Site.Params.voiceEnabled }}{{- with .Params.voice }}
 <section class="voice-section" id="voice">
   <div class="container">
     <div class="card voice-card reveal">
@@ -36,7 +36,7 @@
     </div>
   </div>
 </section>
-{{- end }}
+{{- end }}{{- end }}
 
 {{- with .Params.facts }}
 <section class="pricing-section">
