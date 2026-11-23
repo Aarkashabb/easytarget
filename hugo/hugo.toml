@@ -58,6 +58,8 @@ summaryLength = 40
   email     = "blagoveshchenskyivan@gmail.com"
   calendly  = "https://calendly.com/blagoveshchenskyivan/30min"
   telegram  = "https://t.me/Aarkashabb"
+  # Ссылка кнопки «надиктуйте голосове» на странице аудита. Пока бот не создан, ведёт в личный Telegram; потом заменить ссылкой на бота.
+  telegramVoice = "https://t.me/Aarkashabb"
   linkedin  = "https://www.linkedin.com/in/aarkashabb"
   linkedinCompany = "https://www.linkedin.com/company/easytargetua"
   github    = "https://github.com/Aarkashabb"

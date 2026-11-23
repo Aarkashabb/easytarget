@@ -25,6 +25,25 @@ cta_title: "Let's start with a call"
 cta_lede: "On a call of up to 30 minutes we will go through your task and decide whether an audit makes sense. If you prefer text, message me on Telegram."
 cta_button: "Book a call (up to 30 min)"
 cta_telegram_button: "Message on Telegram"
+voice:
+  eyebrow: "If you came from Threads"
+  title: "Send a voice message and I will tell you what to automate first"
+  lede: "No form to fill in. Record a voice message in Telegram: what your business does and which process eats the most time. I will listen and reply with where I would start."
+  steps:
+    - "Tap the button and Telegram opens."
+    - "Record 1-2 minutes: what the business is, which process, which tools you use, how much time it takes."
+    - "I reply in Telegram: what to automate first and the next step."
+  button: "Record a voice message in Telegram"
+  note: "It is free and commits you to nothing. The paid express audit below is only needed if you want a written report."
+  text_summary: "Not comfortable speaking? Answer in text"
+  text_button: "Send answers in Telegram"
+  questions:
+    - "What is your name and how is it best to reach you (Telegram, phone, email)?"
+    - "What does your business do (one or two sentences)?"
+    - "Which process takes the most time? Describe it step by step, as best you can."
+    - "How many times a week does it repeat and how many people are involved?"
+    - "Which tools do you use now (CRM, spreadsheets, messengers, other)?"
+    - "What would a good result look like in a month?"
 ---
 
 ## Who it is for
