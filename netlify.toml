@@ -14,11 +14,6 @@
   status = 301
 
 [[redirects]]
-  from   = "/tproduct/*"
-  to     = "/"
-  status = 301
-
-[[redirects]]
   from   = "/products/*"
   to     = "/"
   status = 301

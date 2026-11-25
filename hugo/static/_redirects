@@ -2,9 +2,6 @@
 # Cleans up 13 x 404 errors in Google Search Console
 # Cloudflare Pages reads this file automatically
 
-# Old Tilda product pages (vape store products) → homepage
-/tproduct/*           /                  301
-
 # Old Tilda auto-generated pages (page12345.html pattern) → homepage
 /page*.html           /                  301
 
