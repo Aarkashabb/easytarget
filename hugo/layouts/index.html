@@ -82,7 +82,10 @@
     {{- $slug := .File.ContentBaseName }}
     <article class="n-case">
       <a class="n-case__shot" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
-        {{- if fileExists (printf "static/img/workflows/%s.webp" $slug) }}
+        {{- $cover := printf "img/covers/%s/%s.webp" .Lang $slug }}
+        {{- if fileExists (printf "static/%s" $cover) }}
+        <img src="/{{ $cover }}" alt="" loading="lazy" decoding="async" width="880" height="495">
+        {{- else if fileExists (printf "static/img/workflows/%s.webp" $slug) }}
         <img src="/img/workflows/{{ $slug }}.webp" alt="" loading="lazy" decoding="async" width="880" height="495">
         {{- else if fileExists (printf "static/img/workflows/%s.png" $slug) }}
         <img src="/img/workflows/{{ $slug }}.png" alt="" loading="lazy" decoding="async" width="880" height="495">
