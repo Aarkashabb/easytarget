@@ -2,6 +2,10 @@
   base    = "hugo"
   command = "hugo --minify"
   publish = "public"
+  # Production is served by Cloudflare Pages (.github/workflows/deploy.yml).
+  # Skip Netlify production builds (15 credits each); exit 0 = skip, 1 = build.
+  # Deploy previews are still built.
+  ignore  = "if [ \"$CONTEXT\" = \"production\" ]; then exit 0; else exit 1; fi"
 
 [build.environment]
   HUGO_VERSION        = "0.132.0"
