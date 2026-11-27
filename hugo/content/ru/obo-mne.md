@@ -100,7 +100,7 @@ cta_telegram_button: "Написать в Telegram"
 - [Голосовой AI-агент для скрининга кандидатов](/ru/portfolio/voice-ai-candidate-screening/): звонки кандидатам на ElevenLabs и KeyCRM.
 - [AI-ассистент по регламентам в Telegram](/ru/portfolio/telegram-rag-document-assistant/): ответы по документам компании для 60 сотрудников.
 - [Интеграция банковских данных](/ru/portfolio/banking-data-integration/): ежедневный трекинг балансов через Monobank API.
-- [Автоматическая генерация финансовых отчётов](/ru/portfolio/automated-financial-reports/): месячные отчёты с анализом от Gemini и презентацией в Google Slides.
+- [Месячные отчёты по рекламе для клиентов агентства](/ru/portfolio/automated-financial-reports/): отчёты с анализом от Gemini и презентацией в Google Slides.
 - [Синхронизация остатков интернет-магазина](/ru/portfolio/ecommerce-inventory-sync/).
 
 Все проекты: [портфолио](/ru/portfolio/). Практические материалы об автоматизации: [блог](/ru/blog/).

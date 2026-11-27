@@ -36,7 +36,7 @@ Business Process Automation (BPA) — це використання програ
 - Публікація контенту в соцмережах
 - Email-розсилки за тригерами
 
-Реальні приклади з нашої практики: [звіт «реклама → продажі по товарах»](/portfolio/marketing-budget-automation/) (від 30 хвилин на день, за оцінкою), [синхронізація e-commerce залишків](/portfolio/ecommerce-inventory-sync/) (нуль ручного вводу), [генерація фінансових звітів](/portfolio/automated-financial-reports/) (4+ год/міс). Про підхід до звітності - у статті [Автоматизація фінансової звітності](/blog/avtomatyzatsiia-finansovoi-zvitnosti/).
+Реальні приклади з нашої практики: [звіт «реклама → продажі по товарах»](/portfolio/marketing-budget-automation/) (від 30 хвилин на день, за оцінкою), [синхронізація e-commerce залишків](/portfolio/ecommerce-inventory-sync/) (нуль ручного вводу), [звіти з реклами для клієнтів агентства](/portfolio/automated-financial-reports/) (щомісяця для кожного клієнта). Про підхід до звітності - у статті [Автоматизація фінансової звітності](/blog/avtomatyzatsiia-finansovoi-zvitnosti/).
 
 Перш ніж запускати — порахуйте окупність. У нашому [гайді з розрахунку ROI для workflow автоматизації](/blog/calculating-roi-workflow-automation/) є готові формули та приклади.
 
@@ -76,4 +76,4 @@ Business Process Automation (BPA) — це використання програ
 
 Автоматизація процесів у 2026 році — це не про технології, це про звільнення команди від рутини та фокус на задачах, що реально приносять цінність. Почніть з одного процесу, виміряйте результат і масштабуйте.
 
-**Потрібна допомога з першим workflow?** [Запишіться на безкоштовну консультацію](https://calendly.com/blagoveshchenskyivan/30min) — розберемо ваш кейс і запропонуємо оптимальне рішення під ваш бізнес. Або подивіться реальні кейси: [маркетинг](/portfolio/marketing-budget-automation/), [e-commerce](/portfolio/ecommerce-inventory-sync/), [AI-продуктивність](/portfolio/ai-task-management/), [фінанси](/portfolio/automated-financial-reports/).
+**Потрібна допомога з першим workflow?** [Запишіться на безкоштовну консультацію](https://calendly.com/blagoveshchenskyivan/30min) — розберемо ваш кейс і запропонуємо оптимальне рішення під ваш бізнес. Або подивіться реальні кейси: [маркетинг](/portfolio/marketing-budget-automation/), [e-commerce](/portfolio/ecommerce-inventory-sync/), [AI-продуктивність](/portfolio/ai-task-management/), [рекламна звітність](/portfolio/automated-financial-reports/).
