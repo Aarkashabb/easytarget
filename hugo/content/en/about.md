@@ -101,7 +101,7 @@ In June 2026 I passed the Make Basics and Make Intermediate certifications (Make
 - [AI assistant for company documents in Telegram](/en/portfolio/telegram-rag-document-assistant/): answers from company documents for 60 employees.
 - [Banking data integration](/en/portfolio/banking-data-integration/): daily balance tracking through the Monobank API.
 - [Monthly ad reports for agency clients](/en/portfolio/automated-financial-reports/): reports with Gemini analysis and a Google Slides presentation.
-- [Online store inventory synchronization](/en/portfolio/ecommerce-inventory-sync/).
+- [Daily store sales to a spreadsheet](/en/portfolio/ecommerce-inventory-sync/).
 
 All projects: [portfolio](/en/portfolio/). Practical material on automation: [blog](/en/blog/).
 

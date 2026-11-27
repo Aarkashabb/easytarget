@@ -134,7 +134,7 @@ ROI (%) = ((Чистая прибыль - Начальные инвестици�
 | Банки / Финтех | Обработка документов, KYC | 4–8 месяцев |
 | SaaS / IT | Поддержка клиентов, биллинг | 2–5 месяцев |
 
-Конкретные кейсы из нашей практики: [отчёт «реклама → продажи по товарам»](/ru/portfolio/marketing-budget-automation/) (от 30 мин/день, по оценке), [отчёты по рекламе для клиентов агентства](/ru/portfolio/automated-financial-reports/) (ежемесячно для каждого клиента), [синхронизация e-commerce остатков](/ru/portfolio/ecommerce-inventory-sync/) (ноль ручного ввода). Как подойти к отчетности с контролями, смотрите в статье [Автоматизация финансовой отчетности](/ru/blog/avtomatizatsiya-finansovoy-otchetnosti/).
+Конкретные кейсы из нашей практики: [отчёт «реклама → продажи по товарам»](/ru/portfolio/marketing-budget-automation/) (от 30 мин/день, по оценке), [отчёты по рекламе для клиентов агентства](/ru/portfolio/automated-financial-reports/) (ежемесячно для каждого клиента), [продажи магазина в таблицу](/ru/portfolio/ecommerce-inventory-sync/) (ежедневно из CRM, без ручного заполнения). Как подойти к отчетности с контролями, смотрите в статье [Автоматизация финансовой отчетности](/ru/blog/avtomatizatsiya-finansovoy-otchetnosti/).
 
 ## Типичные ошибки при расчёте ROI
 
@@ -212,4 +212,4 @@ ROI от автоматизации часто превышает начальн
 
 **Безопасность влияет на расчёты ROI?** Расходы на безопасную автоматизацию могут повлиять на окупаемость. Прочитайте [Best Practices безопасности в No-Code автоматизации](/ru/blog/security-best-practices-no-code-automation/) чтобы включить эти затраты в ваши расчёты.
 
-**Реальные результаты:** Посмотрите кейсы с реальными цифрами: [маркетинг — от 30 мин/день, по оценке](/ru/portfolio/marketing-budget-automation/), [отчёты по рекламе — ежемесячно для каждого клиента](/ru/portfolio/automated-financial-reports/), [e-commerce — ноль ручного ввода](/ru/portfolio/ecommerce-inventory-sync/).
+**Реальные результаты:** Посмотрите кейсы с реальными цифрами: [маркетинг — от 30 мин/день, по оценке](/ru/portfolio/marketing-budget-automation/), [отчёты по рекламе — ежемесячно для каждого клиента](/ru/portfolio/automated-financial-reports/), [e-commerce — ежедневные продажи из CRM в таблице](/ru/portfolio/ecommerce-inventory-sync/).
