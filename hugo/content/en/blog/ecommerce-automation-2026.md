@@ -55,8 +55,6 @@ How to build the sync workflow: designate one platform as the master source of t
 
 > ⚠️ **Important:** When configuring multi-channel sync, always account for each platform's API rate limits. Overly frequent requests can trigger temporary account blocks.
 
-Result: zero overselling incidents, accurate inventory on all channels 24/7, with zero manual synchronization work.
-
 ![Inventory synchronization between the source system and sales channels](/images/blog/ecommerce-automation-inventory-sync.webp)
 
 ## Workflow 3: Triggered Customer Communications
