@@ -1,7 +1,7 @@
 ---
 title: "E-Commerce Automation: From Order to Delivery"
 date: 2026-06-09
-lastmod: 2026-06-09
+lastmod: 2026-11-27
 description: "Workflow designs for automating your online store: order processing, inventory sync, triggered customer messages, and reporting with N8N and Make."
 tags: ["E-commerce", "Automation", "N8N", "Make", "Shopify"]
 keywords: ["e-commerce automation", "order processing workflow", "inventory sync automation", "abandoned cart recovery"]
@@ -19,17 +19,9 @@ If you have not yet read the [complete guide to business process automation](/en
 
 ## Why Manual Order Processing Kills Your Business
 
-Every minute of manual work is not just wasted time — it is a point of failure. Research shows that human error accounts for 23% of order processing mistakes. Wrong status updates, missed customer emails, delayed inventory adjustments — each of these costs money and customer trust.
+Every minute of manual work is not just wasted time — it is a point of failure. Wrong status updates, missed customer emails, delayed inventory adjustments — each of these costs money and customer trust.
 
 A typical manual setup: a manager copies the order from the website into a spreadsheet, then calls the warehouse, then emails the customer, then updates the CRM. Four actions where a single automated trigger should do all of it in under 30 seconds.
-
-| Process | Manual | Automated |
-|---------|--------|-----------|
-| Processing 1 order | 8–15 min | < 30 sec |
-| Status errors | Up to 23% | < 1% |
-| Customer response time | 30–120 min | < 1 min |
-| Inventory sync | 1–4 times/day | Real-time |
-| Weekly report | 2–3 hrs/week | Automatic |
 
 ## Workflow 1: Automated New Order Processing
 
@@ -59,7 +51,7 @@ How to build the sync workflow: designate one platform as the master source of t
 
 ## Workflow 3: Triggered Customer Communications
 
-77% of customers expect an order confirmation within one minute of purchase. 65% want automatic shipping status updates. Configure these sequences once, and they run indefinitely without any manual effort.
+Buyers need to see that their order has been accepted and where it is now. Triggered messages let you tell them without sending emails by hand.
 
 **Post-order communication chain:**
 
@@ -93,7 +85,7 @@ Schedule: every Monday at 08:00
 → Send to leadership email + Slack channel
 ```
 
-Time to prepare the weekly report: from 2–3 hours to zero. Data is always current and free of manual entry errors. For a deeper look at measuring the financial impact, see our guide on [calculating ROI from workflow automation](/en/blog/calculating-roi-workflow-automation/).
+Once set up, the report is generated on a schedule, with no weekly manual data collection. For a deeper look at measuring the financial impact, see our guide on [calculating ROI from workflow automation](/en/blog/calculating-roi-workflow-automation/).
 
 ![Automated operational data collection and weekly report delivery](/images/blog/ecommerce-automation-operations-reporting.webp)
 
