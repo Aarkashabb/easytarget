@@ -44,7 +44,7 @@ For the agreed route, the team can define normalization, completeness checks, co
 
 ### Controlled pilot and acceptance
 
-The pilot uses test data, agreed error scenarios and acceptance criteria set before launch. The process owner receives the output with documented limitations, exceptions and manual-review points. For context, see the [automated financial report generation case study](/en/portfolio/automated-financial-reports/). It is a specific case, not a transfer of its results, metrics or conditions to a new process.
+The pilot uses test data, agreed error scenarios and acceptance criteria set before launch. The process owner receives the output with documented limitations, exceptions and manual-review points. For context, see the [monthly ad reports for agency clients case study](/en/portfolio/automated-financial-reports/). It is a specific case, not a transfer of its results, metrics or conditions to a new process.
 
 ## Example route: plan-versus-actual and cash flow
 

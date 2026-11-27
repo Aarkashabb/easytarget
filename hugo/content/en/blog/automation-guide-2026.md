@@ -36,7 +36,7 @@ Start with your most painful bottlenecks. The best candidates for automation are
 - Social media content publishing
 - Trigger-based email campaigns
 
-Real examples from our work: [ads-to-sales report for an agency](/en/portfolio/marketing-budget-automation/) (from 30 minutes a day, estimated), [e-commerce inventory sync](/en/portfolio/ecommerce-inventory-sync/) (zero manual entry), [automated financial reporting](/en/portfolio/automated-financial-reports/) (4+ hours/month saved). For the approach to reporting, see [Financial Reporting Automation](/en/blog/financial-reporting-automation/).
+Real examples from our work: [ads-to-sales report for an agency](/en/portfolio/marketing-budget-automation/) (from 30 minutes a day, estimated), [e-commerce inventory sync](/en/portfolio/ecommerce-inventory-sync/) (zero manual entry), [monthly ad reports for agency clients](/en/portfolio/automated-financial-reports/) (every month for each client). For the approach to reporting, see [Financial Reporting Automation](/en/blog/financial-reporting-automation/).
 
 Before building anything, calculate the payback. Our [guide on calculating ROI for workflow automation](/en/blog/calculating-roi-workflow-automation/) has ready-to-use formulas and worked examples.
 
@@ -76,4 +76,4 @@ A concrete example: the [Monobank banking integration case](/en/portfolio/bankin
 
 Process automation in 2026 is not about technology — it is about freeing your team from routine and refocusing on work that actually creates value. Start with one process, measure the outcome, and scale.
 
-**Need help building your first workflow?** [Book a free consultation](https://calendly.com/blagoveshchenskyivan/30min) — we will review your case and propose a tailored solution. Or browse real automation case studies: [marketing](/en/portfolio/marketing-budget-automation/), [e-commerce](/en/portfolio/ecommerce-inventory-sync/), [AI productivity](/en/portfolio/ai-task-management/), [finance](/en/portfolio/automated-financial-reports/).
+**Need help building your first workflow?** [Book a free consultation](https://calendly.com/blagoveshchenskyivan/30min) — we will review your case and propose a tailored solution. Or browse real automation case studies: [marketing](/en/portfolio/marketing-budget-automation/), [e-commerce](/en/portfolio/ecommerce-inventory-sync/), [AI productivity](/en/portfolio/ai-task-management/), [ad reporting](/en/portfolio/automated-financial-reports/).
